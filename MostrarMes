@@ -14,10 +14,7 @@ public class MostrarMes {
 		
 		while (mes!=-1) {
 			
-			while ((mes > 12) || (mes < 1)) {
-				System.out.println("Elige un número entre 1 y 12, por favor:");
-				mes = scanner.nextInt();
-			}
+			//while ((mes > 12) || (mes < 1))  NO HACE FALTA ESTE WHILE si tienes el default como opcion incorrecta
 			
 			
 			switch (mes) {
@@ -74,7 +71,10 @@ public class MostrarMes {
 				System.out.println("El mes es Diciembre");
 				//no hace falta break en el ultimo case
 				
-				
+			default:
+				System.out.println("Elige un número entre 1 y 12, por favor:");
+			
+					
 			}
 			mes = scanner.nextInt();			
 						
