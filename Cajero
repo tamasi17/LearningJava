@@ -12,13 +12,13 @@ public class CajeroComparadores {
 	le hacemos cast
 	parteEntera = (int) devolucion;  esto le quita decimales
 
-	billete500 = parteEntera / 500; dividiendo 127 entre 500 sale 0, la cantidad de billetes de quinientos que hay
+	billete500 = parteEntera / 500; //dividiendo 127 entre 500 sale 0, la cantidad de billetes de quinientos que hay
 	parteEntera -= billete500;
 	billete200 = parteEntera % 200;
-	y asi sucesivamente y lo mismo con los decimales por el otro lado
+	//y asi sucesivamente y lo mismo con los decimales por el otro lado
 
 
-			*/
+			
 			
 			Scanner scanner = new Scanner(System.in);
 			
