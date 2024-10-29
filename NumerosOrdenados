@@ -7,6 +7,10 @@ public class NumerosOrdenados {
 	public static void main(String[] args) {
 		// nos pide una serie de tres numeros, los devuelve por pantalla en orden
 		
+		// podria hacerlo con IFs cuando ya nos han dado los tres numeros pero queria practicar ternarios
+		
+		// para practicar ternarios he ido reasignando variables a medida que nos las dan
+		
 		Scanner scanner = new Scanner(System.in);
 		
 		
@@ -32,26 +36,21 @@ public class NumerosOrdenados {
 		masBajo = (masBajo<c) ? masBajo : c;
 		
 		masAlto = (masAlto>c) ? masAlto : c;
-		
-		// AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHHHHHHHHHHHHHHHH
-		
-		
-		
-		
-		
-		
-		
+		/*
+		medio = ((c>masBajo)&&(c<masAlto)) ? c : medio;
+		*/
+	
 		if ((c>masBajo)&&(c<masAlto)) {
 			
-			medio = c
-		} else {
+			medio = c;
+		} else if ((a>masBajo)&&(c<masAlto)) {
 			
-			medio=;
+			medio = a;
 			
-			masAlto=b;
+			} else {
+				medio = b;
+			}
 			
-		}
-		
 		
 		System.out.println("El número más bajo es: " + masBajo);
 		System.out.println("El número del medio es: " + medio);
