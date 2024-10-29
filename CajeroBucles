@@ -31,15 +31,21 @@ public class CajeroBucle {
 		c2 = 0;
 		c1 = 0;
 		
-		while (precio<0) {
+		
+		
+		// NO FUNCIONA COMPROBARRRR
+		
+		
+		
+		while (precio<=0) {
 			System.out.println("Cuánto ha costado?");
 			precio = scanner.nextDouble();
 		}
 		
-		while (precio>recibido) {
+		do {
 			System.out.println("Cuánto nos entregan?");
-			precio = scanner.nextDouble();
-		}
+			recibido = scanner.nextDouble();
+		} while (precio>recibido);
 		
 		devolucion = recibido - precio;
 		
@@ -60,9 +66,152 @@ public class CajeroBucle {
 				devolucion -= 200;
 			}
 			
-			// SEGUIR COPYPASTE
+			while (devolucion>=100) {
+				b100++;
+				devolucion -= 100;
+			}
+			
+			while (devolucion>=50) {
+				b50++;
+				devolucion -= 50;
+			}
+			
+			while (devolucion>=20) {
+				b20++;
+				devolucion -= 20;
+			}
+			
+			while (devolucion>=10) {
+				b10++;
+				devolucion -= 10;
+			}
+			
+			while (devolucion>=5) {
+				b5++;
+				devolucion -= 5;
+			}
+			
+			while (devolucion>=2) {
+				mon2e++;
+				devolucion -= 2;
+			}
+			
+			while (devolucion>=1) {
+				mon1e++;
+				devolucion -= 1;
+			}
+			
+			while (devolucion>=0.50) {
+				c50++;
+				devolucion -= 0.50;
+			}
+			
+			while (devolucion>=0.20) {
+				c20++;
+				devolucion -= 0.20;
+			}
+			
+			while (devolucion>=0.10) {
+				c10++;
+				devolucion -= 0.10;
+			}
+			
+			while (devolucion>=0.05) {
+				c5++;
+				devolucion -= 0.05;
+			}
+			
+			while (devolucion>=0.02) {
+				c2++;
+				devolucion -= 0.02;
+			}
+			
+			while (devolucion>=0.01) {
+				c1++;
+				devolucion -= 0.01;
+			}
+			
+			System.out.println("Aquí tiene su vuelta:\n");
+			
+			while (b500>0) {
+				System.out.println("Billetes de 500: " + b500);
+				b500 = 0;
+			}
+			
+			while (b200>0) {
+				System.out.println("Billetes de 200: " + b200);
+				b200 = 0;
+			}
+			
+			while (b100>0) {
+				System.out.println("Billetes de 100: " + b100);
+				b100 = 0;
+			}
+			
+			while (b50>0) {
+				System.out.println("Billetes de 50: " + b50);
+				b50 = 0;
+			}
+			
+			while (b20>0) {
+				System.out.println("Billetes de 20: " + b20);
+				b500 = 0;
+			}
+			
+			while (b10>0) {
+				System.out.println("Billetes de 10: " + b10);
+				b10 = 0;
+			}
+			
+			while (b5>0) {
+				System.out.println("Billetes de 5: " + b5);
+				b5 = 0;
+			}
+			
+			while (mon2e>0) {
+				System.out.println("Monedas de 2e: " + mon2e);
+				mon2e = 0;
+			}
+			
+			while (mon1e>0) {
+				System.out.println("Monedas de 1e: " + mon1e);
+				mon1e = 0;
+			}
+			
+			while (c50>0) {
+				System.out.println("Monedas de 50c: " + c50);
+				c50 = 0;
+			}
+			
+			while (c20>0) {
+				System.out.println("Monedas de 20c: " + c20);
+				c20 = 0;
+			}
+			
+			while (c10>0) {
+				System.out.println("Monedas de 10c: " + c10);
+				c10 = 0;
+			}
+			
+			while (c5>0) {
+				System.out.println("Monedas de 5c: " + c5);
+				c5 = 0;
+			}
+			
+			while (c2>0) {
+				System.out.println("Monedas de 2c: " + c2);
+				c2 = 0;
+			}
+			
+			while (c1>0) {
+				System.out.println("Monedas de 1c: " + c1);
+				c1 = 0;
+			}
+			
+			
+			System.out.println("\nGracias por su compra!");
+			
 		}
-		
 		
 		
 		scanner.close();
