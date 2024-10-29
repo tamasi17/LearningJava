@@ -1,23 +1,23 @@
 package ejercicios_Mats;
+
 import java.util.Scanner;
 
-public class CajeroComparadores {
+public class Cajero {
 
 		public static void main(String[] args) {
-			// ejemplo de la pizarra
 			
 			/*
-
-	nos devuelven 127.34, 
-	le hacemos cast
+    Ejemplo de la pizarra
+	nos devuelven 127.34 --> le hacemos cast
 	parteEntera = (int) devolucion;  esto le quita decimales
 
-	billete500 = parteEntera / 500; //dividiendo 127 entre 500 sale 0, la cantidad de billetes de quinientos que hay
+	billete500 = parteEntera / 500; 
 	parteEntera -= billete500;
 	billete200 = parteEntera % 200;
-	//y asi sucesivamente y lo mismo con los decimales por el otro lado
+	y asi sucesivamente y lo mismo con los decimales por el otro lado
 
-
+			*/
+			
 			
 			
 			Scanner scanner = new Scanner(System.in);
@@ -25,12 +25,12 @@ public class CajeroComparadores {
 			System.out.println("Cuánto hay que devolver?");
 			
 			double devolucion= scanner.nextDouble();
-			int pEntera=(int) devolucion;
+			int pEntera=(int) devolucion; // este es el cast, convertir a otro tipo de variable
 			double restoDecimal= (devolucion-pEntera)*100;
 			int pDecimal= (int) restoDecimal;
 			
-			System.out.println(pEntera); 
-			System.out.println(pDecimal);
+			//System.out.println(pEntera); 
+			//System.out.println(pDecimal);
 			
 			int b500= pEntera/500;
 			pEntera -= 500*b500;
@@ -51,17 +51,13 @@ public class CajeroComparadores {
 			pEntera -= 10*b10;
 			
 			int b5= pEntera/5;
-			pEntera -= 50*b5;
-			
-			// NO HACE BIEN LA PARTE DE LAS MONEDAS CHECKKKK
-			
+			pEntera -= 5*b5;
+						
 			int m2e=pEntera/2;
 			pEntera -= 2*m2e;
 			
 			int m1e=pEntera/1;
 			pEntera -= m1e;
-			
-			
 			
 			int cent50=pDecimal/50;
 			pDecimal -= 50*cent50;
@@ -77,14 +73,12 @@ public class CajeroComparadores {
 			
 			int cent2=pDecimal/2;
 			pDecimal -= 2*cent2;
-			
-			// TAMPOCO REDONDEA A 1 el último céntimo CHECKKKKK
-			
+						
 			int cent1=pDecimal/1;
 			pDecimal -= cent1;
 		
 			
-			System.out.println("Necesitas: " + b50 + " billetes de 50");
+			System.out.println("Necesitas: ");
 			
 			System.out.println(b500 + " billetes de 500");
 			System.out.println(b200 + " billetes de 200");
@@ -93,11 +87,10 @@ public class CajeroComparadores {
 			System.out.println(b20 + " billetes de 20");
 			System.out.println(b10 + " billetes de 10");
 			System.out.println(b5 + " billetes de 5");
-			
-			System.out.println(pEntera); 
-			
+	
 			System.out.println(m2e + " monedas de 2e");
 			System.out.println(m1e + " monedas de 1e");
+			
 			System.out.println(cent50 + " monedas de 50c");
 			System.out.println(cent20 + " monedas de 20c");
 			System.out.println(cent10 + " monedas de 10c");
