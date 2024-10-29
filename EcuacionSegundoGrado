@@ -33,29 +33,46 @@ public class EcuacionSegundoGrado {
 		
 		if (discriminante < 0 ) {
 			
-			System.out.println("El discriminante es negativo, la ecuacion no tiene ninguna solucion real");
+			System.out.println("El discriminante es negativo, la ecuacion no tiene ninguna solucion real.");
 			
 		} else if ( discriminante == 0 ) {
 			
 			root = Math.sqrt(discriminante);
-			arriba = (-b) + discriminante;
+			
+			System.out.println("La raíz es: " + root);
+			
+			abajo = 2*a;
+			
+			System.out.println("El divisor es: " + abajo);
+			
+			respuestaUno = ((-b) + discriminante)/abajo;
+			respuestaDos = ((-b) - discriminante)/abajo;
+			
+			System.out.println("El discriminante es igual a cero. "
+					+ "Las respuestas son iguales: " + respuestaUno + " y " + respuestaDos);
 			
 			
-			//termina esto
+			
+		} else { // discriminante positivo
+			
+			root = Math.sqrt(discriminante);
+			
+			System.out.println("La raíz es: " + root);
+			
+			
+			abajo = 2*a;
+			
+			System.out.println("El divisor es: " + abajo);
+			
+			respuestaUno = ((-b) + discriminante)/abajo;
+			respuestaDos = ((-b) - discriminante)/abajo;
+			
+			System.out.println("El discriminante es positivo. "
+					+ "Las respuestas son: " + respuestaUno + " y " + respuestaDos);
 			
 		}
 		
-		/*
-		if (condition1) {
-		    // code block
-		} else if (condition2) {
-		    // another code block
-		} else {
-		    // fallback block
-		}
-		*/
-		
-		
+		scanner.close();
 		
 	}
 
