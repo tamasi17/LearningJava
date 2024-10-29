@@ -9,8 +9,8 @@ public class EcuacionSegundoGrado {
 		
 		Scanner scanner = new Scanner(System.in);
 		
-		double a, b, c, root, arriba, abajo;
-		double discriminante;
+		double a, b, c, root, abajo;  // abajo se refiere al divisor, era mas facil verlo así
+		double discriminante;  // hay tres opciones de respuesta en funcion del discriminante
 		double respuestaUno, respuestaDos;
 		
 		System.out.println("Ecuación de segundo grado: ");
@@ -52,14 +52,12 @@ public class EcuacionSegundoGrado {
 					+ "Las respuestas son iguales: " + respuestaUno + " y " + respuestaDos);
 			
 			
-			
 		} else { // discriminante positivo
 			
 			root = Math.sqrt(discriminante);
 			
 			System.out.println("La raíz es: " + root);
-			
-			
+		
 			abajo = 2*a;
 			
 			System.out.println("El divisor es: " + abajo);
