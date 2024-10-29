@@ -7,9 +7,11 @@ public class Sueldos {
 	public static void main(String[] args) {
 		/*
 		 * 	se introducen una serie de sueldos por teclado
-		 *  obtenemos el sueldo mayor, el sueldo menor, media de los sueldos
-		 *  finaliza al introducir -1
+		 * obtenemos el sueldo mayor, el sueldo menor, media de los sueldos
+		 * finaliza al introducir -1
 		 * 
+		 * como no necesitamos poner en orden, solo sueldoMayor sueldoMenor y un contador para hacer la media después
+		 * pero sí hay que guardar los sueldos que nos dan para ir haciendo la media
 		 */
 
 		Scanner scanner = new Scanner(System.in);
@@ -26,17 +28,18 @@ public class Sueldos {
 		while (sueldo != -1) {
 			
 			i++;
-			System.out.println("Cantidad de sueldos: " + i); //para comprobar
+			//System.out.println("Cantidad de sueldos: " + i); //para comprobar
 			
 			suma += sueldo;
-			System.out.println("La suma es: " + suma); //para comprobar
+			//System.out.println("La suma es: " + suma); //para comprobar
 			
 			media = suma/i;
-			System.out.println("La media es: " + media); //para comprobar
+			//System.out.println("La media es: " + media); //para comprobar
 			
 			sueldoMax = (sueldo>sueldoMax) ? sueldo : sueldoMax;
 			sueldoMin = (sueldo<sueldoMin) ? sueldo : sueldoMin;
 			
+			System.out.println("Escribe un sueldo para continuar o '-1' para parar:");
 			sueldo = scanner.nextInt();
 			
 			
