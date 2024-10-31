@@ -1,18 +1,86 @@
 package calculadora;
 
+import java.util.Scanner;
+
 // realiza una clase matematica con metodos y pruebala en otra clase que lleve el metodo main
 
 public class matematicas {
+	
 
 	public static int suma(int a, int b) {	
 		return a + b;
 	}
 	
 	
+	
 	public static int resta(int a, int b) {	
 		return a - b;
 	}
+	
+	
+	public static double multiplicacion(int a, int b) {	
+		return a * b;
+	}
+	
+	public static double division(int a, int b) {	
+		return a / b;
+	}
+	
+	public static double potencia(int a, int b) {	
+		return (Math.pow(a, b));
+	}
 
+	
+	public static double raiz(int a) {	
+		return Math.sqrt(a);
+	}
+	
+	public static double porcentaje(int a, int b) {	
+		return ((a * b)/100);
+	}
+	
+	
+	
+	public static double factoriales(int factorial) {
+
+			Scanner scanner = new Scanner(System.in);
+
+			double acumulador=1; 
+			factorial=0;
+		
+			do {
+				
+				System.out.println("Introduce un número positivo: ");
+				factorial = scanner.nextInt();
+				
+			} while (factorial<0);
+			
+			
+			System.out.println("Calculamos el factorial de " + factorial);
+
+		
+			while (factorial>1){
+				
+				acumulador *= factorial;
+				factorial--;
+			}
+			
+			System.out.println("El factorial es: " + acumulador);
+			
+			scanner.close();
+			return acumulador;
+
+		}
+	
+	
+	
+	
+	
+	
+	
+
+	}
+	
 	
 	
 }
