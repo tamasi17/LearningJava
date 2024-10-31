@@ -1,0 +1,40 @@
+package calculadora;
+
+import java.util.Scanner;
+
+public class test {
+
+	public static void main(String[] args) {
+		// realiza una clase matematica con metodos y pruebala en otra clase que lleve el metodo main
+		
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.println("En esta calculadora puedes hacer las siguientes operaciones: \n"
+				+ "1: suma \n"
+				+ "2: resta \n"
+				+ "3: multiplicacion \n"
+				+ "4: division \n"
+				+ "5: potencia \n"
+				+ "6: porcentaje \n"
+				+ "7: factorial");
+		
+		// COMO REFERENCIAR CLASESSSS
+		
+		int operacion = scanner.nextInt();
+		
+		switch (operacion) {
+		
+		case 1:
+			System.out.println("Primer número:");
+			int a = scanner.nextInt();
+			System.out.println("Segundo número:");
+			int b = scanner.nextInt();
+			System.out.println("La suma es: " + suma(a,b));
+			
+			break;
+		
+		}
+
+	}
+
+}
