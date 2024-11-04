@@ -4,83 +4,94 @@ import java.util.Scanner;
 
 // realiza una clase matematica con metodos y pruebala en otra clase que lleve el metodo main
 
-public class matematicas {
+public class Matematicas {
 	
+	
+	// 1.SUMA
 
 	public static int suma(int a, int b) {	
 		return a + b;
 	}
 	
 	
+	// 2.RESTA
 	
 	public static int resta(int a, int b) {	
 		return a - b;
 	}
 	
 	
+	// 3.MULTIPLICACION
+	
 	public static double multiplicacion(int a, int b) {	
 		return a * b;
 	}
 	
+	
+	// 4.DIVISION
+	
 	public static double division(int a, int b) {	
 		return a / b;
 	}
+	
+	
+	// 5.POTENCIA
 	
 	public static double potencia(int a, int b) {	
 		return (Math.pow(a, b));
 	}
 
 	
+	// 6.RAIZ
+	
 	public static double raiz(int a) {	
 		return Math.sqrt(a);
 	}
+	
+	
+	// 7.PORCENTAJE
 	
 	public static double porcentaje(int a, int b) {	
 		return ((a * b)/100);
 	}
 	
 	
+	//8. ABSOLUTO
 	
-	public static double factoriales(int factorial) {
-
-			Scanner scanner = new Scanner(System.in);
-
-			double acumulador=1; 
-			factorial=0;
+	public static double abs(int a) {
 		
-			do {
-				
-				System.out.println("Introduce un número positivo: ");
-				factorial = scanner.nextInt();
-				
-			} while (factorial<0);
-			
-			
-			System.out.println("Calculamos el factorial de " + factorial);
-
-		
-			while (factorial>1){
-				
-				acumulador *= factorial;
-				factorial--;
-			}
-			
-			System.out.println("El factorial es: " + acumulador);
-			
-			scanner.close();
-			return acumulador;
-
-		}
-	
-	
-	
-	
-	
-	
-	
-
+		a = (a<0) ? -a : a;
+		return a;
 	}
 	
 	
 	
-}
+	
+	// 9.FACTORIALES
+	
+	
+	
+	
+	public static double factorial(int a) {
+
+			double acumulador=1; 
+			
+			
+			//System.out.println("Calculamos el factorial de " + factorial);
+
+		
+			while (a>1){
+				
+				acumulador *= a;
+				a--;
+			}
+			
+			//System.out.println("El factorial es: " + acumulador);
+			
+			return acumulador;
+
+		}
+	
+
+	} // fin class matematicas
+
