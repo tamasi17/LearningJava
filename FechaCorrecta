@@ -8,31 +8,32 @@ public class FechaCorrecta {
 		
 		Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Is this date correct?");
+        System.out.println("Dame una fecha");
         System.out.println("");
         
-        System.out.println("What year are we in?");
+        System.out.println("Cuál es el año?");
         int year = scanner.nextInt();
         
         System.out.println("");
-        System.out.println("Month?");
+        System.out.println("Mes?");
         int month = scanner.nextInt();
            
         System.out.println("");
-        System.out.println("What day is it?");
+        System.out.println("Y qué día?");
         int day = scanner.nextInt();
+        
         
         if (month == 4 || month == 6 || month == 9 || month == 11) {
         	
         	if (day < 0) {
         		
-        		System.out.println("Date incorrect");
+        		System.out.println("Fecha incorrecta");
         	} else if (day <= 30){
         		
-        		System.out.println("Date is correct!");
+        		System.out.println("Fecha correcta!");
         		
         	} else {
-        		System.out.println("Date is incorrect");
+        		System.out.println("Fecha incorrecta");
         	}
         	
         	
@@ -40,38 +41,45 @@ public class FechaCorrecta {
         		
             	if (day < 0) {
             		
-            		System.out.println("Date incorrect");
+            		System.out.println("Fecha incorrecta");
             	} else if (day <= 31){
             		
-            		System.out.println("Date is correct!");
+            		System.out.println("Fecha correcta!");
             		
             	} else {
-            		System.out.println("Date is incorrect");
+            		System.out.println("Fecha incorrecta");
             	}
         	
         	} else if (month == 2) {
         		
-        		if (day < 0) {
+        		if ((year % 4 == 0) && (year % 100 != 0)) {
+        			
+        			if (day < 0) {
+                		
+            	    	System.out.println("Fecha incorrecta");
+            	    } else if (day <= 29){
+            		
+            		    System.out.println("Fecha correcta!");
+            		
+            	    } else {
+            		System.out.println("Fecha incorrecta");
+            	    
+            	    }
+        			
+        		} else if (day < 0) {
         		
-        	    	System.out.println("Date incorrect");
-        	    } else if (day <= 31){
+        	    	System.out.println("Fecha incorrecta");
+        	    } else if (day <= 28){
         		
-        		    System.out.println("Date is correct!");
+        		    System.out.println("Fecha correcta!");
         		
         	    } else {
-        		System.out.println("Date is incorrect");
+        		System.out.println("Fecha incorrecta");
         	    
         	    }
         
         	}
-       
-       
-        
-        
-        
-        
-        
-        
+    
         
         scanner.close();
         
