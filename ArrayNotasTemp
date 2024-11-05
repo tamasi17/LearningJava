@@ -1,0 +1,66 @@
+package ejercicios_Mats;
+
+import java.util.Scanner;
+
+public class ArrayNotas {
+
+	public static void main(String[] args) {
+		/*
+		 * Tenemos un array para guardar las notas de una clase en formato decimal
+		 * 
+		 * El tamaño del array será el número de alumnos de la clase
+		 * 
+		 * Mostraremos el siguiente informe con datos calculados; 
+		 *    Nota máxima, nota mínima, nota media, número de alumnos por encima y debajo de la media
+		 * 
+		 * Introducir las notas, visualizar las notas
+		 * 
+		 */
+
+		// tipo [] nombreArray = new tipo[tamaño];
+		
+		Scanner scanner = new Scanner(System.in);
+		
+		
+		System.out.println("Cuantos alumnos hay en Sistemas Informaticos?");
+		
+		int alumnos = scanner.nextInt();
+		
+		int i=0;     //contador para llenar el array
+		
+		double suma=0; // para hacer la media
+		
+		 
+				
+		
+		double[] notas = new double[alumnos];       // declarar array
+		
+		
+		
+		for (i=0; i<notas.length; i++) {        // Introduce datos con un for por posicion
+			
+			System.out.println("Dame la nota del alumno " + i);    // puedes poner (i+1) para que empiece en 1 pero te va a liar
+			notas[i] = scanner.nextDouble();
+		}
+		
+		
+		for (i=0; i<notas.length; i++) {        // Para visualizar los datos
+			
+			System.out.println("El alumno " + i + " tiene un: " + notas[i]);
+		}
+		
+		
+		for (i=0; i<notas.length; i++) {        // Para visualizar los datos
+			
+			suma+=notas[i];
+			
+		}
+		
+		System.out.println("La media es de " + (suma/notas.length));
+		
+		
+		scanner.close();
+		
+	}
+
+}
