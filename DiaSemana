@@ -1,4 +1,3 @@
-//Check a way without an imported scanner to do this.
 package ejercicios_Mats;
 
 import java.util.Scanner;
@@ -17,7 +16,7 @@ public class DiaSemana {
                 dayNumber = scanner.nextInt();
                 
                 if (dayNumber < 1 || dayNumber > 7) {
-                    System.out.println("Incorrecto! Por favor introduce un número del 1 al 7.");
+                    System.out.println("No es correcto.");
                  }
                 
         } while (dayNumber < 1 || dayNumber > 7);
