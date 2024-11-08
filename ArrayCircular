@@ -32,7 +32,7 @@ public class ArrayCircular {
 			MetodosArray.introValores(circulo);
 			
 			
-			System.out.println("\nAsí se ve tu array");
+			System.out.println("\nAsí se ve tu array original:");
 			MetodosArray.muestraValores(circulo);
 			
 			
@@ -49,20 +49,34 @@ public class ArrayCircular {
 			 * 
 			 */
 			
+			int continuar=1;
 			
-			
-			for (i=0; i<circulo.length; i++) {
+			while (continuar!=0) {
 				
+				MetodosArray.desplazar(circulo);
+				
+				System.out.println("Este es tu array desplazado:");
+				MetodosArray.muestraValores(circulo);
+				
+				
+				System.out.println("\nSi quieres parar, pulsa 0. "
+						+ "Pulsa cualquier otro numero para seguir desplazando el array");
+				
+				continuar=scanner.nextInt();
 				
 			}
 			
 			
+			System.out.println("Quieres hacer otro array?"
+					+ " Si quieres parar, pulsa 0");
+			
+			tamaño=scanner.nextInt();
 			
 		} while (tamaño!=0);
 		
 		
+		System.out.println("Gracias!");
 		
-		scanner.close();
 		
 		
 	}
