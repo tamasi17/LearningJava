@@ -1,0 +1,17 @@
+package ejercicios_Mats;
+
+public class Dado {
+
+	public static void main(String[] args) {
+		/* tira un dado 1000 veces
+		   porcentajes de los resultados
+		
+		   para tirar el dado: funcion rand
+		   en un array, salvando el cero, se van guardando las tiradas
+		   
+		   visualizar los porcentajes de cada resultado del 1 al 6
+		   
+		*/
+	}
+
+}
