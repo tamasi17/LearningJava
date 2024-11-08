@@ -23,7 +23,7 @@ public class MetodosArray {
 			
 		}
 		
-		scanner.close();
+		
 		return array;
 	}
 	
@@ -41,7 +41,22 @@ public class MetodosArray {
 	
 	
 	
+	// desplazar una posicion los numeros
+	
+	public static void desplazar(int[] array) {	
+
+		int ultimo = array[0];
+		int i;
+		
+		for (i=0; i<(array.length-1); i++) {
+			
+			array[i] = array[i+1];
+		}
+		
+		array[i]=ultimo;
+		
+	}
 	
 	
+} //fin clase
 	
-}
