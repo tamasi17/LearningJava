@@ -90,6 +90,79 @@ public class MetodosArray {
 	}
 	
 	
+	// mostrar respuesta por pantalla
+	
+	public static void muestraRespuesta(char[] array1, char[] array2 ) {	
+		
+		for (int i=0; i<array1.length ; i++) {
+			
+			if ( array1[i] == array2[i] ) {
+				
+				System.out.print(array1[i]);
+				
+			} else {
+				
+				System.out.print(" _ ");
+			}
+			
+		}
+	}
+	
+	
+	
+	// confirma si un char esta dentro del array
+	
+	public static boolean estaDentro(char[] array, char c) {	
+		
+		boolean dentro=false;
+		
+		for (int i=0; i<array.length ; i++) {
+			
+			if (array[i] == c) {
+				dentro=true;
+				break;
+			}
+			
+		}
+		
+		return dentro;
+	}
+	
+	
+	// evalua si dos arrays tienen los mismos valores
+	
+	public static boolean arraysIguales(char[] array1, char[] array2) {
+	    
+		boolean sonIguales=true;
+		
+	    for (int i = 0; i < array1.length; i++) {
+	        if (array1[i] != array2[i]) {
+	            sonIguales=false;
+	        }
+	    }
+
+	    return sonIguales;
+	}
+	
+	
+	// confirma si el char que recibimos es una letra
+	
+	public static boolean esLetra(char c) {
+	    
+		boolean esLetra=false;
+		
+		int caracter = (int) c;
+		
+		// en este entorno --> a=97, z=122, ñ=241
+		
+		if (((caracter>=97) && (caracter<=122)) || (caracter==241)){
+			esLetra=true;
+		}
+		
+	    return esLetra;
+	}
+	
+	
 	
 	
 }
