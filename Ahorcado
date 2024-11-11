@@ -143,6 +143,16 @@ public class Ahorcado {
 			System.out.println("Perdiste");
 		}
 		
-	}
+		
+		/*
+		 * quería comprobar si funcionaba esto si la letra que nos dan por teclado es una letra:
+		 * haciendo el cast a int y viendo si ese char está entre 97 (a) y 122 (z) + ñ (241)
+		 * en vez de hacer un array con todo el alfabeto
+		 * 
+		 */
+			
+		
+	}	
+	
 
 }
