@@ -45,9 +45,6 @@ public class Ahorcado {
 		int intentosFallados=0;
 		int oportunidades=7;
 		
-		System.out.println("Tienes "+ oportunidades +" oportunidades."); //introducir dibujito
-		
-		
 		
 		System.out.println("Introduce las letras de la palabra de una en una.");
 		
@@ -57,7 +54,7 @@ public class Ahorcado {
 		
 		
 		System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n"); // para que el segundo jugador no vea la palabra secreta
-		
+		System.out.println("Tienes "+ oportunidades +" oportunidades.");
 		
 		
 		
@@ -100,11 +97,11 @@ public class Ahorcado {
 				} 
 				
 				
-				System.out.println("\n o---- Acertaste! ----o \n");
+				System.out.println("  Acertaste! Tienes "+ oportunidades +" oportunidades.");
 				
 				DibujoAhorcado.intentos(intentosFallados);
 				
-				
+				System.out.print("Tu respuesta: ");
 				MetodosArray.muestraRespuesta(respuesta, palabra);
 				System.out.print("\nFalladas: ");
 				MetodosArray.muestraPalabra(fallos);
@@ -138,9 +135,10 @@ public class Ahorcado {
 		
 		
 		if (MetodosArray.arraysIguales(respuesta, palabra)==true) {
-			System.out.println("Ganaste!");
+			System.out.println("Ganaste!!  d(^o^)b");
 		} else {
-			System.out.println("Perdiste");
+			System.out.print("¯\\_(··)_/¯  Perdiste, la palabra que buscas es: ");
+			MetodosArray.muestraPalabra(palabra);
 		}
 		
 		
@@ -150,9 +148,9 @@ public class Ahorcado {
 		 * en vez de hacer un array con todo el alfabeto
 		 * 
 		 */
-			
 		
-	}	
+		
+	}
 	
 
 }
