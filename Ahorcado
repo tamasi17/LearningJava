@@ -25,7 +25,6 @@ public class Ahorcado {
 		 */
 
 		
-		
 		Scanner scanner = new Scanner(System.in);
 		
 		System.out.println("Cuantas letras tiene tu palabra secreta?");
@@ -43,10 +42,10 @@ public class Ahorcado {
 		boolean acierto;
 		
 		int i=0;
-		int falladas=0;
+		int intentosFallados=0;
 		int oportunidades=7;
 		
-		System.out.println("Tienes "+ oportunidades+" oportunidades."); //introducir dibujito
+		System.out.println("Tienes "+ oportunidades +" oportunidades."); //introducir dibujito
 		
 		
 		
@@ -54,71 +53,95 @@ public class Ahorcado {
 		
 		MetodosArray.introChar(palabra);
 		
-		MetodosArray.muestraPalabra(palabra);  // descomentar para comprobar
+		//MetodosArray.muestraPalabra(palabra);  // descomentar para comprobar
+		
+		
+		System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n"); // para que el segundo jugador no vea la palabra secreta
 		
 		
 		
-		do {
 		
-			System.out.println("\nAdivina una letra: \n");
-	
-			acierto=false;
-			letra = scanner.next().charAt(0);
+		do { // mientras la respuesta sea diferente de la palabra secreta y queden oportunidades.
+		
 			
 			
-			for (i=0; i<palabra.length; i++) {
+			// comprueba si es un letra haciendo cast del char a int 
+			// a=97, z=122, ñ=241
+			//(no funciona si se usa otro Unicode)
+			
+			do {
+				
+				System.out.println("\nAdivina una letra: \n");
+				
+				letra = scanner.next().charAt(0);
+				
+			} while (MetodosArray.esLetra(letra)==false); 
+			
+			
+			// comprueba si ya hemos usado la letra
+			
+			if ( (MetodosArray.estaDentro(respuesta, letra)==true) || (MetodosArray.estaDentro(fallos, letra)==true) ) {
+				
+				System.out.println("Elige una letra que no hayas usado, por favor.");
 				
 				
-				if ( letra == palabra[i] ) {
+			// comprueba si la letra está en la palabra secreta	
+				
+			} else if ( (MetodosArray.estaDentro(palabra, letra)==true) ){
+				
+				
+				for (i=0; i<palabra.length; i++) {  // añade la letra a la respuesta
 					
-					respuesta[i] = letra;
-					acierto=true;
 					
-					//funcion dibujo con acierto	
-				}
-				
-				
-			} // cierre for comprobacion letra == palabra
-			
-			
-			if (acierto == true){
-				
-				System.out.println("\n Acertaste! \n");
-				DibujoAhorcado.intentos(falladas);
-				
-				//ENSEÑAR LA RESPUESTA CON ESPACIOS VACIOS:
-					for (i=0; i<palabra.length ; i++) {
+					if ( letra == palabra[i] )
 						
-						System.out.print();
-					}
-
-				// SON TODAS IGUALES?
+						respuesta[i] = letra;
+					
+				} 
 				
 				
-			} else {
+				System.out.println("\n o---- Acertaste! ----o \n");
+				
+				DibujoAhorcado.intentos(intentosFallados);
+				
+				
+				MetodosArray.muestraRespuesta(respuesta, palabra);
+				System.out.print("\nFalladas: ");
+				MetodosArray.muestraPalabra(fallos);
+				
+			
+			// si la letra no está en la palabra secreta		
+				
+			} else if ( (MetodosArray.estaDentro(palabra, letra)==false) ) {
+				
+				fallos[intentosFallados] = letra;
 				
 				oportunidades--;
-				System.out.println("\nFatal txiki, te quedan"+ oportunidades +" oportunidades. \n");
 				
-				falladas++;
-				DibujoAhorcado.intentos(falladas);
+				System.out.println("\nFatal txiki, te quedan "+ oportunidades +" oportunidades.");
 				
+				intentosFallados++;
+				DibujoAhorcado.intentos(intentosFallados);
+				
+				MetodosArray.muestraRespuesta(respuesta, palabra);
+				System.out.print("\nFalladas: ");
+				MetodosArray.muestraPalabra(fallos);
 			}
+
 			
 			
 			
-			MetodosArray.muestraPalabra(respuesta); //descomentar para comprobar
+			// MetodosArray.muestraPalabra(respuesta); //descomentar para comprobar
 			
-		} while (oportunidades>0);
+			
+		} while ( (MetodosArray.arraysIguales(palabra, respuesta)==false) && (oportunidades>0) );
 		
 		
-	
-		
-		
-		
-		
-		
-		
+		if (MetodosArray.arraysIguales(respuesta, palabra)==true) {
+			System.out.println("Ganaste!");
+		} else {
+			System.out.println("Perdiste");
+		}
 		
 	}
 
