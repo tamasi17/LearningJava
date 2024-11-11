@@ -23,10 +23,12 @@ public class MetodosArray {
 			
 		}
 		
-		
+		scanner.close();
 		return array;
 	}
 	
+	
+
 	
 	// mostrar valores por pantalla
 	
@@ -58,5 +60,36 @@ public class MetodosArray {
 	}
 	
 	
-} //fin clase
+	// para introducir chars
 	
+	public static char[] introChar(char[] array ) {	
+		
+		Scanner scanner = new Scanner(System.in);
+		
+		int i;
+		for (i=0; i<array.length ; i++) {
+			
+			System.out.println("Dame una letra:");
+			array[i] = scanner.nextLine().charAt(0);
+		}
+		
+		scanner.close();
+		return array;
+	}
+	
+	
+	// mostrar valores por pantalla
+	
+	public static void muestraPalabra(char[] array ) {	
+		
+		int i;
+		for (i=0; i<array.length ; i++) {
+			
+			System.out.print(array[i]);
+		}
+	}
+	
+	
+	
+	
+}
