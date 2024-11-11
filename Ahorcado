@@ -1,0 +1,125 @@
+package ejercicios_Mats;
+
+import java.util.Scanner;
+
+public class Ahorcado {
+
+	public static void main(String[] args) {
+		/*
+		 * 
+		 * Juego del ahorcado con array
+		 * 
+		 * Array hecho con char
+		 * 
+		 * cantidad de letras fija: 7
+		 * 
+		 * array para introducir las letras de char en char
+		 * array para comprobar si las letras que se adivinan coinciden
+		 * 
+		 * si los intentos son menos que 7 y las letras coinciden ganas
+		 * 
+		 * por cada intento se va dibujando en un metodo por separado el ahorcado
+		 * 
+		 * printf("__%f o %i", un float, un int, etc.) en el orden en el que hemos puesto estos, pones el float o el int mencionado, separados por comas.
+		 * 
+		 */
+
+		
+		
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.println("Cuantas letras tiene tu palabra secreta?");
+		
+		int longitud = scanner.nextInt();
+		
+		char[] palabra = new char[longitud];
+		
+		char[] respuesta = new char[longitud];
+		
+		char[] fallos = new char[27]; 	// array letras falladas
+	
+		
+		char letra;
+		boolean acierto;
+		
+		int i=0;
+		int falladas=0;
+		int oportunidades=7;
+		
+		System.out.println("Tienes "+ oportunidades+" oportunidades."); //introducir dibujito
+		
+		
+		
+		System.out.println("Introduce las letras de la palabra de una en una.");
+		
+		MetodosArray.introChar(palabra);
+		
+		MetodosArray.muestraPalabra(palabra);  // descomentar para comprobar
+		
+		
+		
+		do {
+		
+			System.out.println("\nAdivina una letra: \n");
+	
+			acierto=false;
+			letra = scanner.next().charAt(0);
+			
+			
+			for (i=0; i<palabra.length; i++) {
+				
+				
+				if ( letra == palabra[i] ) {
+					
+					respuesta[i] = letra;
+					acierto=true;
+					
+					//funcion dibujo con acierto	
+				}
+				
+				
+			} // cierre for comprobacion letra == palabra
+			
+			
+			if (acierto == true){
+				
+				System.out.println("\n Acertaste! \n");
+				DibujoAhorcado.intentos(falladas);
+				
+				//ENSEÑAR LA RESPUESTA CON ESPACIOS VACIOS:
+					for (i=0; i<palabra.length ; i++) {
+						
+						System.out.print();
+					}
+
+				// SON TODAS IGUALES?
+				
+				
+			} else {
+				
+				oportunidades--;
+				System.out.println("\nFatal txiki, te quedan"+ oportunidades +" oportunidades. \n");
+				
+				falladas++;
+				DibujoAhorcado.intentos(falladas);
+				
+			}
+			
+			
+			
+			MetodosArray.muestraPalabra(respuesta); //descomentar para comprobar
+			
+		} while (oportunidades>0);
+		
+		
+	
+		
+		
+		
+		
+		
+		
+		
+	}
+
+}
