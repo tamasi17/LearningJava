@@ -73,12 +73,12 @@ public class MetodosArray {
 			array[i] = scanner.nextLine().charAt(0);
 		}
 		
-		scanner.close();
+		
 		return array;
 	}
 	
 	
-	// mostrar valores por pantalla
+	// mostrar palabra por pantalla
 	
 	public static void muestraPalabra(char[] array ) {	
 		
