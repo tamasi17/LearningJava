@@ -94,13 +94,14 @@ public class Ahorcado {
 				
 				System.out.println("  Acertaste! Tienes "+ oportunidades +" oportunidades.");
 				
+				/*
 				DibujoAhorcado.intentos(intentosFallados);
 				
 				System.out.print("Tu respuesta: ");
 				MetodosArray.muestraRespuesta(respuesta, palabra);
 				System.out.print("\nFalladas: ");
 				MetodosArray.muestraPalabra(fallos);
-				
+				*/
 			
 			// si la letra no está en la palabra secreta		
 				
@@ -113,21 +114,23 @@ public class Ahorcado {
 				System.out.println("\nFatal txiki, te quedan "+ oportunidades +" oportunidades.");
 				
 				intentosFallados++;
-				DibujoAhorcado.intentos(intentosFallados);
 				
-				MetodosArray.muestraRespuesta(respuesta, palabra);
-				System.out.print("\nFalladas: ");
-				MetodosArray.muestraPalabra(fallos);
 			}
 
+			DibujoAhorcado.intentos(intentosFallados);
+			
+			System.out.print("Tu respuesta: ");
+			MetodosArray.muestraRespuesta(respuesta, palabra);
+			
+			System.out.print("\nFalladas: ");
+			MetodosArray.muestraPalabra(fallos);
 			
 			
 			
-			// MetodosArray.muestraPalabra(respuesta); //descomentar para comprobar
-			
-			
-		} while ( (MetodosArray.arraysIguales(palabra, respuesta)==false) && (oportunidades>0) );
+		} while ( (MetodosArray.arraysIguales(palabra, respuesta)==false) && (oportunidades>0) );   // FIN JUEGO
 		
+		
+		// muestra si ganas o pierdes
 		
 		if (MetodosArray.arraysIguales(respuesta, palabra)==true) {
 			System.out.println("Ganaste!!  d(^o^)b");
