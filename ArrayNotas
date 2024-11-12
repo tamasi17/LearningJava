@@ -24,6 +24,8 @@ public class ArrayNotas {
 		
 		System.out.println("Cuantos alumnos hay en Sistemas Informaticos?");
 		
+		// introducimos numeros
+		
 		int alumnos = scanner.nextInt();
 		
 		int i=0;             //contador para llenar el array
@@ -41,7 +43,7 @@ public class ArrayNotas {
 		
 		for (i=0; i<notas.length; i++) {        // Introduce datos con un for por posicion
 			
-			System.out.println("Dame la nota del alumno " + (i+1));   
+			System.out.println("Dame la nota del alumno " + (i+1));   // introducimos notas
 			notas[i] = scanner.nextDouble();
 		}
 		
@@ -57,8 +59,8 @@ public class ArrayNotas {
 			suma+=notas[i];
 		}
 		
-		System.out.println("La media es de " + (suma/notas.length));
-		media = suma/notas.length; // necesitamos esta variable para el ultimo apartado
+		System.out.println("La media es de " + (suma/notas.length)); // se puede escribir así pero
+		media = suma/notas.length;                                   // necesitamos la variable media para el ultimo apartado
 		
 		
 		
@@ -119,15 +121,11 @@ public class ArrayNotas {
 		for (k=0; k<low.length; k++) {        // Para visualizar los datos
 			
 			System.out.println("El alumno suspenso " + (k+1) + " está por debajo de la media con un: " + low[k]);
-		}
+		}	
 		
 		
-		
-		
-		
-		
-		scanner.close();
-		
+		scanner.close();  
+	
 	}
 
 }
