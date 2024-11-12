@@ -2,7 +2,7 @@ package ejercicios_Mats;
 
 import java.util.Scanner;
 
-// realiza una clase matematica con metodos y pruebala en otra clase que lleve el metodo main
+// metodos para facilitar el uso de arrays (Ahorcado, Array Circular)
 
 public class MetodosArray {
 	
