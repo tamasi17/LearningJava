@@ -33,7 +33,7 @@ public class EcuacionSegundoGrado {
 		
 		if (discriminante < 0 ) {
 			
-			System.out.println("El discriminante es negativo, la ecuacion no tiene ninguna solucion real.");
+			System.out.println("El discriminante es negativo, la ecuación no tiene ninguna solución real.");
 			
 		} else if ( discriminante == 0 ) {
 			
