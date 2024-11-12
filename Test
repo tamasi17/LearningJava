@@ -9,7 +9,12 @@ public class Test {
 		
 		Scanner scanner = new Scanner(System.in);
 		
-		System.out.println("En esta calculadora puedes hacer las siguientes operaciones: \n"
+		int operacion;
+		
+		
+		do {
+		
+		System.out.println("\nEn esta calculadora puedes hacer las siguientes operaciones: \n"
 				+ "1: suma \n"
 				+ "2: resta \n"
 				+ "3: multiplicacion \n"
@@ -17,16 +22,16 @@ public class Test {
 				+ "5: potencia \n"
 				+ "6: porcentaje \n"
 				+ "7: absoluto\n"
-				+ "8: factorial\n");
+				+ "8: factorial\n"
+				+ "9: salir");
 		
 		int a = 0; 
 		int b = 0;
-		int c = 0;
-
 
 		
+		operacion = scanner.nextInt();
 		
-		int operacion = scanner.nextInt();
+	
 		
 		
 		// SWITCH
@@ -71,9 +76,9 @@ public class Test {
 			
 			
 		case 5:
-			System.out.println("Primer número:");
+			System.out.println("Base:");
 			a = scanner.nextInt();
-			System.out.println("Segundo número:");
+			System.out.println("Exponente:");
 			b = scanner.nextInt();
 			System.out.println("La potencia es: " + Matematicas.potencia(a,b));
 			
@@ -89,7 +94,7 @@ public class Test {
 			break;
 			
 		case 7:
-			System.out.println("Primer número:");
+			System.out.println("Dame un número:");
 			a = scanner.nextInt();
 			System.out.println("El absoluto es: " + Matematicas.abs(a));
 			
@@ -97,7 +102,7 @@ public class Test {
 		
 			
 		case 8: //factorial
-			System.out.println("Primer número:");
+			System.out.println("Dame un número:");
 			
 			a = scanner.nextInt();
 			
@@ -113,21 +118,12 @@ public class Test {
 			
 			
 		default:
-			System.out.println("Elige una de las opciones disponibles, por favor:");
-			
-			System.out.println("En esta calculadora puedes hacer las siguientes operaciones: \n"
-					+ "1: suma \n"
-					+ "2: resta \n"
-					+ "3: multiplicacion \n"
-					+ "4: division \n"
-					+ "5: potencia \n"
-					+ "6: porcentaje \n"
-					+ "7: factorial");
-		
+			System.out.println("Hasta luego!");
 			
 			
 		} // fin SWITCH
 
+		} while (operacion != 9);
 		
 		scanner.close();
 	}
