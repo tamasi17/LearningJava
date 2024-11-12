@@ -49,7 +49,7 @@ public class Contabilidad {
 			
 		} // fin for
 		
-		// mostramos resultados 
+		// mostramos resultados - tiene metodos nuevos porque el valor por defecto es cero y quedaba feo.
 		
 		System.out.println("\n\n----- Resultados por separado ----- ");
 		
