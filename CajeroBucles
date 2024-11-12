@@ -29,12 +29,7 @@ public class CajeroBucle {
 		c10 = 0;
 		c5 = 0;
 		c2 = 0;
-		c1 = 0;
-		
-		
-		
-		// NO FUNCIONA COMPROBARRRR
-		
+		c1 = 0;		
 		
 		
 		while (precio<=0) {
