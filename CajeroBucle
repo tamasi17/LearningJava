@@ -29,13 +29,21 @@ public class CajeroBucle {
 		c10 = 0;
 		c5 = 0;
 		c2 = 0;
-		c1 = 0;		
+		c1 = 0;
+		
+		
+		
+		// introducimos precio
+		
 		
 		
 		while (precio<=0) {
 			System.out.println("Cuánto ha costado?");
 			precio = scanner.nextDouble();
 		}
+		
+		
+		// dinero entregado
 		
 		do {
 			System.out.println("Cuánto nos entregan?");
@@ -45,6 +53,8 @@ public class CajeroBucle {
 		devolucion = recibido - precio;
 		
 		System.out.println("Hay que devolver: " + devolucion + " euros.");
+		
+		// repartimos devolucion por monedas practicando el uso de >= o ++
 		
 		if (devolucion == 0) {
 			
@@ -126,6 +136,8 @@ public class CajeroBucle {
 				devolucion -= 0.01;
 			}
 			
+			// recuento vuelta
+			
 			System.out.println("Aquí tiene su vuelta:\n");
 			
 			while (b500>0) {
@@ -150,7 +162,7 @@ public class CajeroBucle {
 			
 			while (b20>0) {
 				System.out.println("Billetes de 20: " + b20);
-				b500 = 0;
+				b20 = 0;
 			}
 			
 			while (b10>0) {
