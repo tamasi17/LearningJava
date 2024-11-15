@@ -23,7 +23,7 @@ public class MetodosArray {
 			
 		}
 		
-		scanner.close();
+		
 		return array;
 	}
 	
