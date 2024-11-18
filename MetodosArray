@@ -56,7 +56,7 @@ public class MetodosArray {
 		}
 		
 		array[i]=ultimo;
-		return array;
+		// no hay return array; porque no se necesita, solo mueve posiciones, por lo tanto es void y no int[]
 		
 	}
 	
