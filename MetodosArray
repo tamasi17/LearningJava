@@ -56,6 +56,7 @@ public class MetodosArray {
 		}
 		
 		array[i]=ultimo;
+		return array;
 		
 	}
 	
