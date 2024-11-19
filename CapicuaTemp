@@ -1,0 +1,67 @@
+import java.util.Scanner;
+
+public class NumeroCapicua {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Solicitar al usuario que ingrese un número
+        System.out.print("Ingrese un número: ");
+        int numero = scanner.nextInt();
+
+        // Convertir el número en un array de dígitos
+        int[] digitos = convertirEnArray(numero);
+
+        // Verificar si el número es capicúa
+        boolean esCapicua = verificarCapicua(digitos);
+
+        // Mostrar el resultado
+        if (esCapicua) {
+            System.out.println("El número " + numero + " es capicúa.");
+        } else {
+            System.out.println("El número " + numero + " no es capicúa.");
+        }
+
+        scanner.close();
+    }
+
+    /**
+     * Convierte un número entero en un array de dígitos.
+     *
+     * @param numero El número entero a convertir.
+     * @return Un array de enteros que representa los dígitos del número.
+     */
+    public static int[] convertirEnArray(int numero) {
+        String numeroComoTexto = String.valueOf(Math.abs(numero)); // Convertimos el número en texto.
+        int[] digitos = new int[numeroComoTexto.length()];
+
+        // Llenar el array con los dígitos del número
+        for (int i = 0; i < numeroComoTexto.length(); i++) {
+            digitos[i] = Character.getNumericValue(numeroComoTexto.charAt(i));
+        }
+
+        return digitos;
+    }
+
+    /**
+     * Verifica si un array de dígitos representa un número capicúa.
+     *
+     * @param digitos El array de dígitos a verificar.
+     * @return true si el array es capicúa, false en caso contrario.
+     */
+    public static boolean verificarCapicua(int[] digitos) {
+        int inicio = 0;
+        int fin = digitos.length - 1;
+
+        // Comparar los extremos del array mientras nos acercamos al centro
+        while (inicio < fin) {
+            if (digitos[inicio] != digitos[fin]) {
+                return false; // Si hay un par de dígitos diferentes, no es capicúa
+            }
+            inicio++;
+            fin--;
+        }
+
+        return true; // Si pasamos todas las comparaciones, es capicúa
+    }
+}
