@@ -1,0 +1,58 @@
+package ejercicios;
+
+import java.util.Scanner;
+
+public class Ejercicio9 {
+
+	public static void main(String[] args) {
+
+
+	/* se introducen datos hasta que uno sea negativo
+	 * suma de edades
+	 * media
+	 * cuantos alumnos
+	 * cuantos mayores de edad
+	 * 
+	 * 
+	 */
+		
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.println("Estadísticas Edades: \n");
+		
+		// declaracion de variables
+		
+		int edad, suma, totalAlumnos, mayores;
+		double media=0;
+		
+		edad=0;
+		suma=0;
+		totalAlumnos=0;
+		mayores=0;
+		
+		do {  // bucle mientras que nos den numeros positivos
+			
+			totalAlumnos++;
+			
+			suma+=edad;
+			
+			if (edad>=18) {
+				mayores++;
+			}
+			
+			System.out.println("Dime la edad del alumno " + totalAlumnos);
+			edad=scanner.nextInt();
+
+		} while (edad>=0);
+		
+		media = (suma/(totalAlumnos-1));  // se podria hacer cast a int para redondear si quisieramos
+		
+		System.out.println("Hay " + (totalAlumnos-1) + " alumnos.\n"
+				+ "La suma de sus edades es: " + suma
+				+ "\nLa media de edad es: " + media
+				+ "\nDe ellos, " + mayores + " son mayores de edad.");
+		
+		
+	}
+
+}
