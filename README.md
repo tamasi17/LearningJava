@@ -3,4 +3,4 @@
 
 Este repositorio es para aprender a usar GitHub y el control de versiones.
 
-En el *readme-edits* se prueban cambios diferentes al *main*
+Todos los metodos propios que conciernen a Arrays estan juntos en la clase MetodosArray para poder reutilizarlos/revisarlos.
