@@ -56,7 +56,6 @@ public class MetodosArray {
 		}
 		
 		array[i]=ultimo;
-		// no hay return array; porque no se necesita, solo mueve posiciones, por lo tanto es void y no int[]
 		
 	}
 	
@@ -219,6 +218,27 @@ public class MetodosArray {
 			System.out.print(array[i] + " ");
 			}
 		}	
+	}
+	
+	
+	// confirma si un numero que hemos convertido en array, es capicúa
+	
+	public static boolean esCapicua(int[] array) {	
+		
+		boolean capicua=true;
+		
+//		Un contador empieza en el principio del numero y otro en el ultimo digito. A medida que se acercan al centro, confirmamos si son iguales.
+		
+		for (int i=0, j=array.length-1; i<(array.length/2) ; i++, j--) {
+			
+			if (array[i] != array[j]) {
+				capicua=false;
+				break;
+			}
+		
+		}
+		
+		return capicua;
 	}
 	
 	
