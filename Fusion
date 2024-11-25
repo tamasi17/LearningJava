@@ -1,0 +1,46 @@
+package ejercicios_Mats;
+
+import java.util.Scanner;
+
+public class Fusion {
+
+	public static void main(String[] args) {
+
+//		Fusiona dos arrays en un tercero sabiendo que estan ordenados.
+
+//		Como ejemplo, pondre pares e impares hasta el 10
+		
+		Scanner scanner = new Scanner(System.in);
+		
+		
+		int[] pares = {2,4,6,8,10};
+		int[] impares = {1,3,5,7,9};
+		int[] fusion = new int[10];
+		
+		
+		System.out.println("Primer array:");
+		MetodosArray.muestraValores(pares);
+		System.out.println("\nSegundo array:");	
+		MetodosArray.muestraValores(impares);
+		
+		for (int i=0; i<pares.length ; i++) {       
+		
+			if (impares[i]>pares[i]) {
+				fusion[i] = impares[i];
+				fusion[i+1] = pares[i];
+			} else {
+				fusion[i] = impares[i];
+			}
+			
+		}
+		
+		
+		
+		System.out.println("\n\nFusion de ambos:");
+
+		MetodosArray.muestraValores(fusion);
+		
+		
+	}
+
+}
