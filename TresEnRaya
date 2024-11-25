@@ -1,0 +1,36 @@
+package ejercicios_Mats;
+
+import java.util.Scanner;
+
+public class TresEnRaya {
+
+	public static void main(String[] args) {
+
+//		Tres en raya con array bidimensional.
+		
+		
+//		Array bidimensional, dos opciones, una para cada jugador. 
+		
+//		Será mas facil con int array. mayor que cero para un jugador, menor para el otro? si es cero, se puede jugar esa posicion, si no, se vuelve a pedir el valor
+		
+//		En la entrada, comprobar si esa posicion ya esta jugada. 
+		
+//		Luego comprobar los numeros que esten alrededor.
+
+		
+		Scanner scanner = new Scanner(System.in);
+		
+		
+		int [][] tres = new int[3][3];
+		
+//		System.out.println(tres[0][0]);
+		
+		
+		
+		
+		
+		
+		
+	}
+
+}
