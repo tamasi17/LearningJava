@@ -34,8 +34,6 @@ public class SumaArrays {
 		}
 		
 		
-		for
-		
 		System.out.println("\n\nSuma de ambos:");
 
 		MetodosArray.muestraValores(suma);
