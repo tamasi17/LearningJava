@@ -1,0 +1,37 @@
+package ejercicios_Mats;
+
+public class ArraysBidi {
+	
+	
+//	Clase para guardar metodos utiles en Arrays Bidimensionales
+	
+	
+//	Tres en raya, 
+	
+	
+	
+	
+	
+	
+//	Para mostrar por pantalla un array bidimensional:
+	
+	
+	
+	public static void muestraBidi(int[][] array) {	
+		
+		for (int i = 0; i < array.length; i++) {
+			
+			for (int j = 0; j < array.length; j++) {
+				
+				System.out.print(array[i][j]+" ");
+			}
+			
+			System.out.println("");
+		}	
+
+	} // fin muestraBidi
+	
+	
+	
+
+}
