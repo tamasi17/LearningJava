@@ -11,7 +11,7 @@ public class TresEnRaya {
 		
 //		Array bidimensional, dos opciones X y O, una para cada turno, asi la jugadora solo tiene que elegir posicion. 
 		
-
+//		No estamos usando la clase Arrays para este ejercicio.
 		
 		
 //		En la entrada, comprobar si esa posicion ya esta jugada. 
@@ -47,198 +47,147 @@ public class TresEnRaya {
 		}
 		
 		
+		int turnos=1;                // a los 9 turnos se termina
 		
 		boolean turnoX = true;       // para cambiar turno
-		boolean yaJugada = false;    // para comprobar si la posicion está ya utilizada
+		
 		boolean hayGanador = false;  // se sigue jugando mientras no haya ganador
 		
 		
 		
 		do{
 			
+			boolean yaJugada = false;    // para comprobar si la posicion está ya utilizada
+			
+			
+			
+			
 			while (!yaJugada) {   // switch 1 - 9 - representan [0][0] al [2][2], confirmamos si se ha jugado esa posicion
 				
+				
+				
+				System.out.println("");
 				ArraysBidi.muestraBidi(posiciones);
 				System.out.println("\n----- Marca tu posición del 1 al 9: \n");
 				ArraysBidi.muestraBidi(tres);
 				
 				pos=scanner.nextInt();
 				
+				
+//				Primero confirma si la posicion esta jugada:
+				
 				switch (pos) {
 				
-				case 1:
-					
-					yaJugada=ArraysBidi.posicionJugada(0, 0, tres);
-					if (yaJugada) { // si ya se jugó, repite switch
-						break;
-					} else {         // si se juega verifica turno
-						if (turnoX){
-							tres[0][0]='X';
-						} else {
-							tres[0][0]='O';
-						}
-						
-						ArraysBidi.cambioTurno(turnoX); // avanza turno
-					}
-					
-					break;
-					
-				case 2:
-					yaJugada=ArraysBidi.posicionJugada(0, 1, tres);
-
-					if (yaJugada) { // si ya se jugó, repite switch
-						break;
-					} else {         // si se juega verifica turno
-						if (turnoX){
-							tres[0][1]='X';
-						} else {
-							tres[0][2]='O';
-						}
-						
-						ArraysBidi.cambioTurno(turnoX); // avanza turno
-					}
-					
-					break;
-					
-				case 3:
-					yaJugada=ArraysBidi.posicionJugada(0, 2, tres);
-
-					if (yaJugada) { // si ya se jugó, repite switch
-						break;
-					} else {         // si se juega verifica turno
-						if (turnoX){
-							tres[0][2]='X';
-						} else {
-							tres[0][2]='O';
-						}
-						
-						ArraysBidi.cambioTurno(turnoX); // avanza turno
-					}
-					
-					break;
-					
-				case 4:
-					yaJugada=ArraysBidi.posicionJugada(1, 0, tres);
-
-					if (yaJugada) { // si ya se jugó, repite switch
-						break;
-					} else {         // si se juega verifica turno
-						if (turnoX){
-							tres[1][0]='X';
-						} else {
-							tres[1][0]='O';
-						}
-						
-						ArraysBidi.cambioTurno(turnoX); // avanza turno
-					}
-					
-					break;
-					
-				case 5:
-					yaJugada=ArraysBidi.posicionJugada(1, 1, tres);
-
-					if (yaJugada) { // si ya se jugó, repite switch
-						break;
-					} else {         // si se juega verifica turno
-						if (turnoX){
-							tres[1][1]='X';
-						} else {
-							tres[1][1]='O';
-						}
-						
-						ArraysBidi.cambioTurno(turnoX); // avanza turno
-					}
-					
-					break;
-					
-				case 6:
-					yaJugada=ArraysBidi.posicionJugada(1, 2, tres);
-
-					if (yaJugada) { // si ya se jugó, repite switch
-						break;
-					} else {         // si se juega verifica turno
-						if (turnoX){
-							tres[1][2]='X';
-						} else {
-							tres[1][2]='O';
-						}
-						
-						ArraysBidi.cambioTurno(turnoX); // avanza turno
-					}
-					
-					break;
-					
-				case 7:
-					yaJugada=ArraysBidi.posicionJugada(2, 0, tres);
-
-					if (yaJugada) { // si ya se jugó, repite switch
-						break;
-					} else {         // si se juega verifica turno
-						if (turnoX){
-							tres[2][0]='X';
-						} else {
-							tres[2][0]='O';
-						}
-						
-						ArraysBidi.cambioTurno(turnoX); // avanza turno
-					}
-					
-					break;
-					
-				case 8:
-					yaJugada=ArraysBidi.posicionJugada(2, 1, tres);
-
-					if (yaJugada) { // si ya se jugó, repite switch
-						break;
-					} else {         // si se juega verifica turno
-						if (turnoX){
-							tres[2][1]='X';
-						} else {
-							tres[2][1]='O';
-						}
-						
-						ArraysBidi.cambioTurno(turnoX); // avanza turno
-					}
-					
-					break;
+				case 1: yaJugada=ArraysBidi.posicionJugada(0, 0, tres);
+				break;
+				case 2: yaJugada=ArraysBidi.posicionJugada(0, 1, tres);
+				break;
+				case 3: yaJugada=ArraysBidi.posicionJugada(0, 2, tres);
+				break;
+				case 4: yaJugada=ArraysBidi.posicionJugada(1, 0, tres);
+				break;
+				case 5: yaJugada=ArraysBidi.posicionJugada(1, 1, tres);
+				break;
+				case 6: yaJugada=ArraysBidi.posicionJugada(1, 2, tres);
+				break;
+				case 7: yaJugada=ArraysBidi.posicionJugada(2, 0, tres);
+				break;
+				case 8: yaJugada=ArraysBidi.posicionJugada(2, 1, tres);
+				break;
+				case 9: yaJugada=ArraysBidi.posicionJugada(2, 2, tres);
+				break;
 				
-				case 9:
-					yaJugada=ArraysBidi.posicionJugada(2, 2, tres);
-
-					if (yaJugada) { // si ya se jugó, repite switch
-						break;
-					} else {         // si se juega verifica turno
-						if (turnoX){
-							tres[2][2]='X';
-						} else {
-							tres[2][2]='O';
-						}
-						
-						ArraysBidi.cambioTurno(turnoX); // avanza turno
-					}
-					
-					break;
-
 				default:
-					yaJugada=true;
-					break;
-					
-				} //fin switch
+					System.out.println("Elige una posición del 1 al 9, por favor.");
+					continue;          // el continue sirve para volver al principio del while (en vez de break que lo finaliza)
+				}
 				
-			} // fin while confirmando si la posicion ya se ha jugado
+				
+				
+//				Una vez confirmado que se puede jugar esa posicion, se juega en funcion del turno que toque:
+
+				
+				if (yaJugada) {
+					
+					System.out.println("Esa posicion ya está jugada, elige otra.");
+						
+				} else {
+					
+					switch (pos) {
+					
+					case 1:
+												
+						tres[0][0] = turnoX ? 'X':'O';
+						break;
+						
+					case 2:
+						
+						tres[0][1] = turnoX ? 'X':'O';
+						break;
+						
+					case 3:
+						
+						tres[0][2] = turnoX ? 'X':'O';
+						break;
+						
+					case 4:
+						
+						tres[1][0] = turnoX ? 'X':'O';
+						break;
+						
+					case 5:
+						
+						tres[1][1] = turnoX ? 'X':'O';
+						break;
+						
+					case 6:
+						
+						
+						tres[1][2] = turnoX ? 'X':'O';
+						break;
+						
+					case 7:
+						
+						tres[2][0] = turnoX ? 'X':'O';
+						break;
+						
+					case 8:
+						
+						tres[2][1] = turnoX ? 'X':'O';
+						break;
+						
+					
+					case 9:
+
+						tres[2][2] = turnoX ? 'X':'O';
+						break;
+						
+					} //fin switch jugar posicion
+					
+					
+					turnoX=!turnoX;      // cambio de turno
+					turnos++;
+					
+				} // fin else juego de turno
+				
+				
+			hayGanador = ArraysBidi.ganaAlguien(tres);
 			
-			hayGanador= //metodo aqui
+			if (hayGanador || (turnos>8) ) break; // si se ha ganado, rompe el bucle while
+				
+			} // fin while
 			
-			/*  
-			  
-				revisar todo el tablero > boolean alguien ha ganado?
-				no: continua el while
-				yes: fin
-			*/
+//		Añadir un break de nueve turnos ?????
 			
-		} while (!hayGanador);
+			
+		} while (!hayGanador && (turnos<8) );
 		
+		System.out.println("\nCantidad de turnos: " + turnos);
+		if (hayGanador) System.out.println("\nGanaste!");  // el ultimo en jugar esa posicion ha ganado
+		if (turnos>8) System.out.println("Empate!");
+		ArraysBidi.muestraBidi(tres);
 		
+		// queda comprobar si hay empate
 		
 	}
 
