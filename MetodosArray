@@ -10,7 +10,7 @@ public class MetodosArray {
 	
 	
 	
-	// for para rellenar int arrays
+// 	for para rellenar int arrays
 
 	public static int[] introValores(int[] array ) {	
 		
@@ -45,7 +45,6 @@ public class MetodosArray {
 	
 	
 
-	
 //	 mostrar enteros por pantalla
 	
 	public static void muestraValores(int[] array ) {	
@@ -59,7 +58,7 @@ public class MetodosArray {
 	
 	
 	
-	// desplazar una posicion los numeros enteros
+// 	desplazar una posicion los numeros enteros
 	
 	public static void desplazar(int[] array) {	
 
@@ -76,7 +75,7 @@ public class MetodosArray {
 	}
 	
 	
-	// para introducir chars
+// 	para introducir chars
 	
 	public static char[] introChar(char[] array ) {	
 		
@@ -94,7 +93,7 @@ public class MetodosArray {
 	}
 	
 	
-	// mostrar palabra hecha de chars por pantalla
+// 	mostrar palabra hecha de chars por pantalla
 	
 	public static void muestraPalabra(char[] array ) {	
 		
@@ -108,7 +107,7 @@ public class MetodosArray {
 	}
 	
 	
-	// muestra respuesta Ahorcado, si los chars de ambos arrays coinciden, salen por pantalla
+//	muestra respuesta Ahorcado, si los chars de ambos arrays coinciden, salen por pantalla
 	
 	public static void muestraRespuesta(char[] array1, char[] array2 ) {	
 		
@@ -128,7 +127,7 @@ public class MetodosArray {
 	
 	
 	
-	// confirma si un char esta dentro del array
+// 	confirma si un char esta dentro del array
 	
 	public static boolean estaDentro(char[] array, char c) {	
 		
@@ -148,7 +147,7 @@ public class MetodosArray {
 	
 	
 	
-	// confirma si un int esta dentro del array (tiene el mismo nombre que el del char!)
+// 	confirma si un int esta dentro del array (tiene el mismo nombre que el del char!)
 	
 	public static boolean estaDentro(int[] array, int a) {	
 		
@@ -169,7 +168,7 @@ public class MetodosArray {
 	
 	
 	
-	// evalua si dos char arrays tienen los mismos valores
+// 	evalua si dos char arrays tienen los mismos valores
 	
 	public static boolean arraysIguales(char[] array1, char[] array2) {
 	    
@@ -185,7 +184,7 @@ public class MetodosArray {
 	}
 	
 	
-	// confirma si el char que recibimos es una letra
+// 	confirma si el char que recibimos es una letra
 	
 	public static boolean esLetra(char c) {
 	    
@@ -203,7 +202,7 @@ public class MetodosArray {
 	}
 	
 	
-	// confirma si un entero es cero
+// 	confirma si un entero es cero
 	
 	public static boolean esCero(int a) {
 	    
@@ -217,7 +216,7 @@ public class MetodosArray {
 	}
 	
 	
-	// confirma si un entero es positivo
+// 	confirma si un entero es positivo
 	
 	public static boolean esPositivo(int a) {
 	    
@@ -232,7 +231,7 @@ public class MetodosArray {
 	}
 	
 	
-	// mostrar enteros positivos por pantalla
+//	mostrar enteros positivos por pantalla
 	
 	public static void muestraPositivos(int[] array ) {	
 		
@@ -245,7 +244,7 @@ public class MetodosArray {
 	}
 	
 	
-	// mostrar enteros negativos por pantalla
+// 	mostrar enteros negativos por pantalla
 
 	
 	public static void muestraNegativos(int[] array ) {	
@@ -259,7 +258,7 @@ public class MetodosArray {
 	}
 	
 	
-	// confirma si un numero que hemos convertido en array, es capicúa
+// 	confirma si un numero que hemos convertido en array es capicúa
 	
 	public static boolean esCapicua(int[] array) {	
 		
