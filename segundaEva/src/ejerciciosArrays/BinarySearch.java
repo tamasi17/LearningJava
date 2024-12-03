@@ -1,4 +1,4 @@
-package ejerciciosMats;
+package ejerciciosArrays;
 
 public class BinarySearch {
 

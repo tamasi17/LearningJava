@@ -1,4 +1,4 @@
-package ejerciciosMats;
+package ejerciciosArrays;
 
 import java.util.Random;
 import java.util.Scanner;
@@ -12,9 +12,24 @@ public class Arrays {
 	
 	
 	
+	
+	
+// 	fill basico int arrays
+
+	public static void fill(int[] array, int a ) {	
+		
+		int i;
+		for (i=0; i<array.length ; i++) {
+			
+			array[i] = a;	
+		}
+			
+	}
+	
+	
 // 	for para rellenar int arrays
 
-	public static int[] fill(int[] array ) {	
+	public static int[] fillManual(int[] array ) {	
 		
 		Scanner scanner = new Scanner(System.in);
 		
