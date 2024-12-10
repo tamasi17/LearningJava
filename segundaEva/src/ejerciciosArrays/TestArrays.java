@@ -20,6 +20,17 @@ public class TestArrays {
 		System.out.println(Arrays.toString(pruebaInt)); // Arrays original
 		
 		
+//		equals
+		
+		
+//		fill
+		
+		
+//		copyOf
+		
+		
+//		bynary search
+		
 		
 		
 	}
