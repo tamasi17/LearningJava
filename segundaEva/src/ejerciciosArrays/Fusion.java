@@ -19,6 +19,7 @@ public class Fusion {
 		
 		System.out.println("Primer array:");
 		Arrays.muestraValores(a);
+		
 		System.out.println("\nSegundo array:");	
 		Arrays.muestraValores(b);
 	

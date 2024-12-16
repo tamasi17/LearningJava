@@ -13,7 +13,7 @@ public class SumaArrays {
 		
 		Scanner scanner = new Scanner(System.in);
 		
-		System.out.println("Dame un tamaño");
+		System.out.println("Dame un tamaño de array");
 		int tamaño = scanner.nextInt();
 		
 		int[] a = new int[tamaño];
