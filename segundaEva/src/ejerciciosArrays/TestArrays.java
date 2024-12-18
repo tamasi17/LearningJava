@@ -24,6 +24,7 @@ public class TestArrays {
 //		toString
 		
 		System.out.println(Arrays.toString(pruebaInt)); 
+		System.out.println(Arrays.toString(pruebaDosInt)); 
 		
 		
 //		equals
@@ -41,20 +42,24 @@ public class TestArrays {
 			pruebaInt[i]= (i+3)*3;
 		}
 		
+		pruebaInt[3]=5;
 		
-		System.out.println(Arrays.toString(pruebaInt)); 
+		System.out.println("\nCopyOf: " + Arrays.toString(pruebaInt)); 
 		
 		
 
 		
 //		sort
 		
+		Arrays.sort(pruebaInt);	
+		System.out.println("\nSort: " + Arrays.toString(pruebaInt)); 
+		
+		
+		
+//		binary search
+		
+		System.out.println("\nBinary Search: " + Arrays.binarySearch(pruebaInt, 21)); 
 
-		
-		
-//		bynary search
-		
-		
 		
 	}
 

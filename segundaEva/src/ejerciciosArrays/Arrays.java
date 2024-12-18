@@ -4,8 +4,12 @@ import java.util.Random;
 import java.util.Scanner;
 
 // metodos para facilitar el uso de arrays (Ahorcado, Array Circular, Contabilidad, Capicua)
-
 // la mayoria para int y char arrays, tambien hay algun metodo cuyos parametros no son arrays pero se usan en los mismo ejercicios.
+
+
+
+
+// esta clase estaba creada antes del ejercicio para clase. Los metodos de la clase Arrays original los he puesto al principio.
 
 public class Arrays {
 	
@@ -14,7 +18,7 @@ public class Arrays {
 	
 	
 	
-// 	fill basico int arrays
+// 	fill basico int (Arrays original)
 
 	public static void fill(int[] array, int a ) {	
 		
@@ -26,6 +30,49 @@ public class Arrays {
 			
 	}
 	
+
+	
+//	 sort (Arrays original)
+	
+    public static void sort(int[] array) {
+    	
+        for (int i = 0; i < array.length - 1; i++) {
+            for (int j = 0; j < array.length - i - 1; j++) {
+                if (array[j] > array[j + 1]) {
+                    int temp = array[j];
+                    array[j] = array[j + 1];
+                    array[j + 1] = temp;
+                }
+            }
+        }
+    }
+	
+	
+    
+    
+//     binary search (implementación binaria)
+    
+    public static int binarySearch(int[] array, int key) {
+    	
+        int min = 0, max = array.length - 1;
+        while (min <= max) {
+            int centro = (min + max) / 2;
+            if (array[centro] == key) {
+                return centro;
+            } else if (array[centro] < key) {
+                min = centro + 1;
+            } else {
+                max = centro - 1;
+            }
+        }
+        return -1; // Devuelve -1 si no se encuentra
+    }
+    
+    
+    
+    
+    
+    
 	
 // 	for para rellenar int arrays
 
