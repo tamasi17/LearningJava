@@ -50,7 +50,7 @@ public class Arrays {
 	
     
     
-//     binary search (implementación binaria)
+//     binary search (implementación binaria, Arrays original)
     
     public static int binarySearch(int[] array, int key) {
     	
@@ -67,6 +67,11 @@ public class Arrays {
         }
         return -1; // Devuelve -1 si no se encuentra
     }
+    
+    
+    
+    
+    
     
     
     
