@@ -70,7 +70,33 @@ public class Arrays {
     
     
     
+//     copyOf (Arrays original)
     
+    public static int[] copyOf(int[] array, int nuevoTamaño) {
+        int[] copia = new int[nuevoTamaño];
+        for (int i = 0; i < Math.min(array.length, nuevoTamaño); i++) {
+            copia[i] = array[i];
+        }
+        return copia;
+    }
+
+    
+//     equals (Arrays original)
+    
+    public static boolean equals(int[] array1, int[] array2) {
+        if (array1 == null || array2 == null) {
+            return array1 == array2;
+        }
+        if (array1.length != array2.length) {
+            return false;
+        }
+        for (int i = 0; i < array1.length; i++) {
+            if (array1[i] != array2[i]) {
+                return false;
+            }
+        }
+        return true;
+    }
     
     
     
