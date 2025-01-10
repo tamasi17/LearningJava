@@ -26,6 +26,9 @@ public class TestCoche {
 		       
 
 		        coche1.mostrarDatos();
+		        
+
+		        System.out.println("\n");
 
 		        
 
@@ -42,6 +45,8 @@ public class TestCoche {
 		        coche2.mostrarDatos();
 
 		        
+		        System.out.println("\n");
+		        
 
 		        //COCHE3
 
@@ -54,6 +59,11 @@ public class TestCoche {
 		        
 
 		        coche3.mostrarDatos();
+		        
+		        
+		        
+		        System.out.println("\n");
+
 		
 
 		
