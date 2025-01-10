@@ -76,11 +76,8 @@ public class Matrices {
 		            }
 		        }
 		        return resultado;
-		    }
-		}
-
-		
-		
-	}
+		   }
+		    
+		    
 
 }
