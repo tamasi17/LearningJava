@@ -12,7 +12,7 @@ public class TestPajaro {
 		Pajaro p4 = new Pajaro("Aguila Imperial Ibérica", "Marron", 5);
 		
 		
-		
+		/*
 		System.out.println("---- "+ p1.getEspecie() + " ----\n"
 		+ "Color: " + p1.getColor() + "\n"
 		+ "Edad: " + p1.getEdad() + "\n"
@@ -32,6 +32,13 @@ public class TestPajaro {
 				+ "Color: " + p4.getColor() + "\n"
 				+ "Edad: " + p4.getEdad() + "\n"
 				+ "ID: " + p4.getId() + "\n");
+		
+		*/
+		
+		System.out.println(p1.toString() + "\n");
+		System.out.println(p2.toString() + "\n");
+		System.out.println(p3.toString() + "\n");
+		System.out.println(p4.toString() + "\n");
 		
 		
 		

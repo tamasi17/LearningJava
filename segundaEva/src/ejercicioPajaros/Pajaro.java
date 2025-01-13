@@ -15,7 +15,7 @@ public class Pajaro {
 //	Atributos
 	 
 	private static int total=0;
-	private int edad, id=1000;
+	private int edad, id=10000;
 	private String especie, color;
 	
 //	Constructor
@@ -71,8 +71,15 @@ public class Pajaro {
 	}
 
 	
+//	toString
 	
-	
+	public String toString() {
+		
+		return "---- "+ this.especie + " ----\n"
+				+ "Color: " + this.color + "\n"
+				+ "Edad: " + this.edad + "\n"
+				+ "ID: " + this.id + " ";
+	}
 	
 	
 
