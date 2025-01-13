@@ -2,7 +2,7 @@ package entidadDireccion;
 
 import java.util.Scanner;
 
-public class testDireccion {
+public class TestDireccion {
 
 	public static void main(String[] args) {
 
