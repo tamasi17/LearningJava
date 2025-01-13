@@ -54,18 +54,17 @@ public class testDireccion {
         num = scanner.nextInt();
         calle1.setCodigoPostal(num);
         
-        System.out.println("País:");
-        input = scanner.nextLine();
-        calle1.setPais(input);
-        
-        System.out.println("Provincia:");
-        input = scanner.nextLine();
-        calle1.setProvincia(input);
-        
         System.out.println("Localidad:");
-        input = scanner.nextLine();
+        input = scanner.next();
         calle1.setCiudad(input);
         
+        System.out.println("Provincia:");
+        input = scanner.next();
+        calle1.setProvincia(input);
+        
+        System.out.println("País:");
+        input = scanner.next();
+        calle1.setPais(input);
         
         
         System.out.println("\nLa dirección completa es: "
