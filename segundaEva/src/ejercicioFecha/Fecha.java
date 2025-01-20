@@ -1,5 +1,6 @@
 package ejercicioFecha;
 
+import java.time.LocalDate;
 import java.util.Objects;
 
 public class Fecha {
@@ -20,7 +21,7 @@ public class Fecha {
 		
 	}
 	
-	public Fecha(int day, int month, int year) {
+	public Fecha(int year, int month, int day) {
 		
 		this.year=year;
 		this.month=month;
@@ -29,10 +30,19 @@ public class Fecha {
 		
 	}
 	
+
+	
 //	Metodos
 	
 	
-	public static boolean fechaCorrecta(int year, int month, int day) {
+	public void fechaSistema() {
+		LocalDate today = LocalDate.now();
+		this.year=today.getYear();
+		this.month=today.getMonthValue();
+		this.day=today.getDayOfMonth();
+	}
+	
+	private boolean fechaCorrecta(int year, int month, int day) {
 		
 		if (month == 4 || month == 6 || month == 9 || month == 11) { //meses con 30 dias
         	
@@ -141,7 +151,7 @@ public class Fecha {
 	
 	@Override
 	public String toString() {
-		return "Fecha [day=" + day + ", month=" + month + ", year=" + year + "]";
+		return day + " del " + month + " de " + year;
 	}
 
 	
