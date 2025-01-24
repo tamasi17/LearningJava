@@ -1,4 +1,4 @@
-package ejercicioPajaros;
+package pooPajaros;
 
 public class TestPajaro {
 

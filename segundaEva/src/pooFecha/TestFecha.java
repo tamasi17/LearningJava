@@ -1,4 +1,4 @@
-package ejercicioFecha;
+package pooFecha;
 
 public class TestFecha {
 

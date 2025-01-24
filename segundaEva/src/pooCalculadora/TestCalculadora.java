@@ -1,4 +1,4 @@
-package calculadoraPOO;
+package pooCalculadora;
 
 import java.util.Scanner;
 

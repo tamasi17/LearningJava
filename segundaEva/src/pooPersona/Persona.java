@@ -1,4 +1,4 @@
-package ejercicioPersona;
+package pooPersona;
 
 /**
  * Clase que refleja las caracter�sticas POO para una persona
@@ -27,6 +27,13 @@ public class Persona {
 		this.apellidos=apellidos;
 	}
 	
+	public Persona (String nombre, String apellidos) {
+		this.nombre=nombre;
+		this.apellidos=apellidos;
+	}
+	
+	
+	
 	//Constructor que necesita dni, nombre, apellidos y color del pelo para crear un objeto de tipo Persona
 	
 	public Persona(String dni, String nombre, String apellidos, String colorPelo) {
@@ -40,9 +47,7 @@ public class Persona {
 
 	//3.- Metodos
 	
-	public String toString() {
-		return dni+","+nombre+","+apellidos+","+direccion+","+colorOjos+","+colorPelo;
-	}
+	
 	
 	public void setNombre(String nuevoNombre) {
 		this.nombre = nuevoNombre;
@@ -88,6 +93,16 @@ public class Persona {
 	
 	public String getColorPelo() {
 		return this.colorPelo;
+	}
+
+	@Override
+	public String toString() {
+		return (nombre != null ? nombre : "")
+				+ (apellidos != null ? " " + apellidos : "")
+				+ (dni != null ? "dni=" + dni + ", " : "")
+				+ (direccion != null ? "direccion=" + direccion + ", " : "")
+				+ (colorOjos != null ? "colorOjos=" + colorOjos + ", " : "")
+				+ (colorPelo != null ? "colorPelo=" + colorPelo : "");
 	}
 	
 	

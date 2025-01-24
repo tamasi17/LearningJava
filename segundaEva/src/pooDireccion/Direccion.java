@@ -1,4 +1,4 @@
-package entidadDireccion;
+package pooDireccion;
 
 public class Direccion {
 

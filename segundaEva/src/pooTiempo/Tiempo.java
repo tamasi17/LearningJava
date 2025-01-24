@@ -1,4 +1,4 @@
-package ejercicioTiempo;
+package pooTiempo;
 
 /*
 	Crear una clase Tiempo, con atributos hora, minuto y segundo, que pueda ser construída indicando los tres atributos,
@@ -12,7 +12,7 @@ public class Tiempo {
 
 //	Atributos
 	
-	int hora, minuto, segundo;
+	private int hora, minuto, segundo;
 	
 	
 //	Constructores

@@ -1,4 +1,4 @@
-package ejercicioFecha;
+package pooFecha;
 
 import java.time.LocalDate;
 

@@ -1,4 +1,4 @@
-package entidadDireccion;
+package pooDireccion;
 
 import java.util.Scanner;
 

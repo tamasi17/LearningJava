@@ -1,4 +1,4 @@
-package calculadoraPOO;
+package pooCalculadora;
 
 public class Calculadora {
 	

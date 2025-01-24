@@ -1,4 +1,4 @@
-package ejercicioRectangulo;
+package pooRectangulo;
 
 public class TestRectangulo {
 

@@ -1,4 +1,4 @@
-package ejercicioFecha;
+package pooFecha;
 
 import java.time.LocalDate;
 import java.util.Objects;
@@ -26,7 +26,6 @@ public class Fecha {
 		this.year=year;
 		this.month=month;
 		this.day=day;
-	
 		
 	}
 	
@@ -151,10 +150,8 @@ public class Fecha {
 	
 	@Override
 	public String toString() {
-		return day + " del " + month + " de " + year;
+		return day + "/" + month + "/" + year;
 	}
-
-	
 
 	
 //	equals (generado desde Source)
@@ -168,6 +165,8 @@ public class Fecha {
 		}		
 		
 	}
+
+	
 	
 	
 	
