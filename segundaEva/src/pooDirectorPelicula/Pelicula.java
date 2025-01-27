@@ -1,4 +1,4 @@
-package pooLibro;
+package pooDirectorPelicula;
 import pooPersona.Persona;
 import pooFecha.Fecha;
 
@@ -21,7 +21,7 @@ import pooFecha.Fecha;
 	
 */
 
-public class Libro {
+public class Pelicula {
 	
 
 //	Atributos
@@ -38,7 +38,7 @@ public class Libro {
 	
 //	Constructores
 	
-	public Libro(String titulo, String edicion, String editorial, String ciudad, String pais, int paginas, String isbn,
+	public Pelicula(String titulo, String edicion, String editorial, String ciudad, String pais, int paginas, String isbn,
 			Persona autor, Fecha fechaEdicion) {
 		this.titulo = titulo;
 		this.edicion = edicion;
@@ -51,24 +51,24 @@ public class Libro {
 		this.fechaEdicion = fechaEdicion;
 	}
 
-	public Libro(String titulo) {
+	public Pelicula(String titulo) {
 		this.titulo=titulo;		
 	}
 	
 
-	public Libro(String titulo, String isbn) {
+	public Pelicula(String titulo, String isbn) {
 		this.titulo = titulo;
 		this.isbn = isbn;
 	}
 	
 
-	public Libro(String titulo, String isbn, Persona autor) {
+	public Pelicula(String titulo, String isbn, Persona autor) {
 		this.titulo = titulo;
 		this.isbn = isbn;
 		this.autor = autor;
 	}
 
-	public Libro(String titulo, Persona autor, Fecha fechaEdicion) {
+	public Pelicula(String titulo, Persona autor, Fecha fechaEdicion) {
 		this.titulo = titulo;
 		this.autor = autor;
 		this.fechaEdicion = fechaEdicion;

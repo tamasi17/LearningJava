@@ -32,6 +32,10 @@ public class Persona {
 		this.apellidos=apellidos;
 	}
 	
+	public Persona (String nombre) {
+		this.nombre=nombre;
+	}
+	
 	
 	
 	//Constructor que necesita dni, nombre, apellidos y color del pelo para crear un objeto de tipo Persona

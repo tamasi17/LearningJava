@@ -1,4 +1,4 @@
-package pooLibro;
+package pooDirectorPelicula;
 import pooPersona.Persona;
 import pooFecha.Fecha;
 
@@ -22,7 +22,7 @@ Prentice-Hall, New Jersey (USA), viernes 16 de noviembre de
 */
 
 
-public class TestLibro {
+public class TestDirectorPelicula {
 
 	public static void main(String[] args) {
 
@@ -30,7 +30,7 @@ public class TestLibro {
 		
 		
 		Persona autor = new Persona("Y. Daniel", "Liang");
-		Libro libro1 = new Libro("Introduction to Java Programming", "0-13-031997-X", autor);
+		Director libro1 = new Director("Introduction to Java Programming", "0-13-031997-X", autor);
 		
 		
 		System.out.println(libro1.toString()+"\n");
