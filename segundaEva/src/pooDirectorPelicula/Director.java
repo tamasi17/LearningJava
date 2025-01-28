@@ -54,7 +54,6 @@ public class Director {
 	
 	private String nombre, pais;
 	private int nacimiento;
-	private Persona autor;
 	
 	
 	
@@ -88,6 +87,29 @@ public class Director {
 //	Getters y Setters
 
 	
+	public String getNombre() {
+		return nombre;
+	}
+	
+	public String getPais() {
+		return pais;
+	}
+	
+	public int getNacimiento() {
+		return nacimiento;
+	}
+	
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+	
+	public void setPais(String pais) {
+		this.pais = pais;
+	}
+	
+	public void setNacimiento(int nacimiento) {
+		this.nacimiento = nacimiento;
+	}
 	
 
 	
@@ -96,23 +118,14 @@ public class Director {
 	
 	@Override
 	public String toString() {
-		return "Director [" + (nombre != null ? "nombre=" + nombre + ", " : "")
-				+ (pais != null ? "pais=" + pais + ", " : "") + "nacimiento=" + nacimiento + "]";
+		return (nombre != null ? nombre : "")
+				+ (pais != null ? ", " + pais : "")
+				+ (nacimiento != 0 ? nacimiento : "");
 	}
+
 
 	
-	/*
-		 "Libro: \n" + (nombre != null ? "Titulo: " + nombre + "\n" : "")
-				+ (edicion != null ? edicion + " edición.\n" : "")
-				+ (autor != null ? "Autor: " + autor + "\n" : "")
-				+ (isbn != null ? "ISBN: " + isbn + "\n" : "")
-				+ (editorial != null ? editorial + ", " : "")
-				+ (ciudad != null ? ciudad + ", " : "") + (pais != null ? "(" + pais + ")\n" : "")
-				+ (fechaEdicion != null ? fechaEdicion + "\n" : "")
-				+ (paginas != 0 ? paginas + " paginas" : "");
-	}
 
-	*/
 
 
 
