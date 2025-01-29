@@ -3,21 +3,11 @@ import pooPersona.Persona;
 import pooFecha.Fecha;
 
 /*
-	Crea una clase Libro que modele la información que se mantiene en una biblioteca sobre cada libro: 
-	título, autor (usa la clase Persona), ISBN, páginas, edición, editorial
-	lugar (ciudad y país) y fecha de edición (usa la clase Fecha).
-	
-	La clase debe proporcionar los siguientes servicios: accedentes y mutadores, método para leer la información y método para mostrar la información. 
-	Este último método mostrará la información del libro con este formato:
-
-
-	Título: Introduction to Java Programming
-	3a. edición
-	Autor: Liang, Y. Daniel
-	ISBN: 0-13-031997-X
-	Prentice-Hall, New Jersey (USA), viernes 16 de noviembre de
-	2001
-	784 páginas
+	Parte 2 
+	Desarrollar una clase "Pelicula" dentro del mismo paquete "ejercicio5". 
+	La clase tendrá tres atributos privados que representan el título, el año de producción y el director de una película. 
+	Añadir tres constructores: uno que reciba únicamente el título, otro que reciba únicamente el director, y uno que no reciba argumentos. 
+	Añadir los métodos get y set, toString.
 	
 */
 
@@ -26,159 +16,85 @@ public class Pelicula {
 
 //	Atributos
 	
-//	título, autor (usa la clase Persona), ISBN, páginas, edición, editorial
-//	lugar (ciudad y país) y fecha de edición (usa la clase Fecha).
+//	título, año de produccion, director
 	
-	private String titulo, edicion, editorial, ciudad, pais, isbn;
-	private int paginas;
-	private Persona autor;
-	private Fecha fechaEdicion;
-	
+	private String titulo;
+	private Director director;
+	private int produccion; //año de produccion
 	
 	
 //	Constructores
 	
-	public Pelicula(String titulo, String edicion, String editorial, String ciudad, String pais, int paginas, String isbn,
-			Persona autor, Fecha fechaEdicion) {
-		this.titulo = titulo;
-		this.edicion = edicion;
-		this.editorial = editorial;
-		this.ciudad = ciudad;
-		this.pais = pais;
-		this.paginas = paginas;
-		this.isbn = isbn;
-		this.autor = autor;
-		this.fechaEdicion = fechaEdicion;
+	
+	public Pelicula() {
 	}
+	
+	
+	public Pelicula(String titulo, Director director, int produccion) {
+		this.titulo = titulo;
+		this.director = director;
+		this.produccion = produccion;
+	}
+
 
 	public Pelicula(String titulo) {
-		this.titulo=titulo;		
-	}
-	
-
-	public Pelicula(String titulo, String isbn) {
-		this.titulo = titulo;
-		this.isbn = isbn;
-	}
-	
-
-	public Pelicula(String titulo, String isbn, Persona autor) {
-		this.titulo = titulo;
-		this.isbn = isbn;
-		this.autor = autor;
+	this.titulo = titulo;
 	}
 
-	public Pelicula(String titulo, Persona autor, Fecha fechaEdicion) {
-		this.titulo = titulo;
-		this.autor = autor;
-		this.fechaEdicion = fechaEdicion;
+
+	public Pelicula(Director director) {
+		this.director = director;
 	}
 
-	
+
 //	Metodos
 	
 	
-	
 //	Getters y Setters
+
+
+	
+	
+
+	
+
 
 	public String getTitulo() {
 		return titulo;
 	}
 
-	public String getEdicion() {
-		return edicion;
+
+	public Director getDirector() {
+		return director;
 	}
 
-	public String getEditorial() {
-		return editorial;
+
+	public int getProduccion() {
+		return produccion;
 	}
 
-	public String getCiudad() {
-		return ciudad;
-	}
-
-	public String getPais() {
-		return pais;
-	}
-
-	public int getPaginas() {
-		return paginas;
-	}
-
-	public String getIsbn() {
-		return isbn;
-	}
-
-	public Persona getAutor() {
-		return autor;
-	}
-
-	public Fecha getFechaEdicion() {
-		return fechaEdicion;
-	}
 
 	public void setTitulo(String titulo) {
 		this.titulo = titulo;
 	}
 
-	public void setEdicion(String edicion) {
-		this.edicion = edicion;
+
+	public void setDirector(Director director) {
+		this.director = director;
 	}
 
-	public void setEditorial(String editorial) {
-		this.editorial = editorial;
+
+	public void setProduccion(int produccion) {
+		this.produccion = produccion;
 	}
 
-	public void setCiudad(String ciudad) {
-		this.ciudad = ciudad;
-	}
 
-	public void setPais(String pais) {
-		this.pais = pais;
-	}
-
-	public void setPaginas(int paginas) {
-		this.paginas = paginas;
-	}
-
-	public void setIsbn(String isbn) {
-		this.isbn = isbn;
-	}
-
-	public void setAutor(Persona autor) {
-		this.autor = autor;
-	}
-
-	public void setFechaEdicion(Fecha fechaEdicion) {
-		this.fechaEdicion = fechaEdicion;
-	}
-
-	
-	
-/*
-	Título: Introduction to Java Programming
-	3a. edición
-	Autor: Liang, Y. Daniel
-	ISBN: 0-13-031997-X
-	Prentice-Hall, New Jersey (USA), viernes 16 de noviembre de
-	2001
-	784 páginas
-	
-*/
-	
-//	El toString automatico genera los ternarios en caso de que no haya informacion en alguno de los atributos.
 	@Override
 	public String toString() {
-		return "Libro: \n" + (titulo != null ? "Titulo: " + titulo + "\n" : "")
-				+ (edicion != null ? edicion + " edición.\n" : "")
-				+ (autor != null ? "Autor: " + autor + "\n" : "")
-				+ (isbn != null ? "ISBN: " + isbn + "\n" : "")
-				+ (editorial != null ? editorial + ", " : "")
-				+ (ciudad != null ? ciudad + ", " : "") + (pais != null ? "(" + pais + ")\n" : "")
-				+ (fechaEdicion != null ? fechaEdicion + "\n" : "")
-				+ (paginas != 0 ? paginas + " paginas" : "");
+		return (titulo != null ? titulo : "")
+				+ (produccion != 0 ? " (" + produccion + ")" : "")
+				+ (director != null ? ", " + director : "");
 	}
-
 
 	
 		
