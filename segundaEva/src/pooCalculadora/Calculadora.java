@@ -21,6 +21,12 @@ public class Calculadora {
         
     }
     
+    public Calculadora() {
+    	this.acumulador=0;
+    	this.memoriaUno=1;
+        this.memoriaDos=1;
+    }
+    
     
 //    Getters y Setters
     
@@ -99,6 +105,10 @@ public class Calculadora {
     	this.acumulador = Math.pow(acumulador, a);
     }
     
+    
+    public void porcentaje(double a) {	
+		this.acumulador = ((acumulador*a)/100);
+	}
     
     
     
