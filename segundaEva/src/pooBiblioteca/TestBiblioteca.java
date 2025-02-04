@@ -1,23 +1,29 @@
 package pooBiblioteca;
 import pooPersona.Persona;
+
+import java.util.Arrays;
+
 import pooFecha.Fecha;
+import pooLibro.Libro;
 
 /*
-Crea una clase Libro que modele la información que se mantiene en una biblioteca sobre cada libro: 
-título, autor (usa la clase Persona), ISBN, páginas, edición, editorial
-lugar (ciudad y país) y fecha de edición (usa la clase Fecha).
+Una biblioteca tiene un nombre (String) y una colección de libros. 
+Se requiere que la biblioteca tenga un constructor que reciba el nombre de la biblioteca e inicialize la colección de libros. 
+La biblioteca posee  los métodos:
 
-La clase debe proporcionar los siguientes servicios: accedentes y mutadores, método para leer la información y método para mostrar la información. 
-Este último método mostrará la información del libro con este formato:
+addLibro() agrega un libro a la biblioteca
+deleteLibro() elimina un libro de la biblioteca.
+listLibros()  visualiza todos los libros de la biblioteca.
+El Libro tiene titulo, autor, editorial,isbn, todos String 
+y año de publicación es un int.
 
+Añade 3 Libros.(Cien años de soledad, Rayuela, la Tia Julia y el escribidor)
 
-Título: Introduction to Java Programming
-3a. edición
-Autor: Liang, Y. Daniel
-ISBN: 0-13-031997-X
-Prentice-Hall, New Jersey (USA), viernes 16 de noviembre de
-2001
-784 páginas
+Visualiza los libros.
+
+Elimina un libro.
+
+Visualiza los libros.
 
 */
 
@@ -26,30 +32,33 @@ public class TestBiblioteca {
 
 	public static void main(String[] args) {
 
-//		Creamos instancias de Libro
+//		Creamos instancias de Biblioteca
 		
 		
-		Persona autor = new Persona("Y. Daniel", "Liang");
-		Biblioteca libro1 = new Biblioteca("Introduction to Java Programming", "0-13-031997-X", autor);
+		Biblioteca trinity = new Biblioteca("Trinity College");
+		
+//		addLibro
+		
+		Libro cien = new Libro("Cien años de Soledad");
+		trinity.addLibro(cien);
 		
 		
-		System.out.println(libro1.toString()+"\n");
+		Libro rayuela = new Libro("Rayuela");
+		trinity.addLibro(rayuela);
 		
 		
-//		Usamos gets, sets, toString
+		Libro tiaJulia = new Libro("La Tia Julia y el Escribidor");
+		trinity.addLibro(tiaJulia);
 		
 		
-		Fecha fechaEdicion = new Fecha(2001,11,16);
-		libro1.setFechaEdicion(fechaEdicion);
 		
-		System.out.println(libro1.toString()+"\n");
 		
-		libro1.setCiudad("New Jersey");
-		libro1.setPais("USA");
-		libro1.setPaginas(784);
-		libro1.setEditorial("Prentice-Hall");
+//		Usamos listLibros:
 		
-		System.out.println(libro1.toString()+"\n");
+		System.out.println("La colección de " + trinity.getNombre() + ":\n" + Arrays.toString(trinity.listLibros()));
+		
+		
+		
 		
 		
 		

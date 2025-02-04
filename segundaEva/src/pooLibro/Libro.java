@@ -169,7 +169,7 @@ public class Libro {
 //	El toString automatico genera los ternarios en caso de que no haya informacion en alguno de los atributos (excepto en ints que es mio)
 	@Override
 	public String toString() {
-		return "Libro: \n" + (titulo != null ? "Titulo: " + titulo + "\n" : "")
+		return  (titulo != null ? titulo : "")
 				+ (edicion != null ? edicion + " edición.\n" : "")
 				+ (autor != null ? "Autor: " + autor + "\n" : "")
 				+ (isbn != null ? "ISBN: " + isbn + "\n" : "")

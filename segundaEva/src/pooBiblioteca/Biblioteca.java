@@ -1,10 +1,12 @@
 package pooBiblioteca;
 import pooPersona.Persona;
 
+import java.util.Arrays;
 import java.util.Iterator;
 
 import pooFecha.Fecha;
 import pooLibro.Libro;
+
 
 /*
 	Una biblioteca tiene un nombre (String) y una colección de libros. 
@@ -27,13 +29,17 @@ import pooLibro.Libro;
 	
 */
 
+/**
+ * Clase que representa una Biblioteca con una coleccion de libros.
+ */
 public class Biblioteca {
 	
 
 //	Atributos
 	
-//	nombre y coleccion de libros
-	
+/**
+ * Atributos: nombre de la biblioteca, array coleccion de libros y contador para la cantidad de libros.	
+ */
 	private String nombre;
 	private Libro [] coleccion = new Libro[100];
 	private int contador=0;
@@ -42,16 +48,34 @@ public class Biblioteca {
 	
 	
 //	Constructores
+	
+	/**
+	 * Constructores
+	 * @param nombre
+	 * @param coleccion
+	 */
 
 	public Biblioteca(String nombre, Libro[] coleccion) {
 		this.nombre = nombre;
 		this.coleccion = coleccion;
 		
 	}
+	
+
+	public Biblioteca(String nombre) {
+		this.nombre = nombre;
+	}
+
+
 
 
 //	Metodos
 	
+	
+	 /**
+     * Agrega un libro a la biblioteca.
+     * @param libro El libro a agregar.
+     */
 	
 	public void addLibro(Libro libro) {
 			this.coleccion[contador]=libro;
@@ -59,22 +83,57 @@ public class Biblioteca {
 		
 	}
 
+	/**
+	 * Quita un libro de la biblioteca
+	 * @param libro
+	 */
+	
 	public void deleteLibro(Libro libro) {
 		
-		for (int i = 0; i < contador; i++) {  // recorremos hasta contador buscando el libro
+//		Recorremos hasta contador buscando el libro
+		for (int i = 0; i < contador; i++) {  
 			
-			if (libro.getTitulo().equals(this.coleccion[i].getTitulo())) { // si encontramos el libro
+//			Si encontramos el libro
+			if (libro.getTitulo().equals(this.coleccion[i].getTitulo())) { 
 				
-				for (int j = i; j < contador-1; j++) {			// recorremos desde la posicion del libro hasta el penultimo	
-					this.coleccion[i]=this.coleccion[j+1];      // sustituyendolos para que no queden espacios vacios	
+				// recorremos desde la posicion del libro hasta el penultimo
+				for (int j = i; j < contador-1; j++) {	
+					
+					// sustituyendolos para que no queden espacios vacios
+					this.coleccion[i]=this.coleccion[j+1];      	
 				}
-				this.coleccion[contador-1]=null;  // borramos el ultimo
-				contador--; // reducimos contador
-				break; // y paramos el proceso
+				
+				// borramos el ultimo y reducimos contador
+				this.coleccion[contador-1]=null;  
+				contador--; 
+				break; 
 			}
 		}
 	}
 	
+	
+	
+	
+//	Para mostrar los libros de una biblioteca, generamos un array solo con los libros que hay actualmente, se visualiza con bucle syso en el test
+	
+	/**
+	 * Metodo para poder mostrar libros por pantalla
+	 * @return Un array con los libros disponibles en la biblioteca.
+	 */
+	
+	public Libro[] listLibros() {
+		
+//		Nuevo array de libros
+		Libro[] librosDisponibles = new Libro[this.contador];
+		
+//		Copiamos los libros reales
+		for (int i = 0; i < librosDisponibles.length; i++) {
+			librosDisponibles[i]=coleccion[i];
+		}
+		
+		return librosDisponibles;
+		
+	}
 	
 	
 //	Getters y Setters
@@ -106,6 +165,15 @@ public class Biblioteca {
 
 	public void setContador(int contador) {
 		this.contador = contador;
+	}
+
+
+	@Override
+	public String toString() {
+		return  (nombre != null ? nombre : "")
+				+ (coleccion != null ? "\n" 
+				+ Arrays.toString(coleccion) : "") 
+				+ (contador != 0 ? contador + " libros." : "");	
 	}
 	
 	
