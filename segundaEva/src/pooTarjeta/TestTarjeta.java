@@ -42,30 +42,24 @@ public class TestTarjeta {
 
 	public static void main(String[] args) {
 
-//		Creamos instancias de Libro AUN ESTAN LAS DE LIBRO !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+//		Creamos instancias de Tarjeta
 		
 		
-		Persona autor = new Persona("Y. Daniel", "Liang");
-		Tarjeta libro1 = new Tarjeta("Introduction to Java Programming", "0-13-031997-X", autor);
+		Tarjeta amex = new Tarjeta(135, 2320, 500, 3212);
 		
 		
-		System.out.println(libro1.toString()+"\n");
+//		try catch para sacar dinero
+		
+		try {
+			amex.sacarDinero(2200);
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
 		
 		
-//		Usamos gets, sets, toString
+//		prueba otros try catch
 		
 		
-		Fecha fechaEdicion = new Fecha(2001,11,16);
-		libro1.setFechaEdicion(fechaEdicion);
-		
-		System.out.println(libro1.toString()+"\n");
-		
-		libro1.setCiudad("New Jersey");
-		libro1.setPais("USA");
-		libro1.setPaginas(784);
-		libro1.setEditorial("Prentice-Hall");
-		
-		System.out.println(libro1.toString()+"\n");
 		
 		
 		

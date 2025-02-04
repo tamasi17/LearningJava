@@ -7,9 +7,8 @@ package pooFigura;
 
 
 	/*
-	Declara e implementa las clases Triángulo, Círculo
-	y Cuadrado de forma que todas tengan un
-	atributo
+	Declara e implementa las clases Triángulo, Círculo y Cuadrado 
+	de forma que todas tengan un atributo
 	 String color
 	y compartan los siguientes métodos:
 	 String dameColor()
@@ -66,7 +65,6 @@ public class Figura {
 	}
 	
 
-	
 	
 	
 	

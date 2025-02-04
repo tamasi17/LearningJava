@@ -177,40 +177,6 @@ public class Biblioteca {
 	}
 	
 	
-
-
-	
-	
-	
-	
-	
-
-	
-	
-	
-/*
-	
-//	El toString automatico genera los ternarios en caso de que no haya informacion en alguno de los atributos.
-	@Override
-	public String toString() {
-		return "Libro: \n" + (titulo != null ? "Titulo: " + titulo + "\n" : "")
-				+ (edicion != null ? edicion + " edición.\n" : "")
-				+ (autor != null ? "Autor: " + autor + "\n" : "")
-				+ (isbn != null ? "ISBN: " + isbn + "\n" : "")
-				+ (editorial != null ? editorial + ", " : "")
-				+ (ciudad != null ? ciudad + ", " : "") + (pais != null ? "(" + pais + ")\n" : "")
-				+ (fechaEdicion != null ? fechaEdicion + "\n" : "")
-				+ (paginas != 0 ? paginas + " paginas" : "");
-	}
-
-*/
-	
-		
-	
-	
-	
-	
-	
 	
 	
 }

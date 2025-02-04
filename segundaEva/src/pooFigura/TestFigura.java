@@ -5,26 +5,38 @@ public class TestFigura {
 	public static void main(String[] args) {
 
 		/*
-		Crear una clase Rectángulo, con atributos base y altura. 
-		Crear también el constructor de la clase y los métodos necesarios para calcular el área y el perímetro.
-		Crear otra clase PruebaRectangulo que pruebe varios rectángulos y muestre por pantalla sus áreas y perímetros.
+		Declara e implementa las clases Triángulo, Círculo y Cuadrado 
+		de forma que todas tengan un atributo
+		 String color
+		y compartan los siguientes métodos:
+		 String dameColor()
+		 String toString()
+		 Imprimir los datos de la figura
+		 Calcular el área de la figura (triangulo es base x altura / 2, cuadrado es lado^2, circulo es pi*r^2)
 		*/
 		
 		
-//		Creamos instancias de la clase Rectangulo usando el metodo constructor.
+//		Creamos instancias de Circulo Triangulo y Cuadrado usando el metodo constructor.
 
-		Figura r1 = new Figura(3,4);
-		Figura r2 = new Figura(7,12);
+		Circulo circ = new Circulo("azul", 5);
+		Triangulo t1 = new Triangulo("amarillo", 3, 7);
+		Cuadrado cuad = new Cuadrado("rosa", 4);
 		
 //		Sacar por pantalla los datos de cada instancia con toString
 
-		System.out.println(r1.toString());
-		System.out.println("\n");
-		System.out.println(r2.toString());
-		System.out.println("\n");
+		System.out.println("Area del circulo: " + circ.area() + " cm2");
+		System.out.println("Color: "+ circ.getColor() +"\n");
 		
-		System.out.println("Tambien podemos conseguir el area del rectangulo 1 con get: " + r1.getArea() + "cm.");
-		System.out.println("O el perimetro del rectangulo 2 con get: " + r2.getPerimetro() + "cm.");
+		System.out.println("Area del triangulo: " + t1.area() + " cm2");
+		System.out.println("Color: "+ t1.getColor() +"\n");
+		
+		System.out.println("Area del cuadrado: " + cuad.area() + " cm2");
+		System.out.println("Color: "+ cuad.getColor() +"\n");
+		
+		System.out.println("--- Con el toString --- \n" 
+							+ circ.toString() + "\n"
+							+ t1.toString() + "\n"
+							+ cuad.toString());
 		
 	}
 

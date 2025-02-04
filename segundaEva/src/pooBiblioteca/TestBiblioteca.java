@@ -58,7 +58,12 @@ public class TestBiblioteca {
 		System.out.println("La colección de " + trinity.getNombre() + ":\n" + Arrays.toString(trinity.listLibros()));
 		
 		
-		
+//		Eliminamos un libro y visualizamos:
+
+		System.out.println("\n ..Eliminamos Tia Julia.. \n");
+		trinity.deleteLibro(tiaJulia);
+		System.out.println("La colección de " + trinity.getNombre() + ":\n" + Arrays.toString(trinity.listLibros()));
+		System.out.println("Libros en la coleccion de " + trinity.getNombre() + ": " + trinity.getContador());
 		
 		
 		

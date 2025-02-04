@@ -40,6 +40,13 @@ public class Circulo extends Figura {
 		
 		return Math.PI * (Math.pow(this.radio, 2));
 	}
+
+
+	@Override
+	public String toString() {
+		return "Circulo \nRadio: " + radio 
+				+ ", Color: " + super.getColor();
+	}
 	
 	
 	

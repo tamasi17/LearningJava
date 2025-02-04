@@ -2,8 +2,8 @@ package pooFigura;
 
 
 /*
-Declara e implementa las clases Triángulo, Círculo
-y Cuadrado de forma que todas tengan un
+Declara e implementa las clases Triángulo, Círculo y Cuadrado 
+de forma que todas tengan un
 atributo
  String color
 y compartan los siguientes métodos:
@@ -22,7 +22,7 @@ public class Triangulo extends Figura {
 //	Atributos
 	
 	/**
-	 * Base 
+	 * Atributos: Base y altura
 	 */
 	
 	private double base, altura;
@@ -30,10 +30,20 @@ public class Triangulo extends Figura {
 	
 //	Constructor
 
+	/**
+	 * Constructor
+	 * @param color
+	 */
 	public Triangulo(String color) {
 		super(color);
 	}
 	
+	/**
+	 * Constructor
+	 * @param color
+	 * @param base
+	 * @param altura
+	 */
 	
 	public Triangulo(String color, double base, double altura) {
 	super(color);
@@ -42,17 +52,42 @@ public class Triangulo extends Figura {
 	}
 
 
-	public Triangulo(String color, double base) {
-		super(color);
-		this.base = base;
-	}
-
 	
 //	Métodos
+	
+	/**
+	 * Metodo que calcula el area de un triangulo
+	 * @return double con el area del triangulo
+	 */
 	
 	public double area() {
 		
 		return (base*altura)/2;
+	}
+
+//	Getters y Setters
+	
+	public double getBase() {
+		return base;
+	}
+
+	public double getAltura() {
+		return altura;
+	}
+
+	public void setBase(double base) {
+		this.base = base;
+	}
+
+	public void setAltura(double altura) {
+		this.altura = altura;
+	}
+
+	@Override
+	public String toString() {
+		return "Triangulo \nBase: " + base 
+				+ ", Altura: " + altura
+				+ ", Color: " + super.getColor();
 	}
 	
 	
