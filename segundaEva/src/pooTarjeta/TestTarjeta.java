@@ -1,18 +1,23 @@
 package pooTarjeta;
+
 import pooPersona.Persona;
-import pooFecha.Fecha;
+
+import java.util.Scanner;
+
 
 /*
 	Se pide que creéis una clase Tarjeta
 	Tiene como características 
-	El número de cuenta que se asocia con la tarjeta, el saldo de la cuenta asociada a la tarjeta, el número secreto de la tarjeta y la cantidad máxima diaria a sacar.
+	El número de cuenta que se asocia con la tarjeta, el saldo de la cuenta asociada a la tarjeta, 
+	El número secreto de la tarjeta y la cantidad máxima diaria a sacar.
 
 	Con la clase Tarjeta se puede realizar movimientos como sacar dinero, ingresar dinero y consultar el saldo
 	También se puede realizar cambios en la cantidad máxima a sacar
 	y realizar comprobaciones como introducir el número secreto y comprobar que sea el mismo que el de la tarjeta.
 
 	Dentro del método de sacar dinero se tiene que tener en cuenta dos condiciones: 
-	La primera es que no se puede dejar la cuenta en menos de 200 euros y la segunda que no se puede pedir sacar cantidades superiores a la cantidad máxima diaria.
+	La primera es que no se puede dejar la cuenta en menos de 200 euros 
+	y la segunda que no se puede pedir sacar cantidades superiores a la cantidad máxima diaria.
 
 	Si esto sucediera se tendría que sacar por pantalla un mensaje que dijera por qué no se ha podido realizar la operación.
 
@@ -28,15 +33,8 @@ import pooFecha.Fecha;
 
 	• Si no da error, sacar dinero de la cuenta. Podéis probar a sacar una cantidad superior a la permitida, etc.
 
-	• Ir pidiendo por teclado una serie de números enteros e irlos sumando. 
-	Se deja de pedir números al usuario cuando la cantidad supera el valor 50. 
-	Escribir por pantalla la suma de todos los números introducidos.
-
-	• Pedir al usuario dos números “a” y “b” entre el 1 y el 10. 
-	Mientras uno de ellos sea menor que el otro, escribir un símbolo “*” en la pantalla e incrementar en una unidad el número menor.
 
 */
-
 
 public class TestTarjeta {
 
@@ -44,20 +42,102 @@ public class TestTarjeta {
 
 //		Creamos instancias de Tarjeta
 		
+		Scanner scanner = new Scanner(System.in);
+
 		
-		Tarjeta amex = new Tarjeta(135, 2320, 500, 3212);
-		
-		
-//		try catch para sacar dinero
-		
-		try {
-			amex.sacarDinero(2200);
-		} catch (Exception e) {
-			System.out.println(e.getMessage());
-		}
+		Tarjeta amex = new Tarjeta(135, 2320, 3212, 500);
+		int pin;
 		
 		
-//		prueba otros try catch
+//		Pedir contraseña
+		
+
+		do {
+
+			System.out.println("Dame pin pls: \n");
+			pin = scanner.nextInt();
+			
+			if (!amex.password(pin)) {
+				System.out.println("PIN Incorrecto");
+			} 
+			
+		} while (!amex.password(pin));
+		
+		
+		int opcion=0;
+		
+		
+		do {
+			
+			
+			System.out.println("\nEn este cajero puedes hacer las siguientes operaciones: \n"
+					+ "1: sacar dinero \n"
+					+ "2: ingresar dinero \n"
+					+ "3: consultar saldo \n"
+					+ "4: cambiar maximo diario \n"
+					+ "5: salir \n");
+			
+			opcion=scanner.nextInt();
+
+			switch (opcion) {
+			case 1:
+				
+				
+				System.out.println("¿Cuánto dinero vas a sacar? \n");
+				double cantidadSacar = scanner.nextDouble();
+				try {
+					
+					amex.sacarDinero(cantidadSacar);
+					System.out.println("Has sacado: " + cantidadSacar 
+										+ "\nTu saldo actual es: " + amex.getSaldo());
+					
+				} catch (Exception e) {
+					
+					System.out.println(e.getMessage());
+				}
+				
+				break;
+
+			case 2:
+				
+				
+				System.out.println("¿Cuánto dinero vas a ingresar? \n");
+				double cantidadIngresar = scanner.nextDouble();
+				
+				amex.ingresarDinero(cantidadIngresar);
+				System.out.println("Has ingresado: " + cantidadIngresar 
+								+ "\nTu saldo actual es: " + amex.getSaldo());
+				
+				break;
+				
+			case 3:
+				
+				System.out.println("Tu saldo actual es: " + amex.getSaldo());
+				
+				break;
+				
+				
+			case 4:
+				
+				System.out.println("Cambia tu maximo diario: ");
+				amex.setMax(scanner.nextDouble());
+				
+				break;
+				
+			default:
+				break;
+			}
+			
+			
+			
+		} while (opcion != 5);
+		
+	
+		
+		
+
+		
+		
 		
 		
 		

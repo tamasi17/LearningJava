@@ -98,17 +98,30 @@ public class Tarjeta {
 	 */
 	
 	
-	// FALTA PONER EL TRY CATCH EN EL MAIN
-	public int sacarDinero(int cantidad) throws Exception {
+	public boolean password(int pass) {
+		if (this.pin==pass) {
+			return true;
+		} 
+		return false;
+	}
+	
+	
+	
+	public double sacarDinero(double cantidad) throws Exception {
 		
-		if (this.saldo<200) {
-		throw new Exception("No tienes dinero txiki");
+		if ( (this.saldo-cantidad)<200) {
+		throw new Exception("No puedes. Te quedarías con menos del mínimo.\nSaldo actual: " + this.saldo );
 		} else if (cantidad>max) {
-			throw new Exception("Supera el máximo");
+			throw new Exception("Supera el máximo diario");
 		} else {
 			this.saldo-=cantidad;
 			return cantidad;
 		}
+	}
+	
+	public void ingresarDinero(double cantidad){
+		
+			this.saldo+=cantidad;
 	}
 	
 	
@@ -168,7 +181,7 @@ public class Tarjeta {
 	/**
 	 * @param max amount per day
 	 */
-	public void setMax(int max) {
+	public void setMax(double max) {
 		this.max = max;
 	}
 
