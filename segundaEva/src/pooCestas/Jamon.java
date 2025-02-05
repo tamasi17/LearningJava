@@ -31,7 +31,6 @@ public class Jamon extends Producto {
 	 */
 	public Jamon(String nombre, int precio, boolean gluten) {
 		super(nombre, precio, gluten);
-		// TODO Auto-generated constructor stub
 	}
 	
 	
