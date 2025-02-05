@@ -7,14 +7,15 @@ public class TestCestas {
 	public static void main(String[] args) {
 
 		/*
-		Declara e implementa las clases Triángulo, Círculo y Cuadrado 
-		de forma que todas tengan un atributo
-		 String color
-		y compartan los siguientes métodos:
-		 String dameColor()
-		 String toString()
-		 Imprimir los datos de la figura
-		 Calcular el área de la figura (triangulo es base x altura / 2, cuadrado es lado^2, circulo es pi*r^2)
+		
+		Ejercicio 3: En el mismo proyecto, pero fuera del paquete “cestas”, crea una clase llamada Test donde programarás un método main.
+		En ella, haz lo siguiente: Primero crea un producto para cada uno de los productos de la lista (ver más abajo).
+		Después crea un cliente con tus propios datos personales.
+	
+		Ahora vas a crear dos cestas, añadiendo los productos las veces que sea necesario.
+		La primera cesta contiene un jamón, dos latas de foie gras, tres cajas de mazapán y una botella de sidra.
+		La segunda cesta contiene un jamón, cinco cajas de turrón y tres botellas de cava.
+		
 		*/
 		
 		

@@ -2,15 +2,14 @@ package pooCestas;
 
 
 /*
-Declara e implementa las clases Triángulo, Círculo
-y Cuadrado de forma que todas tengan un
-atributo
- String color
-y compartan los siguientes métodos:
- String dameColor()
- String toString()
- Imprimir los datos de la figura
- Calcular el área de la figura (triangulo es base x altura / 2, cuadrado es lado^2, circulo es pi*r^2)
+Los códigos, precios y contenido en gluten de los productos son los siguientes:
+	1 - Jamón serrano – 40 euros – Sin gluten
+	2 - Lata de foie gras – 10 euros – Con gluten
+	3 - Turrón de almendras – 5 euros – Con gluten
+	4 - Caja de mazapán – 8 euros – Con gluten
+	5 - Botella de sidra – 8 euros – Sin gluten 
+	6 - Botella de cava – 15 euros – Sin gluten 
+	Nota: en este caso sí se permite que un mismo producto esté repetido en la cesta 
 */
 
 
@@ -21,17 +20,24 @@ public class Jamon extends Producto {
 	
 	private static int codigo = 1;
 	private static Tipo tipo = Tipo.SALADO;
+	private static int precio = 40;
+	private static boolean gluten = false;
 //	Constructor
-
+	
 	/**
 	 * @param nombre
-	 * @param tipo
 	 * @param precio
 	 * @param gluten
 	 */
 	public Jamon(String nombre, int precio, boolean gluten) {
 		super(nombre, precio, gluten);
+		// TODO Auto-generated constructor stub
 	}
+	
+	
+	
+
+
 	
 	
 	
