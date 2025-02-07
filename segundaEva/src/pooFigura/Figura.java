@@ -39,6 +39,11 @@ public class Figura {
 
 //	Metodos
 	
+	
+	public double area() {
+		return 0;
+	}
+	
 	/**
 	 * 
 	 * Getters and Setters

@@ -67,16 +67,6 @@ import java.util.Objects;
 	}
 	
 
-//	toString
-	
-
-	@Override
-	public String toString() {
-		return "Cliente [" + (nombre != null ? "nombre=" + nombre + ", " : "")
-				+ (dni != null ? "dni=" + dni + ", " : "") + (fisco != null ? "fisco=" + fisco : "") + "]";
-	}
-
-
 	
 //	Equals solo con el DNI
 	
@@ -101,7 +91,15 @@ import java.util.Objects;
 	}
 	
 	
+//	toString
 	
+
+	@Override
+	public String toString() {
+		return (nombre != null ? nombre : "")
+				+ (dni != null ? ", " + dni : "") + (fisco != null ? ", " + fisco : "");
+	}
+
 
 	
 	

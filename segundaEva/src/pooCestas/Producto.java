@@ -21,15 +21,19 @@ import java.util.Objects;
 	1. Imprimir todos sus datos (datos del cliente y listado de productos que contiene)
 	2. Imprimir el precio total del contenido de la cesta
 	3. Imprimir si la cesta es apta para celíacos o no (será apta si ninguno de sus productos contiene gluten)
+	
 	Ejercicio 1: Realiza un esquema de clases incluyendo las clases Producto, Cliente y Cesta.
+	
 	Ejercicio 2: Crea un proyecto llamado “Cestas-TuNombre”.
 	Programa las tres clases incluyéndolas en un paquete llamado “cestas”
+	
 	Ejercicio 3: En el mismo proyecto, pero fuera del paquete “cestas”, crea una clase llamada Test donde programarás un método main.
 	En ella, haz lo siguiente: Primero crea un producto para cada uno de los productos de la lista (ver más abajo).
 	Después crea un cliente con tus propios datos personales.
 	Ahora vas a crear dos cestas, añadiendo los productos las veces que sea necesario.
 	La primera cesta contiene un jamón, dos latas de foie gras, tres cajas de mazapán y una botella de sidra.
 	La segunda cesta contiene un jamón, cinco cajas de turrón y tres botellas de cava.
+	
 	Los códigos, precios y contenido en gluten de los productos son los siguientes:
 	1 - Jamón serrano – 40 euros – Sin gluten
 	2 - Lata de foie gras – 10 euros – Con gluten
@@ -43,19 +47,20 @@ import java.util.Objects;
 
 //	Como no vamos a instanciar producto directamente, es una clase abstracta.
 	
-	public abstract class Producto {
+	public class Producto {
 	
 		
 //	Atributos
 	
 	/**
-	 * Atributos: codigo (static), nombre, precio unitario, gluten, tipo
+	 * Atributos: codigo, nombre, precio unitario, gluten, tipo
 	 */
+	private int codigo=1000;
+	private static int total=0;
 	private String nombre;
-	private static Tipo tipo;
-	private static int codigo;
 	private int precio;
 	private boolean gluten;
+	private Tipo tipo;
 	
 //	Constructor
 
@@ -65,10 +70,13 @@ import java.util.Objects;
 	 * @param precio
 	 * @param gluten
 	 */
-	public Producto(String nombre, int precio, boolean gluten) {
+	public Producto(String nombre, int precio, boolean gluten, Tipo tipo) {
 		this.nombre = nombre;
 		this.precio = precio;
 		this.gluten = gluten;
+		this.tipo = tipo;
+		newProducto(); // total++
+		this.codigo=codigo+total; // genera un codigo nuevo para cada producto en funcion del total
 	}
 
 	
@@ -77,6 +85,9 @@ import java.util.Objects;
 //	Metodos
 	
 	
+	static void newProducto() {
+		total++;
+	}
 	
 	
 	/**
@@ -92,7 +103,7 @@ import java.util.Objects;
 	/**
 	 * @return the tipo
 	 */
-	public static Tipo getTipo() {
+	public Tipo getTipo() {
 		return tipo;
 	}
 
@@ -102,8 +113,8 @@ import java.util.Objects;
 	/**
 	 * @return the codigo
 	 */
-	public static int getCodigo() {
-		return codigo;
+	public static int getTotal() {
+		return total;
 	}
 
 
@@ -142,8 +153,17 @@ import java.util.Objects;
 	/**
 	 * @param tipo the tipo to set
 	 */
-	public static void setTipo(Tipo tipo) {
-		Producto.tipo = tipo;
+	public void setTipo(Tipo tipo) {
+		this.tipo = tipo;
+	}
+
+
+
+	/**
+	 * @return the codigo
+	 */
+	public int getCodigo() {
+		return codigo;
 	}
 
 
@@ -152,10 +172,9 @@ import java.util.Objects;
 	/**
 	 * @param codigo the codigo to set
 	 */
-	public static void setCodigo(int codigo) {
-		Producto.codigo = codigo;
+	public void setCodigo(int codigo) {
+		this.codigo = codigo;
 	}
-
 
 
 
@@ -181,8 +200,9 @@ import java.util.Objects;
 
 	@Override
 	public String toString() {
-		return "Producto [" + (nombre != null ? "nombre=" + nombre + ", " : "")
-				+ (tipo != null ? "tipo=" + tipo + ", " : "") + "precio=" + precio + ", gluten=" + gluten + "]";
+		return  (nombre != null ? "\n" + nombre + ", " : "")
+				+ (tipo != null ? tipo + ", " : "") + precio + "€, " 
+				+ (gluten != false ? "Contiene gluten" : "SIN GLUTEN");
 	}
 
 

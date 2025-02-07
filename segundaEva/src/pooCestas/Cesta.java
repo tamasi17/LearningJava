@@ -49,6 +49,9 @@ import java.util.Objects;
 	*/
 	
 
+
+//	FALTA METODOS PARA TOTAL (MAXIMO 100e)
+
 	
 	public class Cesta {
 	
@@ -59,12 +62,21 @@ import java.util.Objects;
 	 * Atributos: array de productos, cliente comprador
 	 */
 
-		private Producto[] productos = new Producto[0];
+		private Producto[] productos;
 		private Cliente cliente;
 		
-
 //	Constructor
-	
+
+		
+		/**Constructo solo con cliente
+		 * @param cliente
+		 */
+		public Cesta(Cliente cliente) {
+			this.cliente = cliente;
+			this.productos = new Producto[0];
+		}
+		
+		
 		/**
 		 * @param productos
 		 * @param cliente
@@ -74,6 +86,7 @@ import java.util.Objects;
 			this.cliente = cliente;
 		}
 		
+		
 //	Añadir producto (creamos un array auxiliar con tamaño +1)
 		
 		public void addProducto(Producto p) {
@@ -82,7 +95,7 @@ import java.util.Objects;
 				aux[i]=productos[i];
 			}
 			aux[aux.length-1]=p;
-			productos=aux;
+			this.productos=aux;
 		}
 		
 //	Borrar Producto
@@ -146,8 +159,9 @@ import java.util.Objects;
 		
 		@Override
 		public String toString() {
-			return "Cesta [" + (productos != null ? "productos=" + Arrays.toString(productos) + ", " : "")
-					+ (cliente != null ? "cliente=" + cliente : "") + "]";
+			return  (cliente != null ? cliente + ": " : "") 
+					+ (productos != null ? Arrays.toString(productos) + ", " : "")
+					;
 		}
 
 	
