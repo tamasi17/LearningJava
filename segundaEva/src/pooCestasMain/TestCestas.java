@@ -46,6 +46,8 @@ public class TestCestas {
 		
 		
 //		La primera cesta contiene un jamón, dos latas de foie gras, tres cajas de mazapán y una botella de sidra.
+
+		try {
 		cestaChema.addProducto(jamon);
 		cestaChema.addProducto(foie);
 		cestaChema.addProducto(foie);
@@ -53,8 +55,13 @@ public class TestCestas {
 		cestaChema.addProducto(mazapan);
 		cestaChema.addProducto(mazapan);
 		cestaChema.addProducto(sidra);
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
 		
 //		La segunda cesta contiene un jamón, cinco cajas de turrón y tres botellas de cava.
+		
+		try {
 		cestaNvidia.addProducto(jamon);
 		cestaNvidia.addProducto(turron);
 		cestaNvidia.addProducto(turron);
@@ -64,17 +71,22 @@ public class TestCestas {
 		cestaNvidia.addProducto(cava);
 		cestaNvidia.addProducto(cava);
 		cestaNvidia.addProducto(cava);
-		
+		} catch (Exception e) {
+			System.out.println("Excepcion: " + e.getMessage() + "\n");
+		}
 		
 		
 //		Sacar por pantalla los datos de cada instancia con toString
 
 
 
-		System.out.println(cestaChema.toString() + "\n");
-		System.out.println(cestaNvidia.toString());
+		System.out.println(cestaChema.toString()+ "\n");
+		System.out.println(cestaNvidia.toString()+ "\n");
+		
 	
-	
+		System.out.println("El precio de la cesta de " + cestaNvidia.getCliente().getNombre() + " es de " + cestaNvidia.precioCesta() 
+						+ " euros.\nPodemos comprobar que no se ha añadido la ultima botella de cava porque superaba el total de 100e.");
+		System.out.println("El precio de la cesta de " + cestaChema.getCliente().getNombre() + " es de " + cestaChema.precioCesta() + " euros.");
 	
 	
 	}

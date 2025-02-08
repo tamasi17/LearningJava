@@ -66,17 +66,63 @@ import java.util.Objects;
 		this.fisco = fisco;
 	}
 	
+//	Getters y Setters
+	
 
+	/**
+	 * @return the nombre
+	 */
+	public String getNombre() {
+		return nombre;
+	}
+
+	/**
+	 * @return the dni
+	 */
+	public String getDni() {
+		return dni;
+	}
+
+	/**
+	 * @return the fisco
+	 */
+	public Fiscalidad getFisco() {
+		return fisco;
+	}
+
+	/**
+	 * @param nombre the nombre to set
+	 */
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	/**
+	 * @param dni the dni to set
+	 */
+	public void setDni(String dni) {
+		this.dni = dni;
+	}
+
+	/**
+	 * @param fisco the fisco to set
+	 */
+	public void setFisco(Fiscalidad fisco) {
+		this.fisco = fisco;
+	}
 	
 //	Equals solo con el DNI
 	
-	
-	
+	/**
+	 * Equals only with DNI
+	 */
 	@Override
 	public int hashCode() {
 		return Objects.hash(dni);
 	}
 
+
+	
 
 	@Override
 	public boolean equals(Object obj) {
@@ -93,7 +139,9 @@ import java.util.Objects;
 	
 //	toString
 	
-
+	/**
+	 * toString omitting nulls.
+	 */
 	@Override
 	public String toString() {
 		return (nombre != null ? nombre : "")

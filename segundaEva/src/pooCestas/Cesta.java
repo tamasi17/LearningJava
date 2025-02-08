@@ -87,18 +87,77 @@ import java.util.Objects;
 		}
 		
 		
-//	Añadir producto (creamos un array auxiliar con tamaño +1)
 		
-		public void addProducto(Producto p) {
-			Producto[] aux = new Producto[this.productos.length+1];
-			for (int i = 0; i < productos.length; i++) {
-				aux[i]=productos[i];
+//		Getters y Setters
+		
+		
+		/**
+		 * @return the productos
+		 */
+		public Producto[] getProductos() {
+			return productos;
+		}
+
+
+		/**
+		 * @return the cliente
+		 */
+		public Cliente getCliente() {
+			return cliente;
+		}
+
+
+		/**
+		 * @param productos the productos to set
+		 */
+		public void setProductos(Producto[] productos) {
+			this.productos = productos;
+		}
+
+
+		/**
+		 * @param cliente the cliente to set
+		 */
+		public void setCliente(Cliente cliente) {
+			this.cliente = cliente;
+		}
+
+		
+		
+//	Añadir producto (creamos un array auxiliar con tamaño +1)
+
+
+		
+		/**
+		 * Method adds a product to each Cesta Products array
+		 * Throws e
+		 * @param p
+		 * @throws Exception
+		 */
+		public void addProducto(Producto p) throws Exception {
+			
+			if ((precioCesta()+p.getPrecio())>100) {
+				throw new Exception("Las cestas no pueden superar el valor de 100e");
+			} else {
+				
+				Producto[] aux = new Producto[this.productos.length+1];
+				for (int i = 0; i < productos.length; i++) {
+					aux[i]=productos[i];
+				}
+				aux[aux.length-1]=p;
+				this.productos=aux;
 			}
-			aux[aux.length-1]=p;
-			this.productos=aux;
 		}
 		
 //	Borrar Producto
+		
+		/**
+		 * Method that deletes a product from the array:
+		 * For through the array to find the product
+		 * Temp array up to the product position, skips it, then continues copying the original.
+		 * Original array now points to temps' memory space: new array without the aforementioned product.
+		 * @param n
+		 */
 		
 //		n es nombre del producto a borrar
 		public void dropProducto(String n) {
@@ -137,6 +196,11 @@ import java.util.Objects;
 		
 //		Precio total de la cesta
 		
+		
+		/**
+		 * Method that returns the value of a Cesta instance
+		 * @return total value of Cesta
+		 */
 		public int precioCesta() {
 			int total=0;
 			for (int i = 0; i < productos.length; i++) {
@@ -145,6 +209,13 @@ import java.util.Objects;
 			return total;
 		}
 		
+		
+//		Apto para gluten
+		
+		/**
+		 * Method that verifies if the Cesta instance is suitable for celiacs
+		 * @return boolean verifying if suitable for celiacs or not
+		 */
 		public boolean aptoGluten() {
 			for (int i = 0; i < productos.length; i++) {
 				if (productos[i].isGluten()) {
@@ -157,6 +228,9 @@ import java.util.Objects;
 	
 //		toString
 		
+		/**
+		 * toString including product array
+		 */
 		@Override
 		public String toString() {
 			return  (cliente != null ? cliente + ": " : "") 
