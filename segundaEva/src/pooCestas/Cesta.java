@@ -49,9 +49,6 @@ import java.util.Objects;
 	*/
 	
 
-
-//	FALTA METODOS PARA TOTAL (MAXIMO 100e)
-
 	
 	public class Cesta {
 	

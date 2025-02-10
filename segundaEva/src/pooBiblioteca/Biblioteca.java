@@ -41,7 +41,7 @@ public class Biblioteca {
  * Atributos: nombre de la biblioteca, array coleccion de libros y contador para la cantidad de libros.	
  */
 	private String nombre;
-	private Libro [] coleccion = new Libro[100];
+	private Libro [] coleccion;
 	private int contador=0;
 
 	
@@ -64,6 +64,7 @@ public class Biblioteca {
 
 	public Biblioteca(String nombre) {
 		this.nombre = nombre;
+		this.coleccion = new Libro[100];
 	}
 
 
@@ -79,8 +80,7 @@ public class Biblioteca {
 	
 	public void addLibro(Libro libro) {
 			this.coleccion[contador]=libro;
-			contador++;
-		
+			contador++;	
 	}
 
 	/**
