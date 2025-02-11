@@ -90,7 +90,8 @@ public abstract class Cuenta {
 	
 	
 	
-//	Extracto mensual: actualiza el saldo restándole la comisión mensual y calculando el interés mensual correspondiente (invoca el método anterior).	
+//	Extracto mensual: actualiza el saldo restándole la comisión mensual y calculando el interés mensual correspondiente (invoca el método anterior).
+	
 	
 //	Imprimir: muestra en pantalla los valores de los atributos (toString)
 	

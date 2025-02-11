@@ -112,6 +112,8 @@ public class Biblioteca {
 	}
 	
 	
+
+	
 	
 	
 //	Para mostrar los libros de una biblioteca, generamos un array solo con los libros que hay actualmente, se visualiza con bucle syso en el test
