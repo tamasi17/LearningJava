@@ -86,14 +86,34 @@ public abstract class Cuenta {
 	
 //	Calcular el interés mensual de la cuenta y actualiza el saldo correspondiente.
 	
-	
+	public void interes() {
+		
+		float tasaMensual = this.tasaAnual/12;
+		float interesMensual = saldo * tasaMensual;
+		saldo += interesMensual;
+
+	}
 	
 	
 	
 //	Extracto mensual: actualiza el saldo restándole la comisión mensual y calculando el interés mensual correspondiente (invoca el método anterior).
 	
-	
+	public void extractoMensual() {
+		saldo -= this.comisionMensual;
+		interes();
+	}
+
+
 //	Imprimir: muestra en pantalla los valores de los atributos (toString)
+
+	@Override
+	public String toString() {
+		return saldo + ", tasaAnual: " + tasaAnual + ", consignas: " + consignaciones
+				+ ", retiros: " + retiros + ", comisionMensual: " + comisionMensual;
+	}
+	
+	
+	
 	
 	
 	

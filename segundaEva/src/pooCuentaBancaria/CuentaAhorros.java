@@ -26,15 +26,19 @@ package pooCuentaBancaria;
 
 
 /**
- * 
+ *  Clase para las Cuentas de Ahorros
  */
 public class CuentaAhorros extends Cuenta {
 
 	/**
-	 * 
+	 * @param saldo
+	 * @param tasaAnual
 	 */
-	public CuentaAhorros() {
-		// TODO Auto-generated constructor stub
+	public CuentaAhorros(float saldo, float tasaAnual) {
+		super(saldo, tasaAnual);
 	}
 
+
+	
+	
 }
