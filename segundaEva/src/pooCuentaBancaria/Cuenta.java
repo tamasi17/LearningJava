@@ -35,13 +35,25 @@ public abstract class Cuenta {
 	
 	/**
 	 * Atributos: saldo, tasa anual, consignaciones, retiros y comision mensual.
+	 * Protected para poder acceder desde las clases herederas (subclases)
 	 */
-	private float saldo;
-	private float tasaAnual;
-	private int consignaciones=0;
-	private int retiros=0;
-	private float comisionMensual=0;
+	protected float saldo;
+	protected float tasaAnual;
+	protected int consignaciones=0;
+	protected int retiros=0;
+	protected float comisionMensual=0;
 	
+	
+	
+	
+	/**
+	 * Constructor vacio
+	 */
+	public Cuenta() {
+	}
+
+
+
 	/**
 	 * Constructor con Saldo y Tasa Anual
 	 * @param saldo
@@ -68,7 +80,7 @@ public abstract class Cuenta {
 //	Retirar una cantidad de dinero en la cuenta actualizando su saldo. El valor a retirar no debe superar el saldo.
 	
 	/**
-	 * Metodo para sacar dinero, suma una consigna. Lanza excepcion si el saldo no es suficiente.
+	 * Metodo para sacar dinero. Lanza excepcion si el saldo no es suficiente.
 	 * @param cantidad
 	 */
 	
@@ -78,7 +90,6 @@ public abstract class Cuenta {
 			throw new Exception("Estas intentando retirar más que el saldo disponible");
 		} else {
 			this.saldo-=cantidad;
-			consignaciones++;			
 			return cantidad;
 		} // fin if
 			

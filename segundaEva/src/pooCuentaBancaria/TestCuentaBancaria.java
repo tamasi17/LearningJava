@@ -13,9 +13,20 @@ public class TestCuentaBancaria {
 
 		
 		
+		CuentaAhorros cA = new CuentaAhorros(10500, 10);
+		
+		try {
+			
+		cA.ingresar(200);
+		cA.interes();
+		cA.retirar(70);
+		
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
 		
 		
-		
+		cA.toString();
 		
 		
 		

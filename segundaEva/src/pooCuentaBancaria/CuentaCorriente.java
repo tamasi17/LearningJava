@@ -6,8 +6,10 @@ package pooCuentaBancaria;
 /*
  *  La clase Cuenta tiene dos clases hijas: Cuenta corriente
 		
-		Posee un atributo de sobregiro, el cual se inicializa en cero. Se
-		redefinen los siguientes métodos: Retirar: se retira dinero de la cuenta actualizando su saldo. Se
+		Posee un atributo de sobregiro, el cual se inicializa en cero. 
+		Se redefinen los siguientes métodos: 
+		
+		Retirar: se retira dinero de la cuenta actualizando su saldo. Se
 		puede retirar dinero superior al saldo. El dinero que se debe queda como sobregiro.
 		
 		Consignar: invoca al método heredado. Si hay sobregiro, la cantidad consignada reduce
