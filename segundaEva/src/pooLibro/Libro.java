@@ -171,7 +171,7 @@ public class Libro {
 	public String toString() {
 		return  (titulo != null ? titulo : "")
 				+ (edicion != null ? edicion + " edición.\n" : "")
-				+ (autor != null ? "Autor: " + autor + "\n" : "")
+				+ (autor != null ? " Autor: " + autor + "\n" : "")
 				+ (isbn != null ? "ISBN: " + isbn + "\n" : "")
 				+ (editorial != null ? editorial + ", " : "")
 				+ (ciudad != null ? ciudad + ", " : "") + (pais != null ? "(" + pais + ")\n" : "")

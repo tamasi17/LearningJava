@@ -61,6 +61,11 @@ public class Biblioteca {
 		
 	}
 	
+	/**
+	 * Constructores
+	 * @param nombre
+	 *
+	 */
 
 	public Biblioteca(String nombre) {
 		this.nombre = nombre;
