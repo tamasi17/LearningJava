@@ -12,22 +12,26 @@ public class TestCuentaBancaria {
 	public static void main(String[] args) {
 
 		
+		CuentaAhorros cA = new CuentaAhorros(10500, 20);
 		
-		CuentaAhorros cA = new CuentaAhorros(10500, 10);
+		System.out.println(cA + "\n");
+		
+		
+		System.out.println(cA.isEstaActiva());
+			
+		cA.ingresar(300);
+			
 		
 		try {
 			
-		cA.ingresar(200);
-		cA.interes();
-		cA.retirar(70);
-		
+			cA.retirar(1200);
+			
+			
 		} catch (Exception e) {
-			System.out.println(e.getMessage());
+			System.out.println(e.getMessage() + "\n");
 		}
 		
-		
-		cA.toString();
-		
+		System.out.println(cA + "\n");	
 		
 		
 		

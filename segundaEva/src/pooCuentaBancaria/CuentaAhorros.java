@@ -39,7 +39,7 @@ public class CuentaAhorros extends Cuenta {
 	 * @param tasaAnual
 	 */
 	public CuentaAhorros(float saldo, float tasaAnual) {
-		super(saldo, tasaAnual);
+		super(saldo, tasaAnual, 0, 0, 0);   // saldo, tasaAnual, consignaciones, retiro, comisionMensual 
 		if (saldo > 10000) {
 			estaActiva = true;
 		}
@@ -51,19 +51,62 @@ public class CuentaAhorros extends Cuenta {
 	public CuentaAhorros() {
 	}
 
-//	Consignar una cantidad de dinero en la cuenta actualizando su saldo.
+	
+//	Getters y Setters
+	
 
+	/**
+	 * @return the estaActiva
+	 */
+	public boolean isEstaActiva() {
+		if (saldo > 10000) {
+			return estaActiva;
+		} else {
+			return false;
+		}
+	}
+
+	/**
+	 * @return the retiros
+	 */
+	public int getRetiros() {
+		return retiros;
+	}
+
+	/**
+	 * @param estaActiva the estaActiva to set
+	 */
+	public void setEstaActiva(boolean estaActiva) {
+		if (saldo > 10000) {
+			this.estaActiva = true;
+		} else {
+			this.estaActiva = false;
+		}
+	}
+
+	/**
+	 * @param retiros the retiros to set
+	 */
+	public void setRetiros(int retiros) {
+		this.retiros = retiros;
+	}
+	
+	
+
+//	Consignar una cantidad de dinero en la cuenta actualizando su saldo.
+	
+	
 	/**
 	 * Metodo para ingresar dinero, suma una consigna.
 	 * 
 	 * @param cantidad
 	 */
 	public void ingresar(float cantidad) {
-		if (estaActiva) {
+		if (this.isEstaActiva()) {
 			this.saldo += cantidad;
 			consignaciones++;
 		} else {
-			System.out.println("Tu cuenta no está activa.");
+			System.out.println("Tu cuenta no está activa."); // sorry por el syso, era mas rapido
 		}
 
 	}
@@ -78,7 +121,7 @@ public class CuentaAhorros extends Cuenta {
 
 	public float retirar(float cantidad) throws Exception {
 
-		if (estaActiva) {
+		if (this.isEstaActiva()) {
 			if (cantidad > this.saldo) {
 				throw new Exception("Estas intentando retirar más que el saldo disponible");
 			} else {
@@ -115,11 +158,13 @@ public class CuentaAhorros extends Cuenta {
 	
 	@Override
 	public String toString() {
-		return "Tu saldo: " + saldo + ""  
-				+ (consignaciones != 0 ? consignaciones + " consignaciones." : "")
-				+ (retiros != 0 ? retiros + " retiros." : "")
-				+ (retiros != 0 ? retiros + " retiros." : "")
-				+ ", comisionMensual: " + comisionMensual;
+		return "Tu saldo actual: " + saldo + "\n"  
+				+ (this.isEstaActiva() ? "Tu cuenta está activa.\n" : "Tu cuenta está inactiva.\n")
+				+ (consignaciones != 0 ? consignaciones + " consignaciones. " : "")
+				+ (retiros != 0 ? retiros + " retiros. " : "")
+				+ ((retiros+consignaciones) != 0 ? (retiros+consignaciones) + " movimientos en total. \n" : "")
+				+ (tasaAnual != 0 ? tasaAnual + " tasa anual. " : "")
+				+ (comisionMensual != 0 ? comisionMensual + " comision mensual. " : "");
 	}
 	
 

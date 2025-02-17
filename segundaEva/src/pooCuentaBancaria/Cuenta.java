@@ -45,7 +45,23 @@ public abstract class Cuenta {
 	
 	
 	
-	
+	/**
+	 * @param saldo
+	 * @param tasaAnual
+	 * @param consignaciones
+	 * @param retiros
+	 * @param comisionMensual
+	 */
+	public Cuenta(float saldo, float tasaAnual, int consignaciones, int retiros, float comisionMensual) {
+		this.saldo = saldo;
+		this.tasaAnual = tasaAnual;
+		this.consignaciones = consignaciones;
+		this.retiros = retiros;
+		this.comisionMensual = comisionMensual;
+	}
+
+
+
 	/**
 	 * Constructor vacio
 	 */
