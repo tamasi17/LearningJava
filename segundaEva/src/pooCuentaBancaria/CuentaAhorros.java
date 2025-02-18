@@ -158,13 +158,13 @@ public class CuentaAhorros extends Cuenta {
 	
 	@Override
 	public String toString() {
-		return "Tu saldo actual: " + saldo + "\n"  
+		return "Bienvenido a tu cuenta de ahorros.\nTu saldo actual: " + saldo + "\n"  
 				+ (this.isEstaActiva() ? "Tu cuenta está activa.\n" : "Tu cuenta está inactiva.\n")
 				+ (consignaciones != 0 ? consignaciones + " consignaciones. " : "")
 				+ (retiros != 0 ? retiros + " retiros. " : "")
 				+ ((retiros+consignaciones) != 0 ? (retiros+consignaciones) + " movimientos en total. \n" : "")
 				+ (tasaAnual != 0 ? tasaAnual + " tasa anual. " : "")
-				+ (comisionMensual != 0 ? comisionMensual + " comision mensual. " : "");
+				+ (comisionMensual != 0 ? comisionMensual + " comision mensual.\n" : "");
 	}
 	
 
