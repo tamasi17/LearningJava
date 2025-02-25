@@ -4,7 +4,7 @@
 package pooAlmacen;
 
 /**
- * enum de Materiales para Ropa del Almacen
+ * Enum de Materiales para Ropa del Almacen
  */
 public enum Material {
 
