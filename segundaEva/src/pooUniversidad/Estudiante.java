@@ -24,19 +24,17 @@ public class Estudiante extends Persona {
 	 */
 	public Estudiante(String nombre) {
 		super(nombre);
-		// TODO Auto-generated constructor stub
 	}
 
 	/**
 	 * Constructor Estudiante con todos sus atributos
-	 * @param dni
 	 * @param nombre
 	 * @param apellidos
 	 * @param carrera
 	 * @param semestre
 	 */
-	public Estudiante(String dni, String nombre, String apellidos, String carrera, int semestre) {
-		super(dni, nombre, apellidos);
+	public Estudiante(String nombre, String direccion, String carrera, int semestre) {
+		super(nombre, direccion);
 		this.carrera = carrera;
 		this.semestre = semestre;
 	}
