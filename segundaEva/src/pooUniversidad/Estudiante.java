@@ -62,6 +62,35 @@ public class Estudiante extends Persona {
 	}
 
 	
+	/**
+	 * @return the carrera
+	 */
+	public String getCarrera() {
+		return carrera;
+	}
+
+	/**
+	 * @param carrera
+	 */
+	public void setCarrera(String carrera) {
+		this.carrera = carrera;
+	}
+
+	/**
+	 * @return the semestre
+	 */
+	public int getSemestre() {
+		return semestre;
+	}
+
+	/**
+	 * @param semestre
+	 */
+	public void setSemestre(int semestre) {
+		this.semestre = semestre;
+	}
+
+	
 	
 	
 	

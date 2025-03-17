@@ -60,7 +60,7 @@ public Equipo(ArrayList<Ciclista> ciclistas, String nombreEquipo, int ganadores)
 	
 	public float calculaTiempoTotal() {
 		
-		
+		return FALTA ALGO AQUI;
 	}
 	
 	
