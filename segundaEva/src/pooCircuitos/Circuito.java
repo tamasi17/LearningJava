@@ -35,6 +35,8 @@ public abstract class Circuito {
 
 	protected double voltaje;
 	protected ArrayList<Resistencia> resistencias;
+	protected int id;
+	protected static int contador=0;
 	
 	/**
 	 * @param voltaje
@@ -43,6 +45,8 @@ public abstract class Circuito {
 	public Circuito(double voltaje) {
 		this.voltaje = voltaje;
 		this.resistencias = new ArrayList<Resistencia>();
+		contador++;
+		this.id=contador;
 	}
 
 	
@@ -80,9 +84,10 @@ public abstract class Circuito {
 
 	@Override
 	public String toString() {
-		return  "Voltaje: " + voltaje + " voltios. \n" 
+		return  "Circuito " + id + ": \n"
+				+ "Voltaje: " + voltaje + " voltios. \n" 
 				+ (totalResistencia() != 0 ? "Resistencia total: " + totalResistencia() + " ohmios. \n" : "")
-				+ (totalIntensidad() != 0 ? "Intensidad Total: " + totalIntensidad() + " amperios. \n" : "");
+				+ (totalIntensidad() != 0 ? "Intensidad Total: " + totalIntensidad() + " amperios. \n\n" : "");
 	}
 
 	

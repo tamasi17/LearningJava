@@ -27,19 +27,30 @@ public class TestCircuitos {
 		c1.addResistencia(200);
 		c1.addResistencia(500);
 		c1.addResistencia(400);
-		System.out.println(c1.totalResistencia() + " ohmios.");
-		System.out.println(c1.totalIntensidad() + " amperios.");
-		
-		System.out.println(c1.toString());
+		// System.out.println(c1.toString());
 		
 //		new circuito en serie 45v, 2res: 50, 70
 		
+		CircuitoSerie c2 = new CircuitoSerie(45);
+		c2.addResistencia(50);
+		c2.addResistencia(70);
+		// System.out.println(c2.toString());
+		
 //		new circuito paralelo 100v, 1res: 40
+		
+		CircuitoParalelo c3 = new CircuitoParalelo(100);
+		c3.addResistencia(100);
 		
 //		new placa con los tres circuitos
 		
+		Placa arduino = new Placa("Arduino");
+		arduino.circuitos.add(c1);
+		arduino.circuitos.add(c2);
+		arduino.circuitos.add(c3);
+		
 //		intensidad total placa
 		
+		System.out.println(arduino.toString());
 		
 	}
 
