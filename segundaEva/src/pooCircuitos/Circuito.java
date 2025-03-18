@@ -3,14 +3,17 @@
  */
 package pooCircuitos;
 
+import java.util.ArrayList;
+
 /**
  * 
  * Una placa electrónica está formada por una serie de circuitos, podemos añadir circuitos a la placa, y podemos calcular la intensidad total de la placa. 
  * Los circuitos podrán ser de dos tipos, circuitos en serie y circuitos en paralelo.
  * Los circuitos (ya sean serie o paralelo) sabemos que tienen las siguientes características, voltaje y un conjunto de resistencias.
  * El voltaje se nos dará en el momento de creación del circuito, en cambio las resistencias necesitamos ir añadiéndolas, con un método añadir resistencias.
- * La única diferencia de los circuitos serie y paralelo es la forma en cómo se calcula la intensidad, que ya sabemos que en los circuitos en serie es:
  * 
+ * La única diferencia de los circuitos serie y paralelo es la forma en cómo se calcula la intensidad
+ * Que ya sabemos que en los circuitos en serie es:
  * Intensidad=Voltaje/(r1+r2...)
  * 
  * En los circuitos en paralelo, la intensidad se calcula:
@@ -37,11 +40,51 @@ public abstract class Circuito {
 	 * @param voltaje
 	 * @param resistencias
 	 */
-	public Circuito(double voltaje, ArrayList<Resistencia> resistencias) {
+	public Circuito(double voltaje) {
 		this.voltaje = voltaje;
 		this.resistencias = new ArrayList<Resistencia>();
 	}
+
 	
+	public void addResistencia(double ohmios) { 
+		Resistencia r = new Resistencia(ohmios);
+		this.resistencias.add(r);
+	}
+	
+	public double totalResistencia() {
+		double total=0;
+		for (Resistencia r : this.resistencias) {
+			total += r.getOhmios();
+		}
+		return total;
+	}
+	
+	public abstract double totalIntensidad(); // podemos encontrar el body en CircuitoSerie o CircuitoParalelo
+	
+	/**
+	 * Getter Voltaje
+	 * @return the voltaje
+	 */
+	public double getVoltaje() {
+		return voltaje;
+	}
+
+	/**
+	 * Setter Voltaje
+	 * @param voltaje the voltaje to set
+	 */
+	public void setVoltaje(double voltaje) {
+		this.voltaje = voltaje;
+	}
+
+
+	@Override
+	public String toString() {
+		return  "Voltaje: " + voltaje + " voltios. \n" 
+				+ (totalResistencia() != 0 ? "Resistencia total: " + totalResistencia() + " ohmios. \n" : "")
+				+ (totalIntensidad() != 0 ? "Intensidad Total: " + totalIntensidad() + " amperios. \n" : "");
+	}
+
 	
 	
 	

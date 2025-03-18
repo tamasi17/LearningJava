@@ -5,6 +5,9 @@ package pooCircuitos;
 
 /**
  * Clase que define una Resistencia
+ * 
+ * Segun he entendido el enunciado y como se comentó en clase, parece que se pedia Resistencia como una clase.
+ * Otra forma de hacerlo sería usando un ArrayList<Double> llamado Resistencias como atributo de un Circuito.
  */
 public class Resistencia {
 
