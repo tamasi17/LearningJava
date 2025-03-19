@@ -15,7 +15,7 @@ import javax.swing.JTextField;
 /**
  *  Versión simplificada del ejercicio Circuitos para probar WindowsBuilder.
  */
-public class TestCircuitosGrafica {
+public class TestGraficaCircuitos {
 
 	private JFrame frame;
 	private JTextField crearPlaca;
@@ -30,7 +30,7 @@ public class TestCircuitosGrafica {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					TestCircuitosGrafica window = new TestCircuitosGrafica();
+					TestGraficaCircuitos window = new TestGraficaCircuitos();
 					window.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -42,7 +42,7 @@ public class TestCircuitosGrafica {
 	/**
 	 * Create the application.
 	 */
-	public TestCircuitosGrafica() {
+	public TestGraficaCircuitos() {
 		initialize();
 	}
 
