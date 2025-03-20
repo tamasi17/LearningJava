@@ -58,6 +58,19 @@ public class GraficaMongo {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
+		
+//		SCREEN
+		JTextArea screen = new JTextArea();
+		screen.setFont(new Font("Monospaced", Font.PLAIN, 13));
+		screen.setWrapStyleWord(true);
+		screen.setForeground(new Color(255, 255, 255));
+		screen.setLineWrap(true);
+		screen.setText("The data from your document will appear here.");
+		screen.setBackground(new Color(73, 73, 73));
+		screen.setBounds(282, 118, 264, 109);
+		frame.getContentPane().add(screen);
+		
+//		START
 		JButton start = new JButton("Conectarse a MongoDB");
 		start.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -70,6 +83,10 @@ public class GraficaMongo {
 					System.out.println("Try again."); 
 				}
 				
+				start.setVisible(false);
+				screen.setText("Connection successful! \nWelcome to your cluster: logindam0. \n"
+						+ "You are currently exploring the database testDAM.");
+
 				
 			}
 		});
@@ -79,6 +96,7 @@ public class GraficaMongo {
 		start.setBounds(203, 32, 183, 34);
 		frame.getContentPane().add(start);
 		
+//		NOMBRE
 		nombre = new JTextField();
 		nombre.setText("Name");
 		nombre.setEnabled(false);
@@ -87,6 +105,7 @@ public class GraficaMongo {
 		frame.getContentPane().add(nombre);
 		nombre.setColumns(10);
 		
+//		ROL
 		rol = new JTextField();
 		rol.setText("Role");
 		rol.setFont(new Font("Verdana", Font.PLAIN, 12));
@@ -95,6 +114,7 @@ public class GraficaMongo {
 		rol.setBounds(45, 150, 190, 20);
 		frame.getContentPane().add(rol);
 		
+//		INSERT
 		JButton insert = new JButton("Insert");
 		insert.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -102,6 +122,8 @@ public class GraficaMongo {
 				if (nombre.getText()!="Name" && rol.getText()!="Role") {
 					
 					MongoDataInserter.insertData(nombre.getText(), rol.getText());
+					screen.setText("Data inserted correctly.");
+
 
 				}
 				
@@ -114,15 +136,7 @@ public class GraficaMongo {
 		frame.getContentPane().add(insert);
 		
 		
-		JTextArea screen = new JTextArea();
-		screen.setWrapStyleWord(true);
-		screen.setForeground(new Color(255, 255, 255));
-		screen.setLineWrap(true);
-		screen.setText("The data from your document will appear here.");
-		screen.setBackground(new Color(73, 73, 73));
-		screen.setBounds(282, 118, 264, 109);
-		frame.getContentPane().add(screen);
-		
+//		RETRIEVE
 		JButton retrieve = new JButton("Retrieve");
 		retrieve.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -130,6 +144,8 @@ public class GraficaMongo {
 				String result = MongoDataRetriever.retrieveData("name", nombre.getText());
 				screen.setText(result);
 				System.out.println("\n Resultado: \n " + result);
+				nombre.setText("");
+				rol.setText("");
 			}
 		});
 		retrieve.setForeground(new Color(0, 255, 64));
