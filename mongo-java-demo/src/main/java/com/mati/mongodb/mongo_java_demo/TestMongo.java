@@ -14,10 +14,10 @@ public class TestMongo {
 	public static void main(String[] args) {
 
 		
-		MongoConnection.getDatabase("testDAM");
+		MongoConnection.getDatabase("testDAM"); // Connects to our db
 		
 		
-		MongoDataInserter.insertData("Juan");
+		MongoDataInserter.insertData("Juan", "Red Hat Hacker"); // Inserts data
 		
 		
 		String result = MongoDataRetriever.retrieveData("name", "Juan");

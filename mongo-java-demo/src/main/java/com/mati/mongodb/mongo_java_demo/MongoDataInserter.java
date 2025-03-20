@@ -13,7 +13,7 @@ import org.bson.Document;                  // Import Document class to represent
  */
 public class MongoDataInserter {
 	
-	public static void insertData(String nombre) {
+	public static void insertData(String nombre, String role) {
 		
 		// Get database connection	
 		MongoDatabase database = MongoConnection.getDatabase("testDAM");
@@ -24,7 +24,7 @@ public class MongoDataInserter {
 		// New document
 		Document doc = new Document ("name", nombre)
 				.append("id", 4)
-				.append("role", "Computer Forensic");
+				.append("role", role);
 		
 		// Insert document into collection
 		collection.insertOne(doc);
