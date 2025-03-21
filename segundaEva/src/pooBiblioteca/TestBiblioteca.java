@@ -1,72 +1,43 @@
 package pooBiblioteca;
 import pooPersona.Persona;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.TreeSet;
 
 import pooFecha.Fecha;
-import pooLibro.Libro;
+import pooLibro.LibroBasico;
 
-/*
-Una biblioteca tiene un nombre (String) y una colección de libros. 
-Se requiere que la biblioteca tenga un constructor que reciba el nombre de la biblioteca e inicialize la colección de libros. 
-La biblioteca posee  los métodos:
-
-addLibro() agrega un libro a la biblioteca
-deleteLibro() elimina un libro de la biblioteca.
-listLibros()  visualiza todos los libros de la biblioteca.
-El Libro tiene titulo, autor, editorial,isbn, todos String 
-y año de publicación es un int.
-
-Añade 3 Libros.(Cien años de soledad, Rayuela, la Tia Julia y el escribidor)
-
-Visualiza los libros.
-
-Elimina un libro.
-
-Visualiza los libros.
-
-*/
 
 
 public class TestBiblioteca {
 
 	public static void main(String[] args) {
-
-//		Creamos instancias de Biblioteca
 		
 		
-		Biblioteca trinity = new Biblioteca("Trinity College");
+		Biblioteca trinity = new Biblioteca("Trinity College"); // funciona con un TreeSet llamado coleccion
 		
-//		addLibro
-		
-		Libro cien = new Libro("Cien años de Soledad");
-		trinity.addLibro(cien);
-		
-		
-		Libro rayuela = new Libro("Rayuela");
-		trinity.addLibro(rayuela);
+		Libro comic1 = new Comic("Invencible", "Robert Kirkman", 130, 3);
+		Libro comic2 = new Comic("Spiderman", "Stan Lee", 220, 700);
+		Libro comic3 = new Comic("Batman", "Bob Kane", 220, 700);
 		
 		
-		Libro tiaJulia = new Libro("La Tia Julia y el Escribidor");
-		trinity.addLibro(tiaJulia);
+		ArrayList<Libro> libros = new ArrayList<Libro>();
+		
+		libros.add(comic1);
 		
 		
+		Libro en1 = new Enciclopedia("Larousse Ilustrado", "Pedro", 1002, 7);
+		Libro en2 = new Enciclopedia("National Geographic", "Juan", 3503, 10);
 		
+		TreeSet<Libro> tree = new TreeSet<>();
 		
-//		Usamos listLibros:
+		tree.add(en1);
+		tree.add(en2);
 		
-		System.out.println("La colección de " + trinity.getNombre() + ":\n" + Arrays.toString(trinity.listLibros()));
+		System.out.println(tree.toString());
 		
-		
-//		Eliminamos un libro y visualizamos:
-
-		System.out.println("\n ..Eliminamos Tia Julia.. \n");
-		trinity.deleteLibro(tiaJulia);
-		System.out.println("La colección de " + trinity.getNombre() + ":\n" + Arrays.toString(trinity.listLibros()));
-		System.out.println("Libros en la coleccion de " + trinity.getNombre() + ": " + trinity.getContador());
-		
-		
-		
+				
 	}
 
 }

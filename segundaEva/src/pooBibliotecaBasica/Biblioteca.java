@@ -1,9 +1,8 @@
-package pooBiblioteca;
+package pooBibliotecaBasica;
 import pooPersona.Persona;
 
 import java.util.Arrays;
 import java.util.Iterator;
-import java.util.TreeSet;
 
 import pooFecha.Fecha;
 import pooLibro.LibroBasico;
@@ -42,7 +41,7 @@ public class Biblioteca {
  * Atributos: nombre de la biblioteca, array coleccion de libros y contador para la cantidad de libros.	
  */
 	private String nombre;
-	private TreeSet<Libro> coleccion;
+	private Libro [] coleccion;
 	private int contador=0;
 
 	
@@ -56,7 +55,7 @@ public class Biblioteca {
 	 * @param coleccion
 	 */
 
-	public Biblioteca(String nombre, TreeSet<Libro> coleccion) {
+	public Biblioteca(String nombre, Libro[] coleccion) {
 		this.nombre = nombre;
 		this.coleccion = coleccion;
 		
@@ -70,7 +69,7 @@ public class Biblioteca {
 
 	public Biblioteca(String nombre) {
 		this.nombre = nombre;
-		this.coleccion = new TreeSet<Libro>();
+		this.coleccion = new Libro[100];
 	}
 
 
@@ -78,7 +77,70 @@ public class Biblioteca {
 
 //	Metodos
 	
+	
+	 /**
+     * Agrega un libro a la biblioteca.
+     * @param libro El libro a agregar.
+     */
+	
+	public void addLibro(Libro libro) {
+			this.coleccion[contador]=libro;
+			contador++;	
+	}
 
+	/**
+	 * Quita un libro de la biblioteca
+	 * @param tiaJulia
+	 */
+	
+	public void deleteLibro(Libro tiaJulia) {
+		
+//		Recorremos hasta contador buscando el libro
+		for (int i = 0; i < contador; i++) {  
+			
+//			Si encontramos el libro
+			if (tiaJulia.getTitulo().equals(this.coleccion[i].getTitulo())) { 
+				
+				// recorremos desde la posicion del libro hasta el penultimo
+				for (int j = i; j < contador-1; j++) {	
+					
+					// sustituyendolos para que no queden espacios vacios
+					this.coleccion[i]=this.coleccion[j+1];      	
+				}
+				
+				// borramos el ultimo y reducimos contador
+				this.coleccion[contador-1]=null;  
+				contador--; 
+				break; 
+			}
+		}
+	}
+	
+	
+
+	
+	
+	
+//	Para mostrar los libros de una biblioteca, generamos un array solo con los libros que hay actualmente, se visualiza con bucle syso en el test
+	
+	/**
+	 * Metodo para poder mostrar libros por pantalla
+	 * @return Un array con los libros disponibles en la biblioteca.
+	 */
+	
+	public Libro[] listLibros() {
+		
+//		Nuevo array de libros
+		Libro[] librosDisponibles = new Libro[this.contador];
+		
+//		Copiamos los libros reales
+		for (int i = 0; i < librosDisponibles.length; i++) {
+			librosDisponibles[i]=coleccion[i];
+		}
+		
+		return librosDisponibles;
+		
+	}
 	
 	
 //	Getters y Setters
@@ -88,7 +150,7 @@ public class Biblioteca {
 	}
 
 
-	public TreeSet<Libro> getColeccion() {
+	public Libro[] getColeccion() {
 		return coleccion;
 	}
 
@@ -103,7 +165,7 @@ public class Biblioteca {
 	}
 
 
-	public void setColeccion(TreeSet<Libro> coleccion) {
+	public void setColeccion(Libro[] coleccion) {
 		this.coleccion = coleccion;
 	}
 
@@ -117,7 +179,7 @@ public class Biblioteca {
 	public String toString() {
 		return  (nombre != null ? nombre : "")
 				+ (coleccion != null ? "\n" 
-				+ coleccion.toString() : "") 
+				+ Arrays.toString(coleccion) : "") 
 				+ (contador != 0 ? contador + " libros." : "");	
 	}
 	

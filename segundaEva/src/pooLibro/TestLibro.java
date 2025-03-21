@@ -30,7 +30,7 @@ public class TestLibro {
 		
 		
 		Persona autor = new Persona("Y. Daniel", "Liang");
-		Libro libro1 = new Libro("Introduction to Java Programming", "0-13-031997-X", autor);
+		LibroBasico libro1 = new LibroBasico("Introduction to Java Programming", "0-13-031997-X", autor);
 		
 		
 		System.out.println(libro1.toString()+"\n");

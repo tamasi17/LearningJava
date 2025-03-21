@@ -1,4 +1,4 @@
-package pooLibro;
+package pooBibliotecaBasica;
 import pooPersona.Persona;
 import pooFecha.Fecha;
 
