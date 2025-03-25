@@ -53,8 +53,8 @@ public Equipo(ArrayList<Ciclista> ciclistas, String nombreEquipo, int ganadores)
 	}
 	
 	public void listar() {
-		for (Ciclista ciclista : ciclistas) {
-			ciclista.toString();
+		for (Ciclista c : ciclistas) {
+			c.toString();
 		}
 	}
 	
