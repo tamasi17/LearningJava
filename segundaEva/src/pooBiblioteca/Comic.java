@@ -3,6 +3,8 @@
  */
 package pooBiblioteca;
 
+import java.util.Objects;
+
 /**
  * 
  */
@@ -38,6 +40,8 @@ public class Comic extends Libro {
 				;
 	}
 
+
+	
 	
 	
 

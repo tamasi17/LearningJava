@@ -1,7 +1,7 @@
 /**
  * 
  */
-package examenCiclista;
+package equipoCiclistas;
 
 /**
  * Clase que define a un objeto Ciclista
@@ -13,7 +13,7 @@ public class Ciclista {
 	private int id;
 	private static int contador;
 	private String nombre;
-	private float tiempoCarrera;
+	private float tiempoCarrera=0;
 	
 //	Constructores
 	

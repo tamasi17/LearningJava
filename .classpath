@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="ejercicios_Mats/src"/>
+	<classpathentry kind="src" path="mongo-java-demo/src/main/java"/>
+	<classpathentry kind="src" path="mongo-java-demo/src/test/java"/>
+	<classpathentry kind="src" path="segundaEva/src"/>
+	<classpathentry kind="output" path="ejercicios_Mats/bin"/>
+</classpath>
