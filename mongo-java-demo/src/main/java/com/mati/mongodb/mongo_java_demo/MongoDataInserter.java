@@ -23,7 +23,7 @@ public class MongoDataInserter {
 		
 		// New document
 		Document doc = new Document ("name", nombre)
-				.append("id", 4)
+				.append("source", "DAM_1")
 				.append("role", role);
 		
 		// Insert document into collection

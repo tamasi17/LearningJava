@@ -14,34 +14,27 @@ public class TestInmobiliaria {
 	public static void main(String[] args) {
 
 		
-		Vivienda casita = new Vivienda(
-		
-		
-		
-		
-		
-		
 		/**
 		
-		Definir un método público precio() que calcula el precio que tiene
+		Definir un mï¿½todo pï¿½blico precio() que calcula el precio que tiene
 		una superficie.
 		
-		Definir un método verTodasVentaInmueble(), que muestra todos
+		Definir un mï¿½todo verTodasVentaInmueble(), que muestra todos
 		los inmuebles, la secuencia de inmuebles en venta de la agencia.
 
-		Definir un método verTodosAlquilerInmueble(), que muestra todos
+		Definir un mï¿½todo verTodosAlquilerInmueble(), que muestra todos
 		los inmuebles, la secuencia de inmuebles en alquiler de la agencia.
 		
 		1. inmueblesVenta(p), que muestra los inmuebles con un precio de
-		venta inferior al parámetro.
+		venta inferior al parï¿½metro.
 		2. localesSegundaMano(m), que muestra los locales comerciales de
-		segunda mano con una superficie superior al parámetro.
-		3. solaresRusticos(), que averigua cuántos solares no urbanos están
+		segunda mano con una superficie superior al parï¿½metro.
+		3. solaresRusticos(), que averigua cuï¿½ntos solares no urbanos estï¿½n
 		en venta. 
 		
-		4.Ver todas las viviendas a alquilar de más de dos dormitorios.
-		5.Ver todas las viviendas para comprar de más de 1 dormitorios.
-		6.Ver todos los garajes públicos.
+		4.Ver todas las viviendas a alquilar de mï¿½s de dos dormitorios.
+		5.Ver todas las viviendas para comprar de mï¿½s de 1 dormitorios.
+		6.Ver todos los garajes pï¿½blicos.
 		
 		*/
 		
