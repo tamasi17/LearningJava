@@ -18,16 +18,23 @@ public class Agencia {
 //	VENDE (Solar, Vivienda)
 	
 	
-	public String verInmueblesVenta(){
+	
+	
+	
+//	1. inmueblesVenta(p), que muestra los inmuebles con un precio de venta inferior al parametro.
+	
+	public String verInmueblesVenta(int precio){
 		String resultado="";
 		for (Inmueble in : inmuebles) {
-			if ((in instanceof Vendible)){
+			if ((in instanceof Vendible) && (in.getPrecio()<precio)){ 
 				resultado+= "\n" + in.toString();
 			}
 		}
 		return resultado;
 	}
 
+//	verTodosAlquilerInmueble(), que muestra todos los inmuebles, la secuencia de inmuebles en alquiler de la agencia.
+	
 	public String verInmueblesAlquiler(){
 		String resultado="";
 		for (Inmueble in : inmuebles) {
@@ -40,22 +47,33 @@ public class Agencia {
 	
 	
 	
+	
+//	2. localesSegundaMano(m), que muestra los locales comerciales de segunda mano con una superficie superior al parï¿½metro.
+	
+	public String verSegundaMano(int superficie){
+		String resultado="";
+		for (Inmueble in : inmuebles) {
+			if ((in instanceof LocalComercial) && (in.getSuperficie()<superficie)){  // CREA getSuperficie()
+				resultado+= "\n" + in.toString();
+			}
+		}
+		return resultado;
+	}
+
+	
+	
+	
+	
+	
 	/**
 	 *  Definir addInmueble()
-	    verTodasVentaInmueble(), que muestra todos
-	los inmuebles, la secuencia de inmuebles en venta de la agencia.
+	 
+
+		
 	
-		verTodosAlquilerInmueble(), que muestra todos
-	los inmuebles, la secuencia de inmuebles en alquiler de la agencia.
-		
-		
-		1. inmueblesVenta(p), que muestra los inmuebles con un precio de
-		venta inferior al parámetro.
 	
-		2. localesSegundaMano(m), que muestra los locales comerciales de 
-		segunda mano con una superficie superior al parámetro.
 		
-		3. solaresRusticos(), que averigua cuántos solares no urbanos están en venta. 
+		3. solaresRusticos(), que averigua cuï¿½ntos solares no urbanos estï¿½n en venta. 
 
 		fusion(Agencia a)
 	

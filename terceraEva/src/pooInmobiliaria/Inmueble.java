@@ -22,6 +22,10 @@ public abstract class Inmueble {
 	
 	
 	
+	
+	
+	// METODO ABSTRACTO CALCULO PRECIO QUE SE APLIQUE A LAS HIJAS
+	
 	@Override
 	public String toString() {
 		return  (ubi != null ? "ubi=" + ubi + "\n" : "") 
@@ -30,5 +34,7 @@ public abstract class Inmueble {
 				+ "Identificador: " + id + "\n";
 	}
 	
+	
+	public abstract int getPrecio();
 	
 }

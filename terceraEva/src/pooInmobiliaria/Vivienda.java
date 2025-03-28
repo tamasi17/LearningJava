@@ -12,6 +12,11 @@ public class Vivienda extends Construccion implements Vendible {
 	@Override
 	public void vender() {		
 	}
+
+	@Override
+	public int getPrecio() {
+		return precioAlquiler;
+	}
 	
 	
 	

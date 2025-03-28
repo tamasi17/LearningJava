@@ -2,11 +2,12 @@ package pooInmobiliaria;
 
 public class PlazaGaraje extends Superficie {
 
+	private int precioAlquiler;
 	private TipoGaraje garaje;
 
 	@Override
-	public int precio() {
-		return 0;
+	public int getPrecio() {
+		return precioAlquiler;
 	}
 	
 	

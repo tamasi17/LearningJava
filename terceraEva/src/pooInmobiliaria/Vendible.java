@@ -5,4 +5,5 @@ public interface Vendible {
 //	Solar, Vivienda
 	
 	void vender();
+	
 }
