@@ -38,6 +38,13 @@ public class TestInmobiliaria {
 		
 		*/
 		
+		
+		Agencia ag = new Agencia("Evergrande");
+		
+		
+		
+		
+		
 	}
 
 }

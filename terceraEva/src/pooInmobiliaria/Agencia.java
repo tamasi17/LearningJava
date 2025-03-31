@@ -12,6 +12,23 @@ public class Agencia {
 
 	
 	private ArrayList<Inmueble> inmuebles;
+	private String nombre;
+	
+	
+	public Agencia (String nombre) {
+		this.nombre=nombre;
+		this.inmuebles = new ArrayList<>();
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 //	ALQUILA (PlazaGaraje, LocalComercial, Vivienda)
 	
@@ -19,9 +36,17 @@ public class Agencia {
 	
 	
 	
+	public void addInmueble(Inmueble in) {
+		this.inmuebles.add(in);
+	}
 	
 	
-//	1. inmueblesVenta(p), que muestra los inmuebles con un precio de venta inferior al parametro.
+	
+	
+	
+	
+	
+//	inmueblesVenta(p) muestra los inmuebles con un precio de venta inferior al parametro.
 	
 	public String verInmueblesVenta(int precio){
 		String resultado="";
@@ -48,18 +73,27 @@ public class Agencia {
 	
 	
 	
-//	2. localesSegundaMano(m), que muestra los locales comerciales de segunda mano con una superficie superior al par�metro.
+//  localesSegundaMano(m), que muestra los locales comerciales de segunda mano con una superficie superior al par�metro.
 	
 	public String verSegundaMano(int superficie){
 		String resultado="";
 		for (Inmueble in : inmuebles) {
-			if ((in instanceof LocalComercial) && (in.getSuperficie()<superficie)){  // CREA getSuperficie()
+			if (in instanceof LocalComercial){
+				
+				LocalComercial local = (LocalComercial) in;
+				if (local.getAntiguedad() == Antiguedad.SEGUNDAMANO) { // AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+					resultado+=local.toString();
+				}
+				
+				
 				resultado+= "\n" + in.toString();
 			}
 		}
 		return resultado;
 	}
 
+	
+	
 	
 	
 	
