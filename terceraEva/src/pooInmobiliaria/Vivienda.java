@@ -3,6 +3,9 @@ package pooInmobiliaria;
 public class Vivienda extends Construccion implements Vendible {
 
 	private int precioAlquiler, precioVenta, habitaciones, piso;
+	
+	
+	
 
 	@Override
 	public void alquilar() {
@@ -17,6 +20,8 @@ public class Vivienda extends Construccion implements Vendible {
 	public int getPrecio() {
 		return precioAlquiler;
 	}
+	
+	
 	
 	
 	

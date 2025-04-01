@@ -41,6 +41,10 @@ public class TestInmobiliaria {
 		
 		Agencia ag = new Agencia("Evergrande");
 		
+		Vivienda viv1 = new Vivienda();
+		Solar solar1 = new Solar();
+		PlazaGaraje plaza1 = new PlazaGaraje();
+		LocalComercial local1 = new LocalComercial();
 		
 		
 		
