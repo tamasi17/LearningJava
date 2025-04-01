@@ -38,9 +38,19 @@ public class TestAtleta {
 			System.out.println(a.getNombre() + ", " + a.getTiempo());
 		}
 		
+		System.out.println("\nArrayList Ordenado\n");
+		
+		Collections.sort(atletasAL);
+		
+		
+		for (Atleta atleta : atletasAL) {
+			System.out.println(atleta.getNombre() + ", " + atleta.getTiempo());
+		}
 
-
+//		Podemos convertir el ArrayList a Array Primitivo con toArray().
 		atletas = atletasAL.toArray(atletas);
+		
+		
 		System.out.println("\nArray sin ordenar\n");
 		for (Atleta atleta : atletas) {
 			System.out.println(atleta.getNombre() + ", " + atleta.getTiempo());
@@ -54,14 +64,6 @@ public class TestAtleta {
 			System.out.println(atleta.getNombre() + ", " + atleta.getTiempo());
 		}
 		
-		System.out.println("\nArrayList Ordenado\n");
-		
-		Collections.sort(atletasAL);
-		
-		
-		for (Atleta atleta : atletasAL) {
-			System.out.println(atleta.getNombre() + ", " + atleta.getTiempo());
-		}
 	}
 
 }
