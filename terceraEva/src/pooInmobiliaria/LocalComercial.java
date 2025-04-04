@@ -3,8 +3,13 @@ package pooInmobiliaria;
 public class LocalComercial extends Construccion {
 
 	
-	private int precioAlquiler;
-	private Antiguedad antiguedad;
+	private int precioMetroCuadrado;
+	
+	public LocalComercial(int precioMetro,int metros, Antiguedad antiguedad) {
+		super(antiguedad); // AÑADIR ANTIGUEDAD
+		this.precioMetroCuadrado=precioMetro;
+		this.metros=metros;
+	}
 	
 	@Override
 	public void alquilar() {
@@ -12,7 +17,7 @@ public class LocalComercial extends Construccion {
 
 	@Override
 	public int getPrecio() {
-		return precioAlquiler;
+		return precioMetroCuadrado*metros;
 	}
 
 	/**

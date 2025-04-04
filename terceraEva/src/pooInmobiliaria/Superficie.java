@@ -25,22 +25,11 @@ public abstract class Superficie extends Inmueble {
 	 */
 	public void setPrecioMetroCuadrado(int precioMetroCuadrado) {
 		this.precioMetroCuadrado = precioMetroCuadrado;
-	}
-	/**
-	 * @return the superficie
-	 */
-	public int getSuperficie() {
-		return superficie;
-	}
-	/**
-	 * @param superficie the superficie to set
-	 */
-	public void setSuperficie(int superficie) {
-		this.superficie = superficie;
-	}
+	}	
 	
-	
-	
+	public int getPrecio() {
+		return this.precioMetroCuadrado*this.metros;
+	}
 
 	
 	

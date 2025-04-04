@@ -6,6 +6,18 @@ public abstract class Construccion extends Inmueble implements Alquilable {
 	
 	Antiguedad antiguedad;
 
+	
+	
+	/**
+ * @param antiguedad
+ */
+public Construccion(Antiguedad antiguedad) {
+	this.antiguedad = antiguedad;
+}
+
+
+
+
 	@Override
 	public abstract void alquilar();
 	
