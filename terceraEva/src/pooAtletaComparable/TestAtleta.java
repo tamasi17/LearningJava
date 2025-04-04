@@ -16,6 +16,10 @@ public class TestAtleta {
 	
 	public static void main(String[] args) {
 
+		
+//		Para este ejercicio compararé por tiempo (orden natural) y por nombre (Comparator).
+		
+		
 		ArrayList<Atleta> atletasAL = new ArrayList<Atleta>();
 		Atleta[] atletas = new Atleta[5];
 		
@@ -38,7 +42,7 @@ public class TestAtleta {
 			System.out.println(a.getNombre() + ", " + a.getTiempo());
 		}
 		
-		System.out.println("\nArrayList Ordenado\n");
+		System.out.println("\nArrayList Ordenado por tiempo\n");
 		
 		Collections.sort(atletasAL);
 		
@@ -46,7 +50,17 @@ public class TestAtleta {
 		for (Atleta atleta : atletasAL) {
 			System.out.println(atleta.getNombre() + ", " + atleta.getTiempo());
 		}
+		
+		
+		Collections.sort(atletasAL, new ComparadorNombre());
+		
+		System.out.println("\nArrayList Ordenado por nombre\n");
+		for (Atleta atleta : atletasAL) {
+			System.out.println(atleta.getNombre() + ", " + atleta.getTiempo());
+		}
+		
 
+		
 //		Podemos convertir el ArrayList a Array Primitivo con toArray().
 		atletas = atletasAL.toArray(atletas);
 		
@@ -59,10 +73,15 @@ public class TestAtleta {
 		Arrays.sort(atletas);
 		
 		
-		System.out.println("\nArray Ordenado\n");
+		System.out.println("\nArray Ordenado por tiempo\n");
 		for (Atleta atleta : atletas) {
 			System.out.println(atleta.getNombre() + ", " + atleta.getTiempo());
 		}
+		
+		
+		
+		
+		
 		
 	}
 
