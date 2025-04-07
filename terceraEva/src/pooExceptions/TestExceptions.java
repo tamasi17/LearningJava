@@ -5,7 +5,7 @@ public class TestExceptions {
 	public static void main(String[] args) {
 
 		
-		int age = 17;
+		int age = 17; // para comprobar ExceptionMayoriaEdad
 		
 		
 		try {
