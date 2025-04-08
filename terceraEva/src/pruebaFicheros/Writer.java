@@ -1,19 +1,41 @@
 package pruebaFicheros;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 
-public class Reader {
+public class Writer {
 
 
 	public static void main(String[] args) throws IOException  {
 		
-		//Todos los animales están en una única línea
+
+		String rutaArchivo = "D:\\LearningJava\\terceraEva\\src\\pruebaFicheros\\ficheroEscribir.txt";
+	       
+		String[] lineas = {
+	            "Primera linea, húsares.",
+	            "Segunda línea, alabarderos.",
+	            "Tercera línea, arqueros."
+	       };
+	
 		
-			
-		FileReader fr = new FileReader("D:\\LearningJava\\terceraEva\\src\\pruebaFicheros\\ficheroLeer.txt");
+		FileWriter fw = new FileWriter(rutaArchivo);
+		
+		BufferedWriter writer = new BufferedWriter(fw);
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		FileReader fr = new FileReader(rutaArchivo);
 		
 		BufferedReader bf = new BufferedReader(fr);
 		
