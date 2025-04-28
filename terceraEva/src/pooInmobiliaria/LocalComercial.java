@@ -15,11 +15,6 @@ public class LocalComercial extends Construccion {
 	public void alquilar() {
 	}
 
-	@Override
-	public int getPrecio() {
-		return precioMetroCuadrado*metros;
-	}
-
 	/**
 	 * @return the antiguedad
 	 */
@@ -32,6 +27,11 @@ public class LocalComercial extends Construccion {
 	 */
 	public void setAntiguedad(Antiguedad antiguedad) {
 		this.antiguedad = antiguedad;
+	}
+
+	@Override
+	public int getPrecioAlquiler() {
+		return precioMetroCuadrado*metros;
 	}
 	
 	

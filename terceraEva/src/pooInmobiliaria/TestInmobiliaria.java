@@ -41,11 +41,19 @@ public class TestInmobiliaria {
 		
 		Agencia ag = new Agencia("Evergrande");
 		
-		Vivienda viv1 = new Vivienda(); //params
+		Vivienda viv1 = new Vivienda(1000, 600000, 3, 2, Antiguedad.SEGUNDAMANO);
+		Vivienda viv2 = new Vivienda(1300, 750000, 4, 1, Antiguedad.NUEVA);
 		Solar solar1 = new Solar();
 		PlazaGaraje plaza1 = new PlazaGaraje();
-		LocalComercial local1 = new LocalComercial(); //params
+		LocalComercial local1 = new LocalComercial(12, 42, Antiguedad.NUEVA); //params
 		
+		
+		ag.addInmueble(viv1);
+		
+		
+		
+		
+		//  1.  Inmuebles con un precio de venta inferior al parametro
 		
 		
 		

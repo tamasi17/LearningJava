@@ -10,7 +10,6 @@ public abstract class Inmueble {
 
 	protected String ubi;
 	protected int metros;
-	protected int precioBase;
 	protected static int contador=0;
 	protected int id=0;
 	
@@ -22,19 +21,49 @@ public abstract class Inmueble {
 	
 	
 	
-	
-	
-	// METODO ABSTRACTO CALCULO PRECIO QUE SE APLIQUE A LAS HIJAS
-	
-	@Override
-	public String toString() {
-		return  (ubi != null ? "ubi=" + ubi + "\n" : "") 
-				+ "Metros cuadrados: " + metros + "\n"
-				+ "Precio original: " + precioBase + "\n"
-				+ "Identificador: " + id + "\n";
+	/**
+	 * @param ubi
+	 * @param metros
+	 */
+	public Inmueble(String ubi, int metros) {
+		this.ubi = ubi;
+		this.metros = metros;
+		this.id = contador++;
 	}
 	
 	
-	public abstract int getPrecio();
+	
+	@Override
+	public String toString() {
+		return  (ubi != null ? "Ubicación: " + ubi + "\n" : "") 
+				+ "Metros cuadrados: " + metros + "\n"
+				+ "Identificador: " + id + "\n";
+	}
+
+	
+
+	/**
+	 * @return the metros
+	 */
+	public int getMetros() {
+		return metros;
+	}
+
+	/**
+	 * @param metros the metros to set
+	 */
+	public void setMetros(int metros) {
+		this.metros = metros;
+	}
+
+	/**
+	 * @return the id
+	 */
+	public int getId() {
+		return id;
+	}
+	
+	
+	
 	
 }
