@@ -69,11 +69,12 @@ public class Vivienda extends Construccion implements Vendible {
 	@Override
 	public String toString() {
 		return super.toString()
-				+ "Habitaciones: " + habitaciones 
-				+ "\nPiso: " + piso 
-				+ "\nPrecio alquiler: " + precioAlquiler
-				+ "Precio de venta: " + precioVenta + "]";
+				+ (habitaciones != 0 ? "Habitaciones: " + habitaciones + "\n" : "")
+				+ (piso != 0 ? "Piso: " + piso + "\n" : "")
+				+ (precioAlquiler != 0 ? "Precio de alquiler: " + precioAlquiler + "\n" : "")
+				+ (precioVenta != 0 ? "Precio de venta: " + precioVenta + "\n" : "");
 	}
+	
 	
 	
 	

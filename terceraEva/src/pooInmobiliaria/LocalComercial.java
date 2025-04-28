@@ -4,12 +4,19 @@ public class LocalComercial extends Construccion {
 
 	
 	private int precioMetroCuadrado;
+
 	
-	public LocalComercial(int precioMetro,int metros, Antiguedad antiguedad) {
-		super(antiguedad); // AÑADIR ANTIGUEDAD
-		this.precioMetroCuadrado=precioMetro;
-		this.metros=metros;
+	/**
+	 * @param ubi
+	 * @param metros
+	 * @param antiguedad
+	 * @param precioMetroCuadrado
+	 */
+	public LocalComercial(String ubi, int metros, Antiguedad antiguedad, int precioMetroCuadrado) {
+		super(ubi, metros, antiguedad);
+		this.precioMetroCuadrado = precioMetroCuadrado;
 	}
+
 	
 	@Override
 	public void alquilar() {
@@ -32,6 +39,13 @@ public class LocalComercial extends Construccion {
 	@Override
 	public int getPrecioAlquiler() {
 		return precioMetroCuadrado*metros;
+	}
+
+
+	@Override
+	public String toString() {
+		return super.toString() 
+				+ (precioMetroCuadrado != 0 ? "Precio metro cuadrado: " + precioMetroCuadrado + "\n" : "");
 	}
 	
 	

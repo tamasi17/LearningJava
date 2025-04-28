@@ -9,7 +9,6 @@ package pooInmobiliaria;
 public abstract class Superficie extends Inmueble {
 
 	protected int precioMetroCuadrado;
-	protected int superficie;
 	
 	
 	
@@ -17,10 +16,9 @@ public abstract class Superficie extends Inmueble {
 	 * @param precioMetroCuadrado
 	 * @param superficie
 	 */
-	public Superficie(String ubi, int metros, int precioMetroCuadrado, int superficie) {
+	public Superficie(String ubi, int metros, int precioMetroCuadrado) {
 		super(ubi, metros);
 		this.precioMetroCuadrado = precioMetroCuadrado;
-		this.superficie = superficie;
 	}
 
 
@@ -44,7 +42,7 @@ public abstract class Superficie extends Inmueble {
 
 	@Override
 	public String toString() {
-		return super.toString() + "Precio metro cuadrado: " + precioMetroCuadrado + "\nSuperficie: " + superficie + "\n";
+		return super.toString() + "Precio metro cuadrado: " + precioMetroCuadrado + "\nSuperficie: ";
 	}
 
 	

@@ -5,12 +5,22 @@ public class Solar extends Superficie implements Vendible {
 	private int precioVenta;
 	private Zona zona;
 	
-	
-	
-	
+
+	/**
+	 * @param ubi
+	 * @param metros
+	 * @param precioMetroCuadrado
+	 * @param superficie
+	 * @param precioVenta
+	 * @param zona
+	 */
+	public Solar(String ubi, int metros, int precioMetroCuadrado, int precioVenta, Zona zona) {
+		super(ubi, metros, precioMetroCuadrado);
+		this.precioVenta = precioVenta;
+		this.zona = zona;
+	}
 
 	
-
 	@Override
 	public void vender() {
 		
@@ -34,6 +44,15 @@ public class Solar extends Superficie implements Vendible {
 	public void setZona(Zona zona) {
 		this.zona = zona;
 	}
+
+
+	@Override
+	public String toString() {
+		return super.toString() 
+				+ (precioVenta != 0 ? "Precio de venta: " + precioVenta + "\n" : "")
+				+ (zona != null ? "Zona: " + zona : "");
+	}
+	
 	
 	
 

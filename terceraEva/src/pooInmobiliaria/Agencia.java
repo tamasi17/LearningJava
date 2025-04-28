@@ -37,14 +37,12 @@ public class Agencia {
 	
 	/** Estos tres puntos son un varargs, ahora podemos pasar cero, uno o N argumentos. 
 	 *  Java lo convierte en array automaticamente.
-	 *  
+	 *  Asi podemos usar addAll junto con la clase Arrays.
 	 *  
 	 */
-	public void addInmuebles(Inmueble... inmuebles) {   // 
+	public void addInmuebles(Inmueble... inmuebles) {  
 		this.inmuebles.addAll(Arrays.asList(inmuebles)); 
 	}
-	
-	
 	
 	
 	

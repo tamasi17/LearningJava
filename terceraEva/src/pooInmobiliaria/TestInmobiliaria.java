@@ -41,15 +41,31 @@ public class TestInmobiliaria {
 		
 		Agencia ag = new Agencia("Evergrande");
 		
-		Vivienda viv1 = new Vivienda(1000, 600000, 3, 2, Antiguedad.SEGUNDAMANO);
-		Vivienda viv2 = new Vivienda(1300, 750000, 4, 1, Antiguedad.NUEVA);
-		Solar solar1 = new Solar();
-		PlazaGaraje plaza1 = new PlazaGaraje();
-		LocalComercial local1 = new LocalComercial(12, 42, Antiguedad.NUEVA); //params
+		Vivienda viv1 = new Vivienda("San Blas", 84, Antiguedad.SEGUNDAMANO, 1400, 800000, 3, 1);
+		Vivienda viv2 = new Vivienda("Pinar del Rey", 90, Antiguedad.NUEVA, 1500, 850000, 4, 3);
+		
+		Solar solar1 = new Solar("La Pedriza", 30, 75, 150000, Zona.RUSTICA);
+		Solar solar2 = new Solar("Goya", 20, 90, 160000, Zona.URBANA);
+
+		PlazaGaraje plaza1 = new PlazaGaraje("Centro", 2, 35, 200, TipoGaraje.PRIVADO);
+		PlazaGaraje plaza2 = new PlazaGaraje("La Peseta", 2, 20, 100, TipoGaraje.PUBLICO);
+		
+		LocalComercial local1 = new LocalComercial("Vallecas", 41, Antiguedad.SEGUNDAMANO, 60);
+		LocalComercial local2 = new LocalComercial("Aluche", 37, Antiguedad.NUEVA, 42);
+		
 		
 		
 		ag.addInmueble(viv1);
 		
+		ag.addInmuebles(viv2,solar1,solar2,plaza1,plaza2,local1,local2);
+		
+		
+		
+		// Ver todos los inmuebles
+		
+		System.out.println("------------Inmuebles en alquiler:--------------- \n " + ag.verInmueblesAlquiler() + "\n\n");
+		
+		System.out.println("----------------Inmuebles en venta: --------------- \n" + ag.verInmueblesVenta(50000000) + "\n\n");
 		
 		
 		
