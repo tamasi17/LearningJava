@@ -45,6 +45,18 @@ public class Agencia {
 	}
 	
 	
+	public String verInmuebles(){
+		String resultado="";
+		for (Inmueble in : inmuebles) {
+					resultado+= "\n" + in.toString();
+				}
+		return resultado;
+	}
+	
+	
+	
+	
+	
 	
 //	inmueblesVenta(p) muestra los inmuebles con un precio de venta inferior al parametro.
 	
