@@ -10,16 +10,24 @@ public class Reader {
 
 	public static void main(String[] args) throws IOException  {
 		
-		//Todos los animales están en una única línea
+		//Todos los animales estn en una unica linea
 		
-			
-		FileReader fr = new FileReader("D:\\LearningJava\\terceraEva\\src\\pruebaFicheros\\ficheroLeer.txt");
+		
+		
+		/* Descomentar para prueba en IES Filipinas
+		 */
+//		FileReader fr = new FileReader("D:\\LearningJava\\terceraEva\\src\\pruebaFicheros\\miFichero.txt");
+	       
+
+		/* Descomentar para prueba en MSI GF63
+		 */
+		FileReader fr = new FileReader("C:\\Users\\matei\\LearningJava\\terceraEva\\src\\pruebaFicheros\\miFichero.txt");	
 		
 		BufferedReader bf = new BufferedReader(fr);
 		
 		String texto = bf.readLine(); 
 		
-		//leemos la cadena con los números String[] subcadenas = texto.split(" ");
+		//leemos la cadena con los numeros String[] subcadenas = texto.split(" ");
 		
 		String[] subcadenas = texto.split(" "); // separamos subcadenas
 		
