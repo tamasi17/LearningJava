@@ -6,4 +6,6 @@ public interface Alquilable {
 	
 	void alquilar();
 	
+	int getPrecioAlquiler();
+	
 }

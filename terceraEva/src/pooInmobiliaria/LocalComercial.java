@@ -3,16 +3,23 @@ package pooInmobiliaria;
 public class LocalComercial extends Construccion {
 
 	
-	private int precioAlquiler;
-	private Antiguedad antiguedad;
+	private int precioMetroCuadrado;
+
+	
+	/**
+	 * @param ubi
+	 * @param metros
+	 * @param antiguedad
+	 * @param precioMetroCuadrado
+	 */
+	public LocalComercial(String ubi, int metros, Antiguedad antiguedad, int precioMetroCuadrado) {
+		super(ubi, metros, antiguedad);
+		this.precioMetroCuadrado = precioMetroCuadrado;
+	}
+
 	
 	@Override
 	public void alquilar() {
-	}
-
-	@Override
-	public int getPrecio() {
-		return precioAlquiler;
 	}
 
 	/**
@@ -27,6 +34,18 @@ public class LocalComercial extends Construccion {
 	 */
 	public void setAntiguedad(Antiguedad antiguedad) {
 		this.antiguedad = antiguedad;
+	}
+
+	@Override
+	public int getPrecioAlquiler() {
+		return precioMetroCuadrado*metros;
+	}
+
+
+	@Override
+	public String toString() {
+		return super.toString() 
+				+ (precioMetroCuadrado != 0 ? "Precio metro cuadrado: " + precioMetroCuadrado + "\n" : "");
 	}
 	
 	

@@ -6,4 +6,6 @@ public interface Vendible {
 	
 	void vender();
 	
+	int getPrecioVenta();
+	
 }
