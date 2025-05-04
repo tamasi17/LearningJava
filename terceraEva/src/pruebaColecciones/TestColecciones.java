@@ -72,11 +72,17 @@ public class TestColecciones {
 		arrayList.remove(2);
 		arrayList.remove(1); // remove por indices
 		
-		
 		System.out.println("\nComprobamos nuestro arrayList:");
 		for (String nombre : arrayList) {
 			System.out.println(nombre);
 		}
+		
+		System.out.println("\nRecorremos hashSet con Iterator");
+		Iterator<String> it = hashSet.iterator();
+		while (it.hasNext()) {
+			System.out.println(it.next());
+		}
+		
 	}
 
 }
