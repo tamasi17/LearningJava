@@ -72,24 +72,33 @@ public class Writer {
             System.out.println("¿Se puede leer?: " + archivo.canRead());
             System.out.println("¿Se puede escribir?: " + archivo.canWrite());
             System.out.println("Tamaño (bytes): " + archivo.length());
-            System.out.println("Última modificación: " + archivo.lastModified());
+            
         } else {
             System.out.println("El archivo no existe. No se pueden mostrar sus propiedades.");
         }
 
         
+
         
-		
-//      ENTENDER WHILE CON readLine() para comprobar funcionamiento !!!!!!!!!!!!!!!
+//      Comprobar el texto escrito con un Reader es complicado por los saltos de linea:
         
-		try (BufferedReader bf = new BufferedReader(new FileReader(archivo))){
-			
-			String texto = bf.readLine();
-			System.out.println(texto);
-			
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+//      Para eso, usamos Stringbuilder
+        StringBuilder contenido = new StringBuilder();
+        
+        
+        
+        try (BufferedReader reader = new BufferedReader(new FileReader(archivo))){
+        	String linea="";
+        	
+        	while (( (linea = reader.readLine()) != null )) { // guarda en linea  = readLine(), que lee hasta que no quedan lineas, devuelve null.
+        		contenido.append(linea).append("\n"); // acumula linea y añade salto en el Stringbuilder
+        	}
+        	System.out.println("\n----- Contenido del archivo -----\n" + contenido.toString());
+        	
+        } catch (IOException e) {
+        	e.printStackTrace();
+        }
+        
         
         
 		
