@@ -19,6 +19,8 @@ public class TestVuelos {
 		vuelos.addAll(Arrays.asList(madridroma,parismilan,cphlondres,oslomalaga));
 		
 		
+		Collections.sort(vuelos, new ComparadorDuracion());
+		System.out.println(vuelos.toString());
 		
 		
 		

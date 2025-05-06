@@ -1,6 +1,7 @@
 package pooVuelos;
 
 import java.io.FileInputStream;
+import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.util.Arrays;
 import java.util.LinkedList;
@@ -14,7 +15,7 @@ public class Deserializar {
 		try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream("vuelos.ser"))){
 			LinkedList<Vuelo> vuelos = (LinkedList<Vuelo>) ois.readObject();
 			System.out.println(vuelos.toString());
-		} catch (Exception e) {
+		} catch (IOException | ClassNotFoundException e) {
 			e.printStackTrace();
 		}
 		
