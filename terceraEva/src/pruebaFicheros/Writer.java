@@ -11,7 +11,7 @@ import java.io.IOException;
 public class Writer {
 
 
-	public static void main(String[] args) throws IOException  {
+	public static void main(String[] args) {
 		
 
 		/* Descomentar para prueba en IES Filipinas
@@ -39,7 +39,7 @@ public class Writer {
 		
 		/* Try-with-resources:
 		 * 
-		 * Forma especial del bloque try que gestiona automáticamente el cierre de recursos
+		 * Forma especial del bloque try que gestiona automï¿½ticamente el cierre de recursos
 		 * (archivos, sockets o streams)
 		 * 
 		 * Es lo mismo que escribir un try catch con finally incluyendo writer.close();
@@ -64,14 +64,14 @@ public class Writer {
         
      // Metodos utiles de la clase File, incluyendo verificar si el archivo existe
         if (archivo.exists()) {
-            System.out.println("\n--- Información del archivo ---");
+            System.out.println("\n--- Informacion del archivo ---");
             System.out.println("Nombre: " + archivo.getName());
             System.out.println("Ruta absoluta: " + archivo.getAbsolutePath());
-            System.out.println("¿Es archivo?: " + archivo.isFile());
-            System.out.println("¿Es directorio?: " + archivo.isDirectory());
-            System.out.println("¿Se puede leer?: " + archivo.canRead());
-            System.out.println("¿Se puede escribir?: " + archivo.canWrite());
-            System.out.println("Tamaño (bytes): " + archivo.length());
+            System.out.println("Es archivo? " + archivo.isFile());
+            System.out.println("Es directorio? " + archivo.isDirectory());
+            System.out.println("Se puede leer? " + archivo.canRead());
+            System.out.println("Se puede sobreescribir? " + archivo.canWrite());
+            System.out.println("TamaÃ±o (bytes): " + archivo.length());
             
         } else {
             System.out.println("El archivo no existe. No se pueden mostrar sus propiedades.");
@@ -91,7 +91,7 @@ public class Writer {
         	String linea="";
         	
         	while (( (linea = reader.readLine()) != null )) { // guarda en linea  = readLine(), que lee hasta que no quedan lineas, devuelve null.
-        		contenido.append(linea).append("\n"); // acumula linea y añade salto en el Stringbuilder
+        		contenido.append(linea).append("\n"); // acumula linea y aï¿½ade salto en el Stringbuilder
         	}
         	System.out.println("\n----- Contenido del archivo -----\n" + contenido.toString());
         	
