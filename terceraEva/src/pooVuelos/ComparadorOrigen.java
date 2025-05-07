@@ -6,7 +6,7 @@ public class ComparadorOrigen implements Comparator<Vuelo> {
 
 	@Override
 	public int compare(Vuelo o1, Vuelo o2) {
-		return o1.getOrigen()-o2.getOrigen();
+		return o1.getOrigen().compareTo(o2.getOrigen());
 	}
 
 	

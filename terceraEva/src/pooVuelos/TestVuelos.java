@@ -11,18 +11,41 @@ public class TestVuelos {
 		
 		List<Vuelo> vuelos = new LinkedList<Vuelo>();
 		
-		Vuelo madridroma = new Vuelo("Madrid", "Roma", 3);
-		Vuelo parismilan = new Vuelo("Paris", "Milan", 2);
-		Vuelo cphlondres = new Vuelo("Copenhague", "Londres", 1);
-		Vuelo oslomalaga = new Vuelo("Oslo", "Malaga", 5);
+		Vuelo madridroma = new Vuelo("Madrid", "Roma",11, 3);
+		Vuelo parismilan = new Vuelo("Paris", "Milan",10, 2);
+		Vuelo cphlondres = new Vuelo("Copenhague", "Londres",15, 1);
+		Vuelo oslomalaga = new Vuelo("Oslo", "Malaga",21, 5);
+		Vuelo palmabarcelona = new Vuelo("Palma", "Barcelona",9, 1);
 		
-		vuelos.addAll(Arrays.asList(madridroma,parismilan,cphlondres,oslomalaga));
+		vuelos.addAll(Arrays.asList(madridroma,parismilan,cphlondres,oslomalaga,palmabarcelona));
+		
+		
+		System.out.println("----- Orden natural: \n");
+		for (Vuelo vuelo : vuelos) {
+			System.out.println(vuelo.toString());
+		}
 		
 		
 		Collections.sort(vuelos, new ComparadorDuracion());
-		System.out.println(vuelos.toString());
+		System.out.println("----- Orden duracion: \n");
+		for (Vuelo vuelo : vuelos) {
+			System.out.println(vuelo.toString());
+		}
 		
 		
+		Collections.sort(vuelos, new ComparadorOrigen());
+		System.out.println("----- Orden por origen: \n");
+		for (Vuelo vuelo : vuelos) {
+			System.out.println(vuelo.toString());
+		}
+		
+		Collections.sort(vuelos, new ComparadorDestino());
+		System.out.println("----- Orden por destino: \n");
+		for (Vuelo vuelo : vuelos) {
+			System.out.println(vuelo.toString());
+		}
+		
+		System.out.println("----- Orden inverso (con miArray.reversed() invierte orden natural): \n" + vuelos.reversed().toString() + "\n");
 		
 	}
 

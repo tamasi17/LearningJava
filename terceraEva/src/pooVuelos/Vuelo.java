@@ -10,16 +10,20 @@ public class Vuelo implements Serializable {
 	private static int contador=1100;
 	private String origen;
 	private String destino;
-	private LocalTime salida;
+	// Primero hice salida como LocalTime, pero es mas sencillo hacer pruebas con un int. 
+	// Mantengo esto para comprobar que sé utilizarlo.
+	private LocalTime registro;
+	private int salida;
 	private int duracion;
 	
-	public Vuelo(String origen, String destino, int duracion) {
+	public Vuelo(String origen, String destino, int salida, int duracion) {
 		this.origen = origen;
 		this.destino = destino;
+		this.salida = salida;
 		this.duracion = duracion;
 		contador++;
 		this.numero = String.valueOf(contador);
-		this.salida = LocalTime.now();
+		this.registro = LocalTime.now();       
 	}
 
 	
@@ -75,8 +79,26 @@ public class Vuelo implements Serializable {
 	/**
 	 * @return the salida
 	 */
-	public LocalTime getSalida() {
+	public int getSalida() {
 		return salida;
+	}
+
+	
+	
+
+	/**
+	 * @return the registro
+	 */
+	public LocalTime getRegistro() {
+		return registro;
+	}
+
+
+	/**
+	 * @param registro the registro to set
+	 */
+	public void setRegistro(LocalTime registro) {
+		this.registro = registro;
 	}
 
 
@@ -84,7 +106,7 @@ public class Vuelo implements Serializable {
 	public String toString() {
 		return "Vuelo numero: " + numero + "\n"
 				+ "Desde " + origen + ", con destino a " + destino + ".\n"
-				+ "Despegue a las " + salida + ", duracion prevista de " + duracion + " horas.";
+				+ "Despegue a las " + salida + "h, duracion prevista de " + duracion + " horas.\n";
 	}
 	
 	
