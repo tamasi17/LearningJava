@@ -3,9 +3,9 @@ package pooVuelos;
 import java.io.Serializable;
 import java.time.LocalTime;
 
-public class Vuelo implements Serializable {
+public class Vuelo implements Serializable, Comparable<Vuelo> {
 
-	
+	// Comparable por numero identificador, el resto Comparators
 	private String numero;
 	private static int contador=1100;
 	private String origen;
@@ -107,6 +107,14 @@ public class Vuelo implements Serializable {
 		return "Vuelo numero: " + numero + "\n"
 				+ "Desde " + origen + ", con destino a " + destino + ".\n"
 				+ "Despegue a las " + salida + "h, duracion prevista de " + duracion + " horas.\n";
+	}
+
+
+
+	@Override
+	public int compareTo(Vuelo o) {
+		// en el ejercicio pide numero identificador como un String:
+		return this.numero.compareTo(o.numero);  
 	}
 	
 	
