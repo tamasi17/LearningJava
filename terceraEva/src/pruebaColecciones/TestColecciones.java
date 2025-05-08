@@ -45,7 +45,7 @@ public class TestColecciones {
 		Set<String> hashSet = new HashSet<>();
 		
 		
-		hashSet.addAll(arrayList); // nuestro arrayList tiene duplicados, pero no se añaden al hashSet.
+		hashSet.addAll(arrayList); // nuestro arrayList tiene duplicados, pero no se aï¿½aden al hashSet.
 		
 		System.out.println("- Hash Set: comprobamos que no hay duplicados.");
 		for (String n : hashSet) {
@@ -63,6 +63,7 @@ public class TestColecciones {
 		System.out.println("arrayList contains Jamal? " + arrayList.contains("Jamal"));
 		System.out.println("hashSet contains Jamal? " + hashSet.contains("Jamal"));
 		
+		// limpia la LinkedList
 		linkedList.clear();
 		System.out.println("linkedList esta vacia? " + linkedList.isEmpty());
 		
@@ -83,6 +84,7 @@ public class TestColecciones {
 			System.out.println(it.next());
 		}
 		
+
 	}
 
 }
