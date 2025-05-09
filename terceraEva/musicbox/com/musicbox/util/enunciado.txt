@@ -1,0 +1,59 @@
+1. Enunciado
+*MusicBox* es una aplicacion donde los usuarios pueden crear playlists personalizadas, agregar canciones, ordenarlas y reproducirlas.
+Cada Album incluye una lista de canciones. 
+Hay usuarios estandar y usuarios premium, con comportamientos distintos al reproducir musica.
+
+Cubre las siguientes caracteristicas:
+2. Diagrama de clases.
+3. (Agregacion,composicion, herencia,implementacion).
+4. MÃ©todos polimorficos.
+5. Debe cumplir los principios de encapsulamiento, herencia y polimorfismo.
+6. Implementa mas de una interfaz.
+7. Colecciones.
+8. Implementar Comparable y Comparator.
+9. Excepciones personalizadas.
+10. Serializacion y deserializacion a un fichero.
+11. Una interfaz de usuario amigable. Te animo a ir metiendo algo de interfaz grafica(no
+obligatorio)
+12. Bien documentado. Generar su javadoc.
+
+
+
+Apuntes:
+
+
+Las listas de Album y Playlist en sí pueden ser internas (List<Cancion>), pero la relación entre clases con Cancion es agregación, no composición.
+
+Artista: incluye bandas/grupos.
+
+Álbum: tiene orden fijo, no repite canciones y esta asociado a un artista (grupo).
+
+Playlist: tiene orden libre y puede repetir canciones.
+
+Artista tiene una lista de Albumes y cada Album tiene un unico Artista.
+Esto puede crear un bucle sin fin, especialmente en formatos como JSON.
+Java no entra en bucles infinitos con ObjectOutputStream si se implementa Serializable correctamente.
+Java detecta si un objeto ya fue serializado anteriormente y en lugar de escribir todo lo marca como referencia interna.
+
+Usuario define el comportamiento de reproducción.
+UsuarioEstandar y UsuarioPremium implementan ese comportamiento con anuncios o no.
+Reproductor es un componente que reproduce a traves Usuario para seguir polimorfismo.
+Reproductor esta desacoplado, no sabe si Usuario es premium o no.
+Album y Playlist solo contienen canciones (colecciones), pero no reproducen directamente. No tienen logica de negocio innecesaria.
+
+Reproductor es instanciable para poder asociarse a Usuario, tener un estado (historial, volumen, ultimaCancionReproducida...)
+Y para hacer pruebas unitarias mas facilmente.
+
+Por claridad, escalabilidad y uso en bases de datos, los nombres de identificadores son especificos: idUsuario, idCancion...
+
+Duration: no funciona con += como un int, tiene sus propios metodos.
+
+Comprobar edad en el constructor garantiza que ningún objeto Usuario menor de edad puede existir.
+
+Estructura de paquetes: model, service, exceptions, ui, util.
+Nombre de dominio inverso: com.musicbox.ui
+
+
+
+
+
