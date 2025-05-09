@@ -1,0 +1,77 @@
+@startuml
+interface Reproducible {
+    +reproducir(): void
+}
+
+interface Ordenable {
+    +ordenarPorDuracion(): void
+    +ordenarPorTitulo(): void
+}
+
+class Reproductor {
+    +reproducirCancion(c: Cancion): void
+    +reproducirPlaylist(p: Playlist): void
+}
+
+class Cancion implements Comparable {
+    -titulo: String
+    -duracion: int
+    -genero: String
+    -artista: Artista
+    -album: Album
+    +getTitulo(): String
+    +getDuracion(): int
+}
+
+Cancion ..|> Comparable
+Cancion --> Artista
+Cancion --> Album
+
+class Album {
+    -titulo: String
+    -anio: int
+    -canciones: List<Cancion>
+    -artista: Artista
+    +getDuracionTotal(): int
+    +agregarCancion(c: Cancion): void
+}
+
+Album *-- Cancion
+
+class Artista {
+    -nombre: String
+    -nacionalidad: String
+    -generoPrincipal: String
+}
+
+class Playlist implements Reproducible, Ordenable {
+    -nombre: String
+    -canciones: List<Cancion>
+    +agregarCancion(c: Cancion): void
+    +reproducir(): void
+}
+
+Playlist o-- Cancion
+Playlist ..|> Reproducible
+Playlist ..|> Ordenable
+Playlist ..|> Serializable
+
+abstract class Usuario {
+    -nombre: String
+    -email: String
+    +reproducir(): void
+}
+
+class UsuarioEstandar extends Usuario {
+    +reproducir(): void
+}
+
+class UsuarioPremium extends Usuario {
+    +reproducir(): void
+}
+
+Usuario <|-- UsuarioEstandar
+Usuario <|-- UsuarioPremium
+Playlist --> Usuario
+
+@enduml
