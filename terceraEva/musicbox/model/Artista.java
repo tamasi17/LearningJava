@@ -1,9 +1,9 @@
-package com.musicbox.model;
+package model;
 
 import java.io.Serializable;
 import java.util.*;
 
-import com.musicbox.util.Sello;
+import util.Sello;
 
 public class Artista implements Serializable {
 

@@ -1,9 +1,9 @@
-package com.musicbox.exceptions;
+package exceptions;
 
 public class UnderageException extends Exception {
 
 	public UnderageException() {
-		super("Necesitas 12 años para tener tu propia cuenta.");
+		super("Necesitas 12 aï¿½os para tener tu propia cuenta.");
 	}
 
 	public UnderageException(String message) {

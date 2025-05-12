@@ -1,10 +1,10 @@
-package com.musicbox.service;
+package service;
 
 import java.util.*;
 
-import com.musicbox.model.Album;
-import com.musicbox.model.Cancion;
-import com.musicbox.model.Usuario;
+import model.Album;
+import model.Cancion;
+import model.Usuario;
 
 public class Reproductor {
 

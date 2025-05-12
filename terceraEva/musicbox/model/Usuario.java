@@ -1,9 +1,9 @@
-package com.musicbox.model;
+package model;
 
 import java.io.Serializable;
 import java.util.*;
 
-import com.musicbox.exceptions.UnderageException;
+import exceptions.UnderageException;
 
 public abstract class Usuario implements Serializable {
 

@@ -1,4 +1,4 @@
-package com.musicbox.model;
+package model;
 
 import java.io.Serializable;
 import java.time.Duration;
@@ -6,7 +6,7 @@ import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 
-import com.musicbox.util.Ordenable;
+import util.Ordenable;
 
 public class Playlist implements Serializable, Ordenable {
 

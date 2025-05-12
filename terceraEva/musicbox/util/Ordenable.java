@@ -1,10 +1,10 @@
 /**
  * 
  */
-package com.musicbox.util;
+package util;
 
 /**
- * Clases ordenables deben implementar diferentes metodos de ordenación. 
+ * Clases ordenables deben implementar diferentes metodos de ordenaciï¿½n. 
  */
 public interface Ordenable {
 

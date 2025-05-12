@@ -1,11 +1,11 @@
-package com.musicbox.model;
+package model;
 
 import java.io.Serializable;
 import java.time.Duration;
 import java.util.*;
 
-import com.musicbox.util.Ordenable;
-import com.musicbox.util.TipoAlbum;
+import util.Ordenable;
+import util.TipoAlbum;
 
 public class Album implements Serializable, Ordenable {
 
@@ -23,7 +23,7 @@ public class Album implements Serializable, Ordenable {
 	private TipoAlbum tipoAlbum;
 	private final Set<Cancion> canciones; // composicion    
 	
-	/** Constructor básico que inicializa HashSet canciones.
+	/** Constructor bï¿½sico que inicializa HashSet canciones.
 	 * @param titulo
 	 * @param artista
 	 */

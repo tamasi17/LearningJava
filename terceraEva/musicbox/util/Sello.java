@@ -1,4 +1,4 @@
-package com.musicbox.util;
+package util;
 
 public enum Sello {
 	Independiente, Firmado;

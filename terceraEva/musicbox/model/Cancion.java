@@ -1,9 +1,9 @@
-package com.musicbox.model;
+package model;
 import java.io.Serializable;
 import java.time.Duration;
 import java.util.Objects;
 
-public class Cancion implements Comparable, Serializable {
+public class Cancion implements Comparable<Cancion>, Serializable {
 
 	
 
@@ -17,10 +17,6 @@ public class Cancion implements Comparable, Serializable {
 	private Duration duracion; // para aprender a usar el tipo Duration
 	private String genero;
 	private Artista artista;
-	
-	
-	
-
 
 
 	/**
@@ -142,9 +138,8 @@ public class Cancion implements Comparable, Serializable {
 	
 	
 	@Override
-	public int compareTo(Object o) {
-										// Elegir orden natural
-		return 0;
+	public int compareTo(Cancion o) {
+		return this.duracion.compareTo(o.getDuracion());
 	}
 	
 }
