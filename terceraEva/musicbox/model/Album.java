@@ -7,7 +7,7 @@ import java.util.*;
 import util.Ordenable;
 import util.TipoAlbum;
 
-public class Album implements Serializable, Ordenable {
+public class Album implements Serializable {
 
 	/**
 	 * Clase que define un Album. Incluye un id, titulo, artista, tipo de album, fecha y genero.
@@ -23,7 +23,7 @@ public class Album implements Serializable, Ordenable {
 	private TipoAlbum tipoAlbum;
 	private final Set<Cancion> canciones; // composicion    
 	
-	/** Constructor b�sico que inicializa HashSet canciones.
+	/** Constructor basico que inicializa HashSet canciones.
 	 * @param titulo
 	 * @param artista
 	 */
@@ -139,15 +139,5 @@ public class Album implements Serializable, Ordenable {
 		return dur;
 	}
 	
-	@Override
-	public void ordenarPorDuracion() {
-		// falta ComparatorDuracion
-		
-	}
-
-	@Override
-	public void ordenarPorTitulo() {
-		// falta ComparatorTitulo
-	}
 	
 }

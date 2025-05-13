@@ -3,6 +3,7 @@ package model;
 import java.io.Serializable;
 import java.time.Duration;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 
@@ -95,13 +96,12 @@ public class Playlist implements Serializable, Ordenable {
 
 	@Override
 	public void ordenarPorDuracion() {
-		// falta ComparatorDuracion
-		
+		Collections.sort(canciones);
 	}
 
 	@Override
 	public void ordenarPorTitulo() {
-		// falta ComparatorTitulo
+		Collections.sort(canciones, new ComparadorTitulo());
 	}
 	
 	
