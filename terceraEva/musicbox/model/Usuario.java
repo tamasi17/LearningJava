@@ -11,6 +11,7 @@ public abstract class Usuario implements Serializable {
 	 * clase que no se que
 	 */
 	protected int idUsuario;
+	private static int contador=1;
 	protected String nombre;
 	protected String email;
 	protected int edad;
@@ -20,12 +21,13 @@ public abstract class Usuario implements Serializable {
 	 * @param idUsuario
 	 * @param nombre
 	 */
-	public Usuario(int idUsuario, String nombre, int edad) throws UnderageException {
+	public Usuario(String nombre, int edad) throws UnderageException {
 		if (edad<12) {
 			throw new UnderageException();
 		}
-		this.idUsuario = idUsuario;
+		this.idUsuario = contador++;
 		this.nombre = nombre;
+		this.edad = edad;
 	}
 
 	

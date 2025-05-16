@@ -18,6 +18,18 @@ public class Cancion implements Comparable<Cancion>, Serializable {
 	private String genero;
 	private Artista artista;
 
+	
+	/** Constructor Basico
+	 * @param titulo
+	 * @param artista
+	 */
+	public Cancion(String titulo, Artista artista) {
+		this.idCancion=contador++;
+		this.titulo = titulo;
+		this.artista = artista;
+	}
+
+
 
 	/**
 	 * @return the contador
@@ -141,5 +153,19 @@ public class Cancion implements Comparable<Cancion>, Serializable {
 	public int compareTo(Cancion o) {
 		return this.duracion.compareTo(o.getDuracion());
 	}
+
+
+
+	@Override
+	public String toString() {
+		return (titulo != null ? titulo + ", " : "")
+				+ (artista != null ? artista + "\n " : "")
+				+ (duracion != null ? duracion + ", " : "") 
+				+ (genero != null ? genero : "");
+	}
+	
+	
+	
+	
 	
 }

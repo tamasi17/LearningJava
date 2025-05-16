@@ -20,8 +20,8 @@ public class UsuarioEstandar extends Usuario {
 	 * @param idUsuario
 	 * @param nombre
 	 */
-	public UsuarioEstandar(int idUsuario, String nombre, int edad) throws UnderageException {
-		super(idUsuario, nombre, edad);
+	public UsuarioEstandar(String nombre, int edad) throws UnderageException {
+		super(nombre, edad);
 	}
 
 	

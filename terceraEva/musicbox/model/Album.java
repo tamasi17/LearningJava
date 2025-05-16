@@ -27,10 +27,10 @@ public class Album implements Serializable {
 	 * @param titulo
 	 * @param artista
 	 */
-	public Album(String titulo, Artista artista) {
+	public Album(String titulo, Artista artista, HashSet<Cancion> canciones) {
 		this.titulo = titulo;
 		this.artista = artista;
-		this.canciones = new HashSet<>();
+		this.canciones = new HashSet<Cancion>(canciones);
 		contador++;
 		this.idAlbum=contador;
 	}
@@ -138,6 +138,17 @@ public class Album implements Serializable {
 		}
 		return dur;
 	}
+
+	@Override
+	public String toString() {
+		return (titulo != null ? titulo + ", " : "")
+				+ (artista != null ? artista + "\n" : "")
+				+ (tipoAlbum != null ? tipoAlbum + ", " : "")
+				+ (fecha != null ? fecha + "\n" : "") 
+				+ (genero != null ? "Género: " + genero + ", " : "");
+	}
+	
+	
 	
 	
 }
