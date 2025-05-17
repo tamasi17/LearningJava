@@ -145,7 +145,7 @@ public class Album implements Serializable {
 				+ (artista != null ? artista + "\n" : "")
 				+ (tipoAlbum != null ? tipoAlbum + ", " : "")
 				+ (fecha != null ? fecha + "\n" : "") 
-				+ (genero != null ? "Género: " + genero + ", " : "");
+				+ (genero != null ? "Genero: " + genero + ", " : "");
 	}
 	
 	

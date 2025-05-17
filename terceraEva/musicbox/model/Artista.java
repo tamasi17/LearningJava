@@ -98,6 +98,25 @@ public class Artista implements Serializable {
 	public static int getContador() {
 		return contador;
 	}
+	
+	
+	
+	
+	@Override
+	public int hashCode() {
+		return Objects.hash(idArtista, nombre);
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Artista other = (Artista) obj;
+		return idArtista == other.idArtista && Objects.equals(nombre, other.nombre);
+	}
 	@Override
 	public String toString() {
 		return (nombre != null ? nombre + "\n" : "")

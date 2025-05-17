@@ -5,7 +5,7 @@ import java.util.*;
 
 import exceptions.UnderageException;
 
-public class UsuarioEstandar extends Usuario {
+public class UsuarioPremium extends Usuario {
 
 	/**
 	 * clase que no se que
@@ -20,7 +20,7 @@ public class UsuarioEstandar extends Usuario {
 	 * @param idUsuario
 	 * @param nombre
 	 */
-	public UsuarioEstandar(String nombre, int edad) throws UnderageException {
+	public UsuarioPremium(String nombre, int edad) throws UnderageException {
 		super(nombre, edad);
 	}
 
@@ -84,7 +84,7 @@ public class UsuarioEstandar extends Usuario {
 	 * @param edad
 	 */
 	public void setEdad(int edad) throws UnderageException {
-		if (edad<12) {
+		if (edad<13) {
 			throw new UnderageException();
 		}
 		this.edad = edad;
@@ -96,7 +96,7 @@ public class UsuarioEstandar extends Usuario {
 	 */
 	public void reproducir(Cancion cancion) {
 		System.out.println("Reproduciendo: " + cancion.getTitulo() + " de " + cancion.getArtista() + " (" + cancion.getDuracion() + ")");
-		System.out.println(".\n..\n...\nPasate al plan premium para escuchar tu música sin anuncios!");
+		System.out.println(".\n..\n...\nPasate al plan premium para escuchar tu musica sin anuncios!");
 	}
 	
 
@@ -115,7 +115,7 @@ public class UsuarioEstandar extends Usuario {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		UsuarioEstandar other = (UsuarioEstandar) obj;
+		UsuarioPremium other = (UsuarioPremium) obj;
 		return idUsuario == other.idUsuario;
 	}
 
@@ -126,8 +126,9 @@ public class UsuarioEstandar extends Usuario {
 		return (nombre != null ? nombre + "\n" : "")
 				+ (edad > 0 ? "Edad: " + edad + "\n" : "")
 				+ (email != null ? "Email: " + email : "")
-				+ "\nUsuario Estandar";
+				+ "\nUsuario Premium";
 	}
+	
 	
 	
 

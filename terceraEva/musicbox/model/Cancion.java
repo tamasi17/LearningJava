@@ -129,9 +129,12 @@ public class Cancion implements Comparable<Cancion>, Serializable {
 	}
 	
 	
+	
+	
+	
 	@Override
 	public int hashCode() {
-		return Objects.hash(idCancion);
+		return Objects.hash(artista, titulo);
 	}
 
 
@@ -145,10 +148,11 @@ public class Cancion implements Comparable<Cancion>, Serializable {
 		if (getClass() != obj.getClass())
 			return false;
 		Cancion other = (Cancion) obj;
-		return idCancion == other.idCancion;
+		return Objects.equals(artista, other.artista) && Objects.equals(titulo, other.titulo);
 	}
-	
-	
+
+
+
 	@Override
 	public int compareTo(Cancion o) {
 		return this.duracion.compareTo(o.getDuracion());
@@ -158,10 +162,8 @@ public class Cancion implements Comparable<Cancion>, Serializable {
 
 	@Override
 	public String toString() {
-		return (titulo != null ? titulo + ", " : "")
-				+ (artista != null ? artista + "\n " : "")
-				+ (duracion != null ? duracion + ", " : "") 
-				+ (genero != null ? genero : "");
+		return (titulo != null ? titulo + " " : "")
+				+ (duracion != null ? duracion + "\n" : "");
 	}
 	
 	
