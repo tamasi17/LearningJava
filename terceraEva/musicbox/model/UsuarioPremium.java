@@ -5,11 +5,12 @@ import java.util.*;
 
 import exceptions.UnderageException;
 
+/**
+ * Clase que define a un usuario Premium (sin anuncios).
+ */
 public class UsuarioPremium extends Usuario {
 
-	/**
-	 * clase que no se que
-	 */
+	
 	protected int idUsuario;
 	protected String nombre;
 	protected String email;

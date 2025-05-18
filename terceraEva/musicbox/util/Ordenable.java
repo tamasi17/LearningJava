@@ -4,7 +4,7 @@
 package util;
 
 /**
- * Clases ordenables deben implementar diferentes metodos de ordenaci�n. 
+ * Clases ordenables deben implementar diferentes metodos de ordenacion. 
  */
 public interface Ordenable {
 

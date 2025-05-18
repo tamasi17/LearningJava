@@ -5,6 +5,11 @@ import java.util.*;
 
 import util.Sello;
 
+/**
+ * Clase que define a un Artista. Un artista tiene id, nombre, nacionalidad.
+ * Tambien incluye genero principal, una lista de sus albumes y el tipo de sello al que pertenece.
+ * 
+ */
 public class Artista implements Serializable {
 
 	/**

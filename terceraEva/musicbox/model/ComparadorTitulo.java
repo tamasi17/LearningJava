@@ -2,6 +2,9 @@ package model;
 
 import java.util.Comparator;
 
+/**
+ * Comparador por titulo.
+ */
 public class ComparadorTitulo implements Comparator<Cancion> {
 
 	@Override

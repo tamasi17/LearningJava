@@ -7,12 +7,13 @@ import java.util.*;
 import util.Ordenable;
 import util.TipoAlbum;
 
+/**
+ * Clase que define un Album. Incluye un id, titulo, artista, tipo de album, fecha y genero.
+ * Las canciones no pueden repetirse. Tienen un orden fijo.
+ */
 public class Album implements Serializable {
 
-	/**
-	 * Clase que define un Album. Incluye un id, titulo, artista, tipo de album, fecha y genero.
-	 * Las canciones no pueden repetirse. Tienen un orden fijo.
-	 */
+	
 	
 	private static int contador=0;
 	private int idAlbum;

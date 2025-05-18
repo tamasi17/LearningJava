@@ -31,6 +31,13 @@ import javax.swing.JMenu;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
+
+/**
+ * Interfaz grafica de MusicBox, construida con WindowBuilder (Swing). Se necesita un entorno java anterior al 21.
+ * Lo mas recomendable es tener una version de java entre 17 y 21.
+ * Si el entorno general es 22 o mas nueva, se puede ajustar para que funcione con una version anterior solo este proyecto.
+ * (Requiere tener el JRE adecuado en tu Build Path Configuration).
+ */
 public class MusicboxGUI {
 
 	private JFrame frame;

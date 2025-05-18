@@ -3,13 +3,12 @@ import java.io.Serializable;
 import java.time.Duration;
 import java.util.Objects;
 
+/**
+ * Clase que define a una Cancion. Incluye un id, titulo, duracion, genero y artista.
+ */
 public class Cancion implements Comparable<Cancion>, Serializable {
 
 	
-
-	/**
-	 * clase que no se que
-	 */
 	
 	private int contador;
 	private int idCancion;

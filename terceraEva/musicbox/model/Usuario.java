@@ -5,11 +5,13 @@ import java.util.*;
 
 import exceptions.UnderageException;
 
+
+/**
+ * Clase abstracta Usuario, instanciada en Usuario Estandar o Premium. Incluye excepcion comprobante de Edad en el constructor.
+ */
 public abstract class Usuario implements Serializable {
 
-	/**
-	 * clase que no se que
-	 */
+	
 	protected int idUsuario;
 	private static int contador=1;
 	protected String nombre;

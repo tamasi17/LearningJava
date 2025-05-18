@@ -9,12 +9,12 @@ import java.util.List;
 
 import util.Ordenable;
 
-public class Playlist implements Serializable, Ordenable {
 
-	/**
-	 * Clase que define una Playlist. Incluye un id, titulo y descripcion.
-	 * Las canciones pueden repetirse. No tienen un orden fijo.
-	 */
+/**
+ * Clase que define una Playlist. Incluye un id, titulo y descripcion.
+ * Las canciones pueden repetirse. No tienen un orden fijo.
+ */
+public class Playlist implements Serializable, Ordenable {
 	
 	private static int contador;
 	private int idPlaylist;

@@ -5,11 +5,12 @@ import java.util.*;
 
 import exceptions.UnderageException;
 
+/**
+ * Clase que define a un usuario Estandar (con anuncios).
+ */
 public class UsuarioEstandar extends Usuario {
 
-	/**
-	 * clase que no se que
-	 */
+	
 	protected int idUsuario;
 	protected String nombre;
 	protected String email;

@@ -6,11 +6,14 @@ import model.Album;
 import model.Cancion;
 import model.Usuario;
 
+/**
+ * Clase que define el reproductor de las canciones, que luego delega en Usuarios para comprobar su plan: Estandar o Premium.
+ * Esta es una idea por si decido continuar este proyecto.
+ * Al separar Reproductor en otra clase, sigo principios de encapsulamiento que me permitiran escalar y mantener el codigo con mas facilidad.
+ */
 public class Reproductor {
 
-	/**
-	 * clase que no se que
-	 */
+	
 	
 	private final Usuario usuario;
 	private final List<Cancion> historial = new ArrayList<>();
