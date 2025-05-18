@@ -31,7 +31,7 @@ import javax.swing.JMenu;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
-public class Grafica {
+public class MusicboxGUI {
 
 	private JFrame frame;
 	private JTextField textNombre;
@@ -47,7 +47,7 @@ public class Grafica {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Grafica window = new Grafica();
+					MusicboxGUI window = new MusicboxGUI();
 					window.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -59,7 +59,7 @@ public class Grafica {
 	/**
 	 * Create the application.
 	 */
-	public Grafica() {
+	public MusicboxGUI() {
 		initialize();
 	}
 

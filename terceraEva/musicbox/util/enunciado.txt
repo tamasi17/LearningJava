@@ -1,26 +1,28 @@
 1. Enunciado
 *MusicBox* es una aplicacion donde los usuarios pueden crear playlists personalizadas, agregar canciones, ordenarlas y reproducirlas.
 Cada Album incluye una lista de canciones. 
-Hay usuarios estandar y usuarios premium, con comportamientos distintos al reproducir musica.
+Hay usuarios estandar y usuarios premium, con comportamientos distintos al reproducir música.
 
 Cubre las siguientes caracteristicas:
 2. Diagrama de clases.
-3. (Agregacion,composicion, herencia,implementacion).
-4. MÃ©todos polimorficos.
+3. Agregacion, composicion, herencia, implementacion.
+4. Metodos polimorficos.
 5. Debe cumplir los principios de encapsulamiento, herencia y polimorfismo.
 6. Implementa mas de una interfaz.
 7. Colecciones.
 8. Implementar Comparable y Comparator.
 9. Excepciones personalizadas.
 10. Serializacion y deserializacion a un fichero.
-11. Una interfaz de usuario amigable. Te animo a ir metiendo algo de interfaz grafica(no
-obligatorio)
+11. Una interfaz de usuario amigable.
 12. Bien documentado. Generar su javadoc.
 
 
 
-Apuntes:
 
+
+
+
+Apuntes:
 
 Las listas de Album y Playlist en sí pueden ser internas (List<Cancion>), pero la relación entre clases con Cancion es agregación, no composición.
 
